@@ -89,7 +89,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212832;
-  --bs-primary-rgb: 48, 146, 85;
+  --bs-primary-rgb: 10, 21, 67;
   --bs-secondary-rgb: 231, 248, 238;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 54, 59, 66;
@@ -2313,7 +2313,7 @@ progress {
   background-color: #fff;
   border-color: #98c9aa;
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 0 rgba(10, 21, 67, 0);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2452,7 +2452,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #98c9aa;
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 0 rgba(10, 21, 67, 0);
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 2.188rem;
@@ -2529,7 +2529,7 @@ textarea.form-control-lg {
 .form-check-input:focus {
   border-color: #98c9aa;
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 0 rgba(10, 21, 67, 0);
 }
 .form-check-input:checked {
   background-color: #0A1543;
@@ -2615,10 +2615,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0 rgba(10, 21, 67, 0);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0 rgba(10, 21, 67, 0);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -3243,7 +3243,7 @@ textarea.form-control-lg {
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #0A1543;
   --bs-btn-hover-border-color: #0A1543;
-  --bs-btn-focus-shadow-rgb: 48, 146, 85;
+  --bs-btn-focus-shadow-rgb: 10, 21, 67;
   --bs-btn-active-color: #000;
   --bs-btn-active-bg: #0A1543;
   --bs-btn-active-border-color: #0A1543;
@@ -4769,7 +4769,7 @@ textarea.form-control-lg {
   --bs-pagination-hover-border-color: #dee2e6;
   --bs-pagination-focus-color: var(--bs-link-hover-color);
   --bs-pagination-focus-bg: #e9ecef;
-  --bs-pagination-focus-box-shadow: 0 0 0 0 rgba(48, 146, 85, 0);
+  --bs-pagination-focus-box-shadow: 0 0 0 0 rgba(10, 21, 67, 0);
   --bs-pagination-active-color: #fff;
   --bs-pagination-active-bg: #0A1543;
   --bs-pagination-active-border-color: #0A1543;
@@ -5407,7 +5407,7 @@ textarea.form-control-lg {
 }
 .btn-close:focus {
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(48, 146, 85, 0);
+  box-shadow: 0 0 0 0 rgba(10, 21, 67, 0);
   opacity: 1;
 }
 .btn-close:disabled, .btn-close.disabled {
@@ -6909,7 +6909,7 @@ textarea.form-control-lg {
 
 .text-bg-primary {
   color: #000 !important;
-  background-color: RGBA(48, 146, 85, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(10, 21, 67, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
@@ -14353,7 +14353,7 @@ img {
   font-size: 15px;
   font-weight: 500;
   color: #212832;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   display: block;
   transform: all 0.3s ease 0s;
   border-radius: 50%;
@@ -14747,7 +14747,7 @@ img {
   font-size: 15px;
   color: #52565b;
   transition: all 0.3s ease 0s;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   background-color: #fff;
 }
@@ -15164,7 +15164,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(48, 146, 85, 0.25);
+  border: 1px solid rgba(10, 21, 67, 0.25);
   padding: 16px 15px;
   border-radius: 15px;
   margin-left: -15px;
@@ -16574,7 +16574,7 @@ img {
 .courses-search input {
   width: 100%;
   height: 64px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 0 30px;
   padding-right: 90px;
@@ -16635,7 +16635,7 @@ img {
 .courses-tabs-menu .nav li button {
   width: 100%;
   height: 60px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   background-color: #fff;
   color: #212832;
@@ -16658,7 +16658,7 @@ img {
   text-align: center;
   background-color: #fff;
   border-radius: 50%;
-  box-shadow: 0px 0px 20px 0px rgba(48, 146, 85, 0.05);
+  box-shadow: 0px 0px 20px 0px rgba(10, 21, 67, 0.05);
   color: #212832;
   cursor: pointer;
   outline: none;
@@ -16701,7 +16701,7 @@ img {
 
 .single-courses {
   margin-top: 30px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 15px;
   padding: 20px;
   transition: all 0.3s ease 0s;
@@ -16743,7 +16743,7 @@ img {
 .single-courses .courses-images .courses-option .dropdown-menu {
   padding: 10px 20px;
   border: 0;
-  background-color: rgba(48, 146, 85, 0.9);
+  background-color: rgba(10, 21, 67, 0.9);
   border-radius: 10px;
   min-width: 180px;
   top: -20px !important;
@@ -17096,7 +17096,7 @@ img {
   width: 160px;
   height: 60px;
   line-height: 58px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   text-align: center;
   border-radius: 10px;
   background-color: #fff;
@@ -17265,7 +17265,7 @@ img {
   height: 65px;
   line-height: 68px;
   text-align: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   background-color: #fff;
   color: #0A1543;
@@ -17504,7 +17504,7 @@ img {
 
 .single-testimonial {
   text-align: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 45px 45px 40px;
   position: relative;
@@ -17538,7 +17538,7 @@ img {
 .single-testimonial .testimonial-author .author-thumb img {
   display: block;
   width: 90px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
   padding: 8px;
   margin: 0 auto;
@@ -17702,7 +17702,7 @@ img {
 
 .single-blog {
   margin-top: 30px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 15px;
   padding: 20px;
   transition: all 0.3s ease 0s;
@@ -17821,7 +17821,7 @@ img {
   padding: 0 20px;
   height: 45px;
   line-height: 39px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   font-size: 15px;
   margin-top: 30px;
 }
@@ -18065,7 +18065,7 @@ img {
   width: 140px;
   height: 140px;
   text-align: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
   margin: 0 auto;
   padding: 10px;
@@ -18240,7 +18240,7 @@ img {
 }
 
 .about-item {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 30px;
   margin-top: 30px;
@@ -18314,7 +18314,7 @@ img {
 .single-team .team-thumb img {
   border-radius: 50%;
   padding: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   transition: all 0.3s ease 0s;
 }
 .single-team .team-content {
@@ -18567,7 +18567,7 @@ img {
   height: 45px;
   line-height: 41px;
   text-align: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 5px;
   font-size: 15px;
   font-weight: 500;
@@ -18608,7 +18608,7 @@ img {
 .courses-details-tab .details-tab-content .tab-rating-box {
   margin-top: 45px;
   text-align: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 40px 30px;
 }
@@ -18688,7 +18688,7 @@ img {
   margin-top: 30px;
 }
 .courses-details-tab .details-tab-content .tab-reviews .single-review {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 30px;
   position: relative;
@@ -18727,7 +18727,7 @@ img {
 .courses-details-tab .details-tab-content .tab-reviews .single-review .review-author .author-thumb img {
   display: block;
   width: 90px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
   padding: 8px;
 }
@@ -19034,7 +19034,7 @@ img {
   width: 110px;
   height: 45px;
   line-height: 43px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   color: #212832;
   text-align: center;
@@ -19068,7 +19068,7 @@ img {
   width: 50px;
   height: 50px;
   line-height: 52px;
-  border: 1px solid rgba(48, 146, 85, 0.25);
+  border: 1px solid rgba(10, 21, 67, 0.25);
   border-radius: 10px;
   text-align: center;
   font-size: 18px;
@@ -19130,7 +19130,7 @@ img {
 
 .single-comment {
   padding: 30px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   margin-top: 30px;
   position: relative;
@@ -19149,7 +19149,7 @@ img {
   width: 90px;
   padding: 10px;
   border-radius: 50%;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
 }
 .single-comment .comment-author .author-content {
   flex: 1;
@@ -19246,7 +19246,7 @@ img {
 .register-login-wrapper {
   padding: 70px;
   padding-top: 20px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
 }
 @media only screen and (max-width: 575px) {
@@ -19373,7 +19373,7 @@ img {
   height: 600px;
 }
 .register-login-form .single-form .btn.btn-outline {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   line-height: 58px;
 }
 .register-login-form .single-form .btn.btn-outline:hover {
@@ -19416,7 +19416,7 @@ img {
 .faq-tab-menu .nav li button {
   height: 60px;
   line-height: 58px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   font-size: 15px;
   font-weight: 500;
@@ -19455,7 +19455,7 @@ img {
 }
 
 .single-faq-item {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 10px 70px 35px;
   border-radius: 10px;
   margin-top: 20px;
@@ -19603,7 +19603,7 @@ img {
 .contact-wrapper {
   padding: 70px;
   padding-top: 20px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (max-width: 767px) {
@@ -19666,7 +19666,7 @@ img {
   }
 }
 .single-contact-info + .single-contact-info {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
 }
 .single-contact-info .info-icon {
   width: 100px;
@@ -19674,7 +19674,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -19693,7 +19693,7 @@ img {
   height: 70px;
   line-height: 78px;
   background-color: #fff;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
   font-size: 30px;
   color: #0A1543;
@@ -19828,7 +19828,7 @@ img {
   height: 600px;
 }
 .contact-form .single-form .btn.btn-outline {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   line-height: 58px;
 }
 .contact-form .single-form .btn.btn-outline:hover {
@@ -20077,7 +20077,7 @@ img {
   padding: 5px 20px;
   cursor: pointer;
   display: block;
-  border-bottom: 1px solid rgba(48, 146, 85, 0.2);
+  border-bottom: 1px solid rgba(10, 21, 67, 0.2);
   transition: all 0.3s ease 0s;
   color: #52565b;
 }
@@ -20226,7 +20226,7 @@ img {
   padding: 10px 7px 0;
 }
 .courses-enroll-content .courses-enroll-tab .enroll-tab-menu .nav li button {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   background-color: #fff;
   border-radius: 10px;
   padding: 0 15px;
@@ -20261,7 +20261,7 @@ img {
   padding-top: 10px;
 }
 .courses-enroll-content .courses-enroll-tab .enroll-share a {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   background-color: #fff;
   border-radius: 10px;
   padding: 0 25px;
@@ -20296,7 +20296,7 @@ img {
   color: #fff;
 }
 .courses-enroll-content .courses-enroll-tab-content {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 10px 50px 35px;
   border-radius: 10px;
   margin-top: 30px;
@@ -20334,13 +20334,13 @@ img {
   font-weight: 400;
 }
 .courses-enroll-content .courses-enroll-tab-content .enroll-tab-content .table {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
   margin-bottom: 25px;
   margin-top: 25px;
 }
 .courses-enroll-content .courses-enroll-tab-content .enroll-tab-content .table tbody tr th {
   width: 170px;
-  border-color: rgba(48, 146, 85, 0.2);
+  border-color: rgba(10, 21, 67, 0.2);
   padding: 12px 30px;
   padding-right: 0;
   font-size: 15px;
@@ -20361,7 +20361,7 @@ img {
   float: right;
 }
 .courses-enroll-content .courses-enroll-tab-content .enroll-tab-content .table tbody tr td {
-  border-color: rgba(48, 146, 85, 0.2);
+  border-color: rgba(10, 21, 67, 0.2);
   padding: 12px 30px;
   font-size: 15px;
   font-weight: 400;
@@ -20378,7 +20378,7 @@ img {
   color: #212832;
 }
 .courses-enroll-content .courses-enroll-tab-content .enroll-tab-content .single-instructor {
-  border-bottom: 1px solid rgba(48, 146, 85, 0.2);
+  border-bottom: 1px solid rgba(10, 21, 67, 0.2);
   position: relative;
   overflow: hidden;
   padding: 25px 0 20px;
@@ -20406,7 +20406,7 @@ img {
 .courses-enroll-content .courses-enroll-tab-content .enroll-tab-content .single-instructor .review-author .author-thumb img {
   display: block;
   width: 90px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 50%;
   padding: 8px;
 }
@@ -20859,7 +20859,7 @@ img {
   height: 50px;
   line-height: 48px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -20902,7 +20902,7 @@ img {
   width: 50px;
   height: 50px;
   line-height: 48px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   text-align: center;
   padding: 0;
   background-color: #fff;
@@ -20952,7 +20952,7 @@ img {
 }
 
 .courses-item {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 20px;
   margin-top: 30px;
@@ -21223,7 +21223,7 @@ img {
   height: 50px;
   line-height: 48px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   font-weight: 500;
   font-size: 15px;
   color: #212832;
@@ -21286,7 +21286,7 @@ img {
   margin-top: 30px;
 }
 .single-resources .resources-icon {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   display: inline-block;
   padding: 13px;
   border-radius: 50%;
@@ -21634,7 +21634,7 @@ img {
 .graph {
   padding: 25px 70px 45px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   margin-top: 40px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
@@ -21729,7 +21729,7 @@ img {
 .single-student {
   display: flex;
   align-items: center;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 25px;
   margin-top: 30px;
@@ -21743,7 +21743,7 @@ img {
 .single-student .student-images img {
   width: 85px;
   border-radius: 50%;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 7px;
   transition: all 0.3s ease 0s;
 }
@@ -21825,7 +21825,7 @@ img {
   text-align: center;
   background-color: #fff;
   border-radius: 50%;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   color: #212832;
   cursor: pointer;
   outline: none;
@@ -21860,7 +21860,7 @@ img {
 
 .students-map {
   padding: 30px 45px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   margin-top: 50px;
 }
@@ -22076,7 +22076,7 @@ img {
   padding-top: 40px;
 }
 .single-student-widget .page-pagination .pagination li a {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
 }
 .single-student-widget .page-pagination .pagination li a.active, .single-student-widget .page-pagination .pagination li a:hover {
   color: #fff;
@@ -22120,7 +22120,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(48, 146, 85, 0.95);
+  background-color: rgba(10, 21, 67, 0.95);
   z-index: -1;
 }
 .new-courses .new-courses-title {
@@ -22210,7 +22210,7 @@ img {
   height: 60px;
   line-height: 58px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   font-weight: 500;
   font-size: 20px;
   color: #212832;
@@ -22264,7 +22264,7 @@ img {
   height: 50px;
   line-height: 48px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   background-color: #eaf8f0;
   font-weight: 500;
   font-size: 15px;
@@ -22366,7 +22366,7 @@ img {
 .engagement-courses .courses-list ul li {
   padding: 20px;
   margin-top: 20px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -22466,7 +22466,7 @@ img {
 .engagement-courses .courses-list ul li .button .btn {
   height: 50px;
   line-height: 48px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 0 30px;
   font-size: 15px;
   white-space: nowrap;
@@ -22643,7 +22643,7 @@ img {
   height: 50px;
   line-height: 48px;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   font-weight: 500;
   font-size: 15px;
   color: #212832;
@@ -22680,7 +22680,7 @@ img {
 }
 
 .single-courses-rating {
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 25px;
   border-radius: 10px;
   margin-top: 25px;
@@ -22827,7 +22827,7 @@ img {
 }
 .single-courses-rating .courses .courses-btn .btn {
   font-size: 15px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   padding: 0 20px;
   height: 50px;
   line-height: 48px;
@@ -22939,7 +22939,7 @@ img {
 }
 
 .question-answer {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
   margin-top: 20px;
 }
 
@@ -22951,7 +22951,7 @@ img {
   padding: 20px;
   display: flex;
   border-radius: 10px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   position: relative;
   align-items: center;
   margin-top: 20px;
@@ -23066,13 +23066,13 @@ img {
 }
 
 .answer-message-wrapper {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
   padding-top: 10px;
   padding-bottom: 80px;
 }
 @media only screen and (min-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1599px) {
   .answer-message-wrapper {
-    border-left: 1px solid rgba(48, 146, 85, 0.2);
+    border-left: 1px solid rgba(10, 21, 67, 0.2);
     padding-left: 30px;
     border-top: 0;
   }
@@ -23083,16 +23083,16 @@ img {
   }
 }
 .answer-message-wrapper ul {
-  border-bottom: 1px solid rgba(48, 146, 85, 0.2);
+  border-bottom: 1px solid rgba(10, 21, 67, 0.2);
 }
 .answer-message-wrapper ul li + li .single-message {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
 }
 .answer-message-wrapper ul li ul {
   border-bottom: 0;
 }
 .answer-message-wrapper ul li ul li .single-message {
-  border-top: 1px solid rgba(48, 146, 85, 0.2);
+  border-top: 1px solid rgba(10, 21, 67, 0.2);
 }
 .answer-message-wrapper ul li .message-replay {
   padding-left: 110px;
@@ -23307,7 +23307,7 @@ img {
   padding: 20px 30px;
   resize: none;
   height: 200px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 5px;
   font-size: 15px;
   font-family: serif;
@@ -23475,7 +23475,7 @@ img {
   width: 100%;
   height: 55px;
   padding: 0 30px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   background-color: #fff;
   color: #212832;
@@ -23549,7 +23549,7 @@ img {
   width: 50px;
   height: 50px;
   line-height: 52px;
-  border: 1px solid rgba(48, 146, 85, 0.25);
+  border: 1px solid rgba(10, 21, 67, 0.25);
   border-radius: 10px;
   text-align: center;
   font-size: 18px;
@@ -23579,7 +23579,7 @@ img {
 .widget-information {
   background-color: #e7f8ee;
   padding: 30px 30px 40px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
 }
 .widget-information .info-price {
@@ -23642,7 +23642,7 @@ img {
 .widget-search input {
   width: 100%;
   height: 60px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   padding: 0 20px;
   padding-right: 60px;
@@ -23684,7 +23684,7 @@ img {
 
 .widget-category {
   padding: 35px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   margin-top: 30px;
 }
@@ -23702,7 +23702,7 @@ img {
   line-height: 50px;
   display: block;
   color: #52565b;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   font-size: 15px;
   font-weight: 500;
@@ -23725,7 +23725,7 @@ img {
 
 .widget-post {
   padding: 35px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   margin-top: 30px;
 }
@@ -23735,7 +23735,7 @@ img {
   }
 }
 .widget-post .post-items li {
-  border-bottom: 1px solid rgba(48, 146, 85, 0.2);
+  border-bottom: 1px solid rgba(10, 21, 67, 0.2);
   padding: 20px 0;
 }
 .widget-post .post-items li:first-child {
@@ -23803,7 +23803,7 @@ img {
 
 .widget-tags {
   padding: 35px;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   margin-top: 30px;
 }
@@ -23830,7 +23830,7 @@ img {
   background-color: #fff;
   display: block;
   color: #52565b;
-  border: 1px solid rgba(48, 146, 85, 0.2);
+  border: 1px solid rgba(10, 21, 67, 0.2);
   border-radius: 10px;
   font-size: 15px;
   font-weight: 500;
