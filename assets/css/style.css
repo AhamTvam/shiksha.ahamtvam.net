@@ -15055,17 +15055,7 @@ img {
   position: relative;
 }
 .header-top-medal::before {
-  position: absolute;
-  content: "";
-  width: 41px;
-  height: 14px;
-  background-image: url(../images/shape/shape-1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -110px;
+  display: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-top-medal::before {
@@ -15075,17 +15065,7 @@ img {
   }
 }
 .header-top-medal::after {
-  position: absolute;
-  content: "";
-  width: 41px;
-  height: 14px;
-  background-image: url(../images/shape/shape-2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -110px;
+  display: none;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-top-medal::after {
