@@ -16599,7 +16599,7 @@ img {
 
 .courses-tabs-menu {
   background-color: #eefbf3;
-  padding: 40px 100px;
+  padding: 30px 40px;
   border-radius: 10px;
   margin-top: 50px;
   position: relative;
@@ -16610,7 +16610,11 @@ img {
   }
 }
 .courses-tabs-menu .nav {
-  flex-wrap: nowrap;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
 }
 .courses-tabs-menu .nav li button {
   width: 100%;
