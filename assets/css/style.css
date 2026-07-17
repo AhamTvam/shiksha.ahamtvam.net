@@ -24073,3 +24073,14 @@ img {
 .accordion-button:not(.collapsed)::after{
     transform:rotate(180deg);
 }
+/*=========================================
+    Sugreeva Banner
+=========================================*/
+
+.course-banner-text{
+    max-width:650px;
+    margin:20px auto 0;
+    font-size:17px;
+    line-height:1.8;
+    color:#52565B;
+}
