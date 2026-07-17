@@ -23950,3 +23950,32 @@ img {
     text-decoration-thickness:2px;
     text-decoration-color:#888;
 }
+/* ===========================
+   Course Details - Overview
+=========================== */
+
+.tab-description h3{
+    color:#0A1543;
+    font-size:28px;
+    font-weight:700;
+    margin:35px 0 15px;
+}
+
+.tab-description p{
+    color:#52565B;
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.course-list{
+    margin:0;
+    padding-left:22px;
+}
+
+.course-list li{
+    color:#52565B;
+    font-size:16px;
+    line-height:2;
+    margin-bottom:8px;
+}
