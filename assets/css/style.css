@@ -24078,9 +24078,14 @@ img {
 =========================================*/
 
 .course-banner-text{
-    max-width:650px;
-    margin:20px auto 0;
-    font-size:17px;
-    line-height:1.8;
-    color:#52565B;
+  .old-price{
+    color:#888;
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.old-price span{
+    text-decoration: line-through;
+    text-decoration-thickness:2px;
+    text-decoration-color:#888;
 }
