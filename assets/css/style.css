@@ -23933,3 +23933,20 @@ img {
   color: #fff;
   background-color: #212832;
 }
+
+
+/* ============================
+   Course Details - Price Box
+============================ */
+
+.old-price{
+    color:#888;
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.old-price span{
+    text-decoration: line-through;
+    text-decoration-thickness:2px;
+    text-decoration-color:#888;
+}
