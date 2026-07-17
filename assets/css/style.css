@@ -23979,3 +23979,45 @@ img {
     line-height:2;
     margin-bottom:8px;
 }
+/* ==================================
+   Course Curriculum
+================================== */
+
+.tab-curriculum h3{
+    color:#0A1543;
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.tab-curriculum p{
+    color:#52565B;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.curriculum-module{
+    background:#F8FBFA;
+    border-left:5px solid #FFA500;
+    padding:22px 25px;
+    margin-bottom:25px;
+    border-radius:8px;
+}
+
+.curriculum-module h4{
+    color:#0A1543;
+    font-size:20px;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.curriculum-module ul{
+    margin:0;
+    padding-left:20px;
+}
+
+.curriculum-module li{
+    color:#52565B;
+    line-height:2;
+    margin-bottom:6px;
+}
