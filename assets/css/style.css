@@ -24021,3 +24021,55 @@ img {
     line-height:2;
     margin-bottom:6px;
 }
+/*=========================================
+    AhámTvám Shiksha - Course FAQ
+=========================================*/
+
+.accordion-item{
+    background:#fff;
+    border:1px solid rgba(10,21,67,.08);
+    border-radius:12px !important;
+    margin-bottom:18px;
+    overflow:hidden;
+    transition:all .3s ease;
+}
+
+.accordion-item:hover{
+    box-shadow:0 10px 30px rgba(10,21,67,.08);
+}
+
+.accordion-button{
+    background:#fff;
+    color:#0A1543;
+    font-size:17px;
+    font-weight:600;
+    padding:22px 28px;
+    box-shadow:none !important;
+    transition:all .3s ease;
+}
+
+.accordion-button:not(.collapsed){
+    background:#E7F8EE;
+    color:#0A1543;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+    border:none;
+}
+
+.accordion-body{
+    padding:24px 28px;
+    color:#52565B;
+    line-height:1.9;
+    font-size:16px;
+    background:#fff;
+}
+
+.accordion-button::after{
+    transition:all .3s ease;
+}
+
+.accordion-button:not(.collapsed)::after{
+    transform:rotate(180deg);
+}
