@@ -20,7 +20,8 @@ export default async function handler(req, res) {
             code,
             client_id: process.env.ZOHO_CLIENT_ID,
             client_secret: process.env.ZOHO_CLIENT_SECRET,
-            redirect_uri: "https://shiksha.ahamtvam.net/api/zoho/oauth/callback",
+            redirect_uri:
+                "https://shiksha.ahamtvam.net/api/zoho/oauth/callback",
             grant_type: "authorization_code"
         });
 
@@ -39,8 +40,8 @@ export default async function handler(req, res) {
 
         if (!response.ok || data.error) {
             return res.status(500).send(`
-                <h2>Zoho Token Exchange Failed</h2>
-                <pre>${JSON.stringify(data, null, 2)}</pre>
+                <h2>Zoho Authorization Failed</h2>
+                <p>Token exchange was unsuccessful.</p>
             `);
         }
 
@@ -48,47 +49,59 @@ export default async function handler(req, res) {
             <!DOCTYPE html>
             <html>
             <head>
-                <title>Zoho Authorization Complete</title>
+                <title>Zoho Payments Connected</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
                 <style>
                     body {
                         font-family: Arial, sans-serif;
-                        max-width: 800px;
-                        margin: 60px auto;
-                        padding: 20px;
+                        background: #f7f7f7;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        margin: 0;
                     }
+
                     .box {
-                        padding: 20px;
-                        border: 1px solid #ddd;
-                        border-radius: 10px;
+                        background: white;
+                        padding: 40px;
+                        border-radius: 12px;
+                        max-width: 500px;
+                        text-align: center;
+                        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
                     }
-                    code {
-                        word-break: break-all;
+
+                    h2 {
+                        color: #111;
+                    }
+
+                    p {
+                        color: #555;
+                        line-height: 1.6;
                     }
                 </style>
             </head>
+
             <body>
                 <div class="box">
-                    <h2>Zoho Authorization Successful</h2>
-
-                    <p>Your refresh token has been generated.</p>
-
-                    <p><strong>Refresh Token:</strong></p>
-
-                    <code>${data.refresh_token || "Not returned"}</code>
-
+                    <h2>Zoho Payments Connected</h2>
                     <p>
-                        Copy this refresh token and store it in Vercel
-                        as <strong>ZOHO_REFRESH_TOKEN</strong>.
+                        Your Zoho Payments authorization has been completed successfully.
+                    </p>
+                    <p>
+                        You can safely close this window.
                     </p>
                 </div>
             </body>
             </html>
         `);
 
-    } catch (error) {
+    } catch (err) {
+        console.error("Zoho OAuth error:", err);
+
         return res.status(500).send(`
             <h2>Server Error</h2>
-            <pre>${error.message}</pre>
+            <p>Unable to complete Zoho authorization.</p>
         `);
     }
 }
