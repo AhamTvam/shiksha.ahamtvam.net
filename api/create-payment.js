@@ -128,7 +128,7 @@ export default async function handler(req, res) {
             currency: "INR",
 
             description:
-                `Enrollment for ${selectedCourse.name}`,
+               `Enrollment for ${selectedCourse.name}`,
 
             reference_number: registrationId,
 
@@ -147,7 +147,7 @@ export default async function handler(req, res) {
                     email: email.trim(),
 
                     description:
-                        `${selectedCourse.name} - AhámTvám Shiksha`,
+                        `${selectedCourse.name} - Shiksha`,
 
                     success_url:
                         "https://shiksha.ahamtvam.net/after-enroll.html",
