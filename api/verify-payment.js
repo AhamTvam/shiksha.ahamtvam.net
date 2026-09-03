@@ -144,24 +144,19 @@ export default async function handler(req, res) {
         // --------------------------------------------------
 
         return res.status(200).json({
-            success: true,
-            verified: verified,
+    success: true,
 
-            payment_status: paymentStatus,
-            session_status: sessionStatus,
+    checkout_url: checkoutUrl,
 
-            course: course || null,
-            amount: actualAmount,
+    registration_id: registrationId,
 
-            registration_id:
-                registrationId || null,
+    course: course,
 
-            payment_id:
-                payment?.payment_id || null,
+    amount: selectedCourse.amount,
 
-            payments_session_id:
-                session.payments_session_id
-        });
+    payments_session_id:
+        paymentResult.payments_session.payments_session_id
+});
 
     } catch (error) {
         console.error(
