@@ -208,16 +208,19 @@ export default async function handler(req, res) {
         // --------------------------------------------------
 
         return res.status(200).json({
-            success: true,
+    success: true,
 
-            checkout_url: checkoutUrl,
+    checkout_url: checkoutUrl,
 
-            registration_id: registrationId,
+    registration_id: registrationId,
 
-            course: course,
+    course: course,
 
-            amount: selectedCourse.amount
-        });
+    amount: selectedCourse.amount,
+
+    payments_session_id:
+        paymentResult.payments_session.payments_session_id
+});
 
     } catch (error) {
 
