@@ -72,16 +72,17 @@ export default async function handler(req, res) {
         const zohoData = await zohoResponse.json();
 
         if (!zohoResponse.ok || !zohoData.payments_session) {
-            console.error(
-                "Zoho verification error:",
-                zohoData
-            );
+    console.error(
+        "Zoho verification error:",
+        zohoData
+    );
 
-            return res.status(500).json({
-                success: false,
-                message: "Unable to verify payment with Zoho."
-            });
-        }
+    return res.status(500).json({
+        success: false,
+        message: "Unable to verify payment with Zoho.",
+        zoho_error: zohoData
+    });
+}
 
         const session = zohoData.payments_session;
 
