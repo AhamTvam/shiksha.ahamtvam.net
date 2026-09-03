@@ -24250,3 +24250,164 @@ img {
     font-size: 14px;
     text-align: center;
 }
+
+/* =========================================
+   ENROLLMENT MODAL
+   ========================================= */
+
+.enrollment-modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 99999;
+}
+
+.enrollment-modal.active {
+    display: flex;
+}
+
+.enrollment-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: enrollmentModalIn 0.25s ease;
+}
+
+@keyframes enrollmentModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.enrollment-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    color: #555;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.enrollment-close:hover {
+    color: #000;
+}
+
+.enrollment-modal-content h3 {
+    margin: 0 35px 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+.enrollment-modal-content p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.enrollment-field {
+    margin-bottom: 18px;
+}
+
+.enrollment-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.enrollment-field input {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.enrollment-field input:focus {
+    border-color: #309255;
+    box-shadow: 0 0 0 3px rgba(48, 146, 85, 0.10);
+}
+
+.enrollment-error {
+    display: none;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #dc3545;
+}
+
+.enrollment-error.active {
+    display: block;
+}
+
+.enrollment-submit {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    background: #309255;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.enrollment-submit:hover {
+    background: #267746;
+}
+
+.enrollment-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+
+    .enrollment-modal {
+        padding: 15px;
+    }
+
+    .enrollment-modal-content {
+        padding: 28px 22px;
+        border-radius: 10px;
+    }
+
+    .enrollment-modal-content h3 {
+        font-size: 21px;
+    }
+
+    .enrollment-field input {
+        height: 48px;
+    }
+}
