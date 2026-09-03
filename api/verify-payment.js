@@ -1,4 +1,3 @@
-
 export default async function handler(req, res) {
     if (req.method !== "GET") {
         return res.status(405).json({
@@ -144,19 +143,24 @@ export default async function handler(req, res) {
         // --------------------------------------------------
 
         return res.status(200).json({
-    success: true,
+            success: true,
+            verified: verified,
 
-    checkout_url: checkoutUrl,
+            payment_status: paymentStatus,
+            session_status: sessionStatus,
 
-    registration_id: registrationId,
+            course: course || null,
+            amount: actualAmount,
 
-    course: course,
+            registration_id:
+                registrationId || null,
 
-    amount: selectedCourse.amount,
+            payment_id:
+                payment?.payment_id || null,
 
-    payments_session_id:
-        paymentResult.payments_session.payments_session_id
-});
+            payments_session_id:
+                session.payments_session_id
+        });
 
     } catch (error) {
         console.error(
