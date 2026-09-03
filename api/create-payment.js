@@ -184,21 +184,21 @@ export default async function handler(req, res) {
         // --------------------------------------------------
 
         if (
-            !paymentResponse.ok ||
-            !paymentResult.payments_session ||
-            !paymentResult.payments_session.access_key
-        ) {
-            console.error(
-                "Zoho payment session error:",
-                paymentResult
-            );
+    !paymentResponse.ok ||
+    !paymentResult.payments_session ||
+    !paymentResult.payments_session.access_key
+) {
+    console.error(
+        "Zoho payment session error:",
+        paymentResult
+    );
 
-            return res.status(500).json({
-                success: false,
-                message:
-                    "Unable to create payment session."
-            });
-        }
+    return res.status(500).json({
+        success: false,
+        message: "Zoho payment session failed.",
+        zoho_error: paymentResult
+    });
+}
 
         // --------------------------------------------------
         // CREATE HOSTED CHECKOUT URL
