@@ -133,13 +133,6 @@ export default async function handler(req, res) {
             reference_number: registrationId,
 
             configurations: {
-                allowed_payment_methods: [
-                    "upi",
-                    "card",
-                    "net_banking",
-                    "wallet"
-                ],
-
                 hosted_checkout_parameters: {
                     phone_country_code: "IN",
                     phone: cleanPhone,
