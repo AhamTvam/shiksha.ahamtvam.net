@@ -721,7 +721,12 @@ content="AhámTvám Shiksha">
     </li>
 </ul>
 
-    <a class="btn btn-primary btn-hover-dark w-100" href="payment.html">Enroll Now</a>
+    <button
+		type="button"
+		class="btn btn-primary btn-hover-dark w-100"
+		id="enrollVaaliBtn">
+		Enroll Now
+	</button>
                                 </div>
                             </div>
                             <!-- Sidebar Widget Information End -->
@@ -868,7 +873,157 @@ content="AhámTvám Shiksha">
 
     </div>
 
+	<!-- Vaali Enrollment Form Start -->
+<div id="enrollmentModal" class="enrollment-modal">
 
+    <div class="enrollment-modal-content">
+
+        <button type="button" class="enrollment-close" id="closeEnrollmentModal">
+            &times;
+        </button>
+
+        <div class="enrollment-header">
+            <h3>Enroll in Vaali</h3>
+            <p>DaVinci Resolve — Vaali (Basic)</p>
+        </div>
+
+        <form id="vaaliEnrollmentForm">
+
+            <div class="enrollment-field">
+                <label for="studentName">Full Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required>
+            </div>
+
+            <div class="enrollment-field">
+                <label for="studentEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="studentEmail"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <div class="enrollment-field">
+                <label for="studentPhone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="studentPhone"
+                    name="phone"
+                    placeholder="10-digit mobile number"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    required>
+            </div>
+
+            <div class="enrollment-course-summary">
+                <span>Course</span>
+                <strong>Vaali (Basic)</strong>
+
+                <span>Amount</span>
+                <strong>₹999</strong>
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-hover-dark w-100"
+                id="proceedPaymentBtn">
+                Proceed to Payment
+            </button>
+
+            <p id="enrollmentError" class="enrollment-error"></p>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- Vaali Enrollment Form End -->
+
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enrollBtn = document.getElementById("enrollVaaliBtn");
+    const modal = document.getElementById("enrollmentModal");
+    const closeBtn = document.getElementById("closeEnrollmentModal");
+    const form = document.getElementById("vaaliEnrollmentForm");
+    const paymentBtn = document.getElementById("proceedPaymentBtn");
+    const errorBox = document.getElementById("enrollmentError");
+
+    enrollBtn.addEventListener("click", function () {
+        modal.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", function () {
+        modal.classList.remove("active");
+        errorBox.textContent = "";
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("active");
+            errorBox.textContent = "";
+        }
+    });
+
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        errorBox.textContent = "";
+
+        const name = document.getElementById("studentName").value.trim();
+        const email = document.getElementById("studentEmail").value.trim();
+        const phone = document.getElementById("studentPhone").value.trim();
+
+        paymentBtn.disabled = true;
+        paymentBtn.textContent = "Creating Payment...";
+
+        try {
+
+            const response = await fetch("/api/create-payment.js", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    course: "vaali",
+                    name: name,
+                    email: email,
+                    phone: phone
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success || !data.checkout_url) {
+                throw new Error(
+                    data.message || "Unable to create payment session."
+                );
+            }
+
+            window.location.href = data.checkout_url;
+
+        } catch (error) {
+
+            console.error("Enrollment error:", error);
+
+            errorBox.textContent =
+                error.message || "Something went wrong. Please try again.";
+
+            paymentBtn.disabled = false;
+            paymentBtn.textContent = "Proceed to Payment";
+        }
+
+    });
+
+});
+</script>
 
 
 
