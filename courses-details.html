@@ -873,44 +873,173 @@ content="AhámTvám Shiksha">
 
     </div>
 
-	<!-- Vaali Enrollment Form Start -->
-<div id="enrollmentModal" class="enrollment-modal">
+<!-- Vaali Enrollment Form Start -->
 
-    <div class="enrollment-modal-content">
+<div
+    id="enrollmentModal"
+    style="
+        display: flex;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.65);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999999;
+    "
+>
 
-        <button type="button" class="enrollment-close" id="closeEnrollmentModal">
+    <div
+        style="
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        "
+    >
+
+        <!-- Close Button -->
+        <button
+            type="button"
+            id="closeEnrollmentModal"
+            style="
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                width: 36px;
+                height: 36px;
+                border: none;
+                background: transparent;
+                font-size: 28px;
+                line-height: 36px;
+                color: #555;
+                cursor: pointer;
+            "
+        >
             &times;
         </button>
 
-        <div class="enrollment-header">
-            <h3>Enroll in Vaali</h3>
-            <p>DaVinci Resolve — Vaali (Basic)</p>
-        </div>
+        <!-- Header -->
+        <h3
+            style="
+                margin: 0 40px 8px 0;
+                font-size: 25px;
+                font-weight: 700;
+                color: #111;
+            "
+        >
+            Enroll in Vaali
+        </h3>
+
+        <p
+            style="
+                margin: 0 0 25px;
+                color: #666;
+                font-size: 15px;
+            "
+        >
+            DaVinci Resolve — Vaali (Basic)
+        </p>
 
         <form id="vaaliEnrollmentForm">
 
-            <div class="enrollment-field">
-                <label for="studentName">Full Name</label>
+            <!-- Name -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentName"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Full Name
+                </label>
+
                 <input
                     type="text"
                     id="studentName"
                     name="name"
                     placeholder="Enter your full name"
-                    required>
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
             </div>
 
-            <div class="enrollment-field">
-                <label for="studentEmail">Email Address</label>
+            <!-- Email -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentEmail"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Email Address
+                </label>
+
                 <input
                     type="email"
                     id="studentEmail"
                     name="email"
                     placeholder="Enter your email address"
-                    required>
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
             </div>
 
-            <div class="enrollment-field">
-                <label for="studentPhone">Phone Number</label>
+            <!-- Phone -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentPhone"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Phone Number
+                </label>
+
                 <input
                     type="tel"
                     id="studentPhone"
@@ -918,111 +1047,364 @@ content="AhámTvám Shiksha">
                     placeholder="10-digit mobile number"
                     maxlength="10"
                     pattern="[0-9]{10}"
-                    required>
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
             </div>
 
-            <div class="enrollment-course-summary">
-                <span>Course</span>
-                <strong>Vaali (Basic)</strong>
+            <!-- Course Summary -->
+            <div
+                style="
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    gap: 8px 15px;
+                    margin: 20px 0;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background: #f5f7f6;
+                    font-size: 14px;
+                "
+            >
 
-                <span>Amount</span>
-                <strong>₹999</strong>
+                <span style="color:#666;">Course</span>
+                <strong style="color:#111;">Vaali (Basic)</strong>
+
+                <span style="color:#666;">Amount</span>
+                <strong style="color:#111;">₹999</strong>
+
             </div>
 
+            <!-- Payment Button -->
             <button
                 type="submit"
-                class="btn btn-primary btn-hover-dark w-100"
-                id="proceedPaymentBtn">
+                id="proceedPaymentBtn"
+                style="
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    border-radius: 6px;
+                    background: #0a1543;
+                    color: #ffffff;
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+                "
+            >
                 Proceed to Payment
             </button>
 
-            <p id="enrollmentError" class="enrollment-error"></p>
+            <!-- Error -->
+            <p
+                id="enrollmentError"
+                style="
+                    margin: 10px 0 0;
+                    color: #dc3545;
+                    font-size: 13px;
+                "
+            ></p>
 
         </form>
 
     </div>
 
 </div>
+
 <!-- Vaali Enrollment Form End -->
 
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
+<script>
+(function () {
+    "use strict";
 
-    const enrollBtn = document.getElementById("enrollVaaliBtn");
-    const modal = document.getElementById("enrollmentModal");
-    const closeBtn = document.getElementById("closeEnrollmentModal");
-    const form = document.getElementById("vaaliEnrollmentForm");
-    const paymentBtn = document.getElementById("proceedPaymentBtn");
-    const errorBox = document.getElementById("enrollmentError");
+    function initEnrollmentModal() {
 
-    enrollBtn.addEventListener("click", function () {
-        modal.classList.add("active");
-    });
+        const enrollBtn = document.getElementById("enrollVaaliBtn");
+        const modal = document.getElementById("enrollmentModal");
+        const closeBtn = document.getElementById("closeEnrollmentModal");
+        const form = document.getElementById("vaaliEnrollmentForm");
+        const paymentBtn = document.getElementById("proceedPaymentBtn");
+        const errorBox = document.getElementById("enrollmentError");
 
-    closeBtn.addEventListener("click", function () {
-        modal.classList.remove("active");
-        errorBox.textContent = "";
-    });
+        console.log("Enrollment system loaded");
+        console.log("Enroll button:", enrollBtn);
+        console.log("Modal:", modal);
 
-    modal.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.classList.remove("active");
-            errorBox.textContent = "";
+        if (!enrollBtn || !modal) {
+            console.error("Enrollment elements not found.");
+            return;
         }
-    });
 
-    form.addEventListener("submit", async function (event) {
+        /* =========================================
+           DEFAULT STATE
+           Modal stays hidden when page loads
+           ========================================= */
 
-        event.preventDefault();
+        modal.style.display = "none";
 
-        errorBox.textContent = "";
 
-        const name = document.getElementById("studentName").value.trim();
-        const email = document.getElementById("studentEmail").value.trim();
-        const phone = document.getElementById("studentPhone").value.trim();
+        /* =========================================
+           OPEN MODAL
+           ========================================= */
 
-        paymentBtn.disabled = true;
-        paymentBtn.textContent = "Creating Payment...";
+        enrollBtn.addEventListener("click", function (event) {
 
-        try {
+            event.preventDefault();
 
-            const response = await fetch("/api/create-payment.js", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    course: "vaali",
-                    name: name,
-                    email: email,
-                    phone: phone
-                })
+            console.log("Enroll Now clicked");
+
+            modal.style.display = "flex";
+
+            document.body.style.overflow = "hidden";
+
+        });
+
+
+        /* =========================================
+           CLOSE MODAL
+           ========================================= */
+
+        if (closeBtn) {
+
+            closeBtn.addEventListener("click", function () {
+
+                modal.style.display = "none";
+
+                document.body.style.overflow = "";
+
+                if (errorBox) {
+                    errorBox.textContent = "";
+                }
+
             });
 
-            const data = await response.json();
-
-            if (!response.ok || !data.success || !data.checkout_url) {
-                throw new Error(
-                    data.message || "Unable to create payment session."
-                );
-            }
-
-            window.location.href = data.checkout_url;
-
-        } catch (error) {
-
-            console.error("Enrollment error:", error);
-
-            errorBox.textContent =
-                error.message || "Something went wrong. Please try again.";
-
-            paymentBtn.disabled = false;
-            paymentBtn.textContent = "Proceed to Payment";
         }
 
-    });
 
-});
+        /* =========================================
+           CLOSE WHEN CLICKING OUTSIDE
+           ========================================= */
+
+        modal.addEventListener("click", function (event) {
+
+            if (event.target === modal) {
+
+                modal.style.display = "none";
+
+                document.body.style.overflow = "";
+
+                if (errorBox) {
+                    errorBox.textContent = "";
+                }
+
+            }
+
+        });
+
+
+        /* =========================================
+           CLOSE WITH ESC KEY
+           ========================================= */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (
+                event.key === "Escape" &&
+                modal.style.display === "flex"
+            ) {
+
+                modal.style.display = "none";
+
+                document.body.style.overflow = "";
+
+            }
+
+        });
+
+
+        /* =========================================
+           PAYMENT FORM
+           ========================================= */
+
+        if (form) {
+
+            form.addEventListener("submit", async function (event) {
+
+                event.preventDefault();
+
+                if (errorBox) {
+                    errorBox.textContent = "";
+                }
+
+
+                const name =
+                    document.getElementById("studentName").value.trim();
+
+                const email =
+                    document.getElementById("studentEmail").value.trim();
+
+                const phone =
+                    document.getElementById("studentPhone").value.trim();
+
+
+                /* Basic validation */
+
+                if (!name || !email || !phone) {
+
+                    if (errorBox) {
+                        errorBox.textContent =
+                            "Please fill in all the required details.";
+                    }
+
+                    return;
+                }
+
+
+                if (!/^[0-9]{10}$/.test(phone)) {
+
+                    if (errorBox) {
+                        errorBox.textContent =
+                            "Please enter a valid 10-digit phone number.";
+                    }
+
+                    return;
+                }
+
+
+                if (paymentBtn) {
+
+                    paymentBtn.disabled = true;
+
+                    paymentBtn.textContent =
+                        "Creating Payment...";
+
+                }
+
+
+                try {
+
+                    const response = await fetch(
+    "/api/create-payment.js",
+    {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            course: "vaali",
+            name: name,
+            email: email,
+            phone: phone
+        })
+    }
+);
+
+const responseText = await response.text();
+
+let data;
+
+try {
+    data = JSON.parse(responseText);
+} catch (parseError) {
+
+    console.error(
+        "Invalid response from payment server:",
+        responseText
+    );
+
+    throw new Error(
+        "Unable to connect to the payment service. Please try again."
+    );
+}
+
+                    console.log(
+                        "Payment response:",
+                        data
+                    );
+
+
+                    if (
+                        !response.ok ||
+                        !data.success ||
+                        !data.checkout_url
+                    ) {
+
+                        throw new Error(
+                            data.message ||
+                            "Unable to create payment session."
+                        );
+
+                    }
+
+
+                    /* Redirect to Zoho Hosted Checkout */
+
+                    window.location.href =
+                        data.checkout_url;
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Enrollment error:",
+                        error
+                    );
+
+
+                    if (errorBox) {
+
+                        errorBox.textContent =
+                            error.message ||
+                            "Something went wrong. Please try again.";
+
+                    }
+
+
+                    if (paymentBtn) {
+
+                        paymentBtn.disabled = false;
+
+                        paymentBtn.textContent =
+                            "Proceed to Payment";
+
+                    }
+
+                }
+
+            });
+
+        }
+
+    }
+
+
+    /* =========================================
+       START AFTER PAGE LOAD
+       ========================================= */
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initEnrollmentModal
+        );
+
+    } else {
+
+        initEnrollmentModal();
+
+    }
+
+})();
 </script>
 
 
