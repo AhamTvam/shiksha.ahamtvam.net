@@ -12,7 +12,8 @@ export default async function handler(req, res) {
             course,
             name,
             email,
-            phone
+            phone,
+            timezone
         } = req.body || {};
 
         // --------------------------------------------------
@@ -352,7 +353,17 @@ export default async function handler(req, res) {
                                     selectedCourse.amount,
 
                                 registration_date:
-                                    new Date().toISOString()
+                                    new Intl.DateTimeFormat("en-IN", {
+                                             day: "2-digit",
+                                             month: "2-digit",
+                                             year: "numeric",
+                                             hour: "2-digit",
+                                             minute: "2-digit",
+                                             second: "2-digit",
+                                             hour12: true,
+                                             timeZone: timezone || "Asia/Kolkata",
+                                             timeZoneName: "short"
+                                        }).format(new Date())
                             })
                     }
                 );
