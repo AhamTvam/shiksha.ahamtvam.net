@@ -112,6 +112,10 @@ export default async function handler(req, res) {
         const registrationId = session.configurations
             ?.hosted_checkout_parameters
             ?.udf2;
+        
+        const studentName = session.configurations
+            ?.hosted_checkout_parameters
+            ?.udf3;
 
         const expectedAmounts = {
             vaali: 999,
@@ -155,6 +159,9 @@ export default async function handler(req, res) {
 
             registration_id:
                 registrationId || null,
+
+            student_name:
+                studentName || null,
 
             payment_id:
                 payment?.payment_id || null,
