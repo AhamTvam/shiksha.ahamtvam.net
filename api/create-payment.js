@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         // --------------------------------------------------
 
         const GOOGLE_SHEET_WEBHOOK_URL =
-            "https://script.google.com/macros/s/AKfycbzJ9gBWB1N1DkS2ZiIaXUapyD_ad9D5hG5NmK9Fmzf9zxCJOfZ12kUtg6dkRFFG7Xhl/exec";
+            "https://script.google.com/macros/s/AKfycbxrI0jlMGLfDLu0eL-KuShfwHbZmNhOdW-fzNMAEugq_hauTBVepOAxrOgmhtYWR-vn/exec";
 
         // --------------------------------------------------
         // FIXED COURSE PRICES
