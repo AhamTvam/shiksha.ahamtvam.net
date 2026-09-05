@@ -75,590 +75,1162 @@
         }
 
 
-/* =====================================================
-   SHIKSHA WELCOME HEADER
-   ===================================================== */
-
-.shiksha-welcome-header {
-    position: relative;
-    width: 100%;
-    height: clamp(72px, 5.2vw, 100px);
-    overflow: hidden;
-    background: #000000;
-    display: flex;
-    align-items: center;
-    isolation: isolate;
-}
-
-
-/* =====================================================
-   MOVING CENTRAL GRADIENT
-   ===================================================== */
+        /* =====================================================
+           WELCOME HEADER
+           ===================================================== */
 
-.shiksha-header-glow {
-    position: absolute;
-
-    width: 78%;
-    height: 320%;
+        .shiksha-welcome-header {
 
-    left: 50%;
-    top: 50%;
+            position: relative;
 
-    transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100px;
 
-    background:
-        radial-gradient(
-            ellipse at center,
-            #0a1543 0%,
-            #0a1543 22%,
-            rgba(10, 21, 67, 0.97) 36%,
-            rgba(10, 21, 67, 0.80) 50%,
-            rgba(10, 21, 67, 0.42) 65%,
-            rgba(0, 0, 0, 0.88) 80%,
-            #000000 100%
-        );
+            overflow: hidden;
 
-    filter: blur(8px);
+            background: #000000;
 
-    z-index: -1;
+            display: flex;
+            align-items: center;
 
-    animation:
-        shikshaGlowMove
-        12s
-        ease-in-out
-        infinite
-        alternate;
-}
+            isolation: isolate;
 
+        }
 
-@keyframes shikshaGlowMove {
 
-    0% {
-        transform:
-            translate(-57%, -50%)
-            scale(1);
-    }
+        /* -----------------------------------------------------
+           CENTRAL MOVING GRADIENT
+           ----------------------------------------------------- */
 
-    25% {
-        transform:
-            translate(-49%, -53%)
-            scale(1.05);
-    }
+        .shiksha-header-glow {
 
-    50% {
-        transform:
-            translate(-43%, -48%)
-            scale(1.08);
-    }
+            position: absolute;
 
-    75% {
-        transform:
-            translate(-51%, -44%)
-            scale(1.04);
-    }
+            width: 78%;
+            height: 300%;
 
-    100% {
-        transform:
-            translate(-44%, -51%)
-            scale(1);
-    }
-}
+            left: 50%;
+            top: 50%;
 
+            transform:
+                translate(-50%, -50%);
 
-/* =====================================================
-   HEADER INNER
-   ===================================================== */
+            background:
 
-.shiksha-header-inner {
-    position: relative;
+                radial-gradient(
+                    ellipse at center,
 
-    width: 100%;
-    max-width: 1500px;
+                    #0a1543 0%,
+                    #0a1543 23%,
 
-    height: 100%;
+                    rgba(10, 21, 67, 0.98) 36%,
 
-    margin: 0 auto;
+                    rgba(10, 21, 67, 0.82) 48%,
 
-    padding:
-        0 clamp(12px, 3vw, 48px);
+                    rgba(10, 21, 67, 0.48) 62%,
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+                    rgba(0, 0, 0, 0.90) 78%,
 
+                    #000000 100%
+                );
 
-/* =====================================================
-   BRAND GROUP
-   ===================================================== */
+            filter: blur(8px);
 
-.shiksha-welcome-brand {
+            z-index: -1;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            animation:
+                shikshaGlowMove
+                12s
+                ease-in-out
+                infinite
+                alternate;
 
-    height: 100%;
+        }
 
-    margin: 0;
 
-    text-decoration: none;
+        /* -----------------------------------------------------
+           GLOW ANIMATION
+           ----------------------------------------------------- */
 
-    /*
-     * No translateX.
-     * This keeps the complete brand composition
-     * genuinely centered.
-     */
-}
+        @keyframes shikshaGlowMove {
 
+            0% {
 
-/* =====================================================
-   SWAGATHAM TEXT
-   ===================================================== */
+                transform:
+                    translate(-57%, -50%)
+                    scale(1);
 
-.welcome-text {
+            }
 
-    color: #ffffff;
+            20% {
 
-    font-family:
-        "Segoe Print",
-        cursive;
+                transform:
+                    translate(-50%, -54%)
+                    scale(1.05);
 
-    font-size:
-        clamp(15px, 2.05vw, 36px);
+            }
 
-    font-weight: 700;
+            40% {
 
-    line-height: 1;
+                transform:
+                    translate(-43%, -49%)
+                    scale(1.08);
 
-    white-space: nowrap;
+            }
 
-    text-shadow:
-        0 2px 8px
-        rgba(0, 0, 0, 0.35);
+            60% {
 
-}
+                transform:
+                    translate(-47%, -44%)
+                    scale(1.04);
 
+            }
 
-/* =====================================================
-   DIVIDER
-   ===================================================== */
+            80% {
 
-.welcome-divider {
+                transform:
+                    translate(-54%, -47%)
+                    scale(1.08);
 
-    display: block;
+            }
 
-    width:
-        clamp(2px, 0.18vw, 3px);
+            100% {
 
-    height:
-        clamp(32px, 3.1vw, 60px);
+                transform:
+                    translate(-44%, -51%)
+                    scale(1);
 
-    margin:
-        0 clamp(8px, 1.2vw, 22px);
+            }
 
-    background:
-        #f2a900;
+        }
 
-    flex-shrink: 0;
 
-}
+        /* =====================================================
+           HEADER INNER
+           ===================================================== */
 
+        .shiksha-header-inner {
 
-/* =====================================================
-   SHIKSHA BRAND
-   ===================================================== */
+            position: relative;
 
-.shiksha-brand {
+            width: 100%;
+            max-width: 1400px;
 
-    display: flex;
+            height: 100%;
 
-    align-items: center;
+            margin: 0 auto;
 
-    gap:
-        clamp(2px, 0.4vw, 7px);
+            padding:
+                0 45px;
 
-    height: 100%;
+            display: flex;
 
-}
+            align-items: center;
 
+            justify-content: center;
 
-/* Diamond */
+        }
 
-.shiksha-brand-icon {
 
-    width:
-        clamp(34px, 4vw, 74px);
+        /* =====================================================
+           BRAND
+           ===================================================== */
 
-    height: auto;
+        .shiksha-welcome-brand {
 
-    display: block;
+            display: flex;
 
-    object-fit: contain;
+            align-items: center;
 
-    flex-shrink: 0;
+            justify-content: center;
 
-}
+            height: 100%;
 
+            text-decoration: none;
 
-/* Shiksha text */
+            transform:
+                translateX(55px);
 
-.shiksha-brand-text {
+        }
 
-    width:
-        clamp(82px, 10.2vw, 190px);
 
-    height: auto;
+        /* -----------------------------------------------------
+           SWAGATHAM TEXT
+           ----------------------------------------------------- */
 
-    display: block;
+        .welcome-text {
 
-    object-fit: contain;
+            color: #ffffff;
 
-    flex-shrink: 0;
+            font-family:
+                "Segoe Print",
+                cursive;
 
-}
+            font-size: 36px;
 
+            font-weight: 700;
 
-/* =====================================================
-   CONTINUE BUTTON
-   ===================================================== */
+            line-height: 1;
 
-.shiksha-continue-btn {
+            white-space: nowrap;
 
-    position: absolute;
+            text-shadow:
+                0 2px 8px
+                rgba(0, 0, 0, 0.35);
 
-    right:
-        clamp(12px, 3vw, 48px);
+        }
 
-    top: 50%;
 
-    transform:
-        translateY(-50%);
+        /* =====================================================
+           DIVIDER
+           ===================================================== */
 
-    min-width:
-        clamp(82px, 8vw, 140px);
+        .welcome-divider {
 
-    padding:
-        clamp(7px, 0.7vw, 12px)
-        clamp(10px, 1.1vw, 22px);
+            display: block;
 
-    border-radius:
-        clamp(6px, 0.55vw, 10px);
+            width: 3px;
 
-    background:
-        #dffafa;
+            height: 60px;
 
-    color:
-        #0a1543;
+            margin:
+                0 22px;
 
-    font-family:
-        "Segoe Print",
-        cursive;
+            background:
+                #f2a900;
 
-    font-size:
-        clamp(11px, 1.15vw, 20px);
+            box-shadow:
+                0 0 10px
+                rgba(242, 169, 0, 0.15);
 
-    font-weight:
-        700;
+        }
 
-    line-height:
-        1;
 
-    text-align:
-        center;
+        /* =====================================================
+           SHIKSHA BRAND
+           ===================================================== */
 
-    text-decoration:
-        none;
+        .shiksha-brand {
 
-    white-space:
-        nowrap;
+            display: flex;
 
-    box-shadow:
-        0 6px 20px
-        rgba(0, 0, 0, 0.25);
+            align-items: center;
 
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
+            gap: 7px;
 
-    z-index: 5;
+            height: 100%;
 
-}
+        }
 
 
-.shiksha-continue-btn:hover {
+        .shiksha-brand-icon {
 
-    background:
-        #ffffff;
+            width: 74px;
 
-    color:
-        #0a1543;
+            height: auto;
 
-    transform:
-        translateY(-52%);
+            display: block;
 
-    box-shadow:
-        0 9px 26px
-        rgba(0, 0, 0, 0.32);
+            object-fit: contain;
 
-}
+        }
 
 
-/* =====================================================
-   TABLET
-   ===================================================== */
+        .shiksha-brand-text {
 
-@media (max-width: 900px) {
+            width: 190px;
 
-    .shiksha-header-inner {
-        padding:
-            0 18px;
-    }
+            height: auto;
 
-    .shiksha-welcome-brand {
-        max-width:
-            calc(100% - 125px);
-    }
+            display: block;
 
-}
+            object-fit: contain;
 
+        }
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
 
-@media (max-width: 600px) {
+        /* =====================================================
+           CONTINUE BUTTON
+           ===================================================== */
 
-    .shiksha-welcome-header {
+        .shiksha-continue-btn {
 
-        height:
-            clamp(68px, 18vw, 86px);
+            position: absolute;
 
-    }
+            right: 42px;
 
+            top: 50%;
 
-    .shiksha-header-inner {
+            transform:
+                translateY(-50%);
 
-        padding:
-            0 10px;
+            min-width: 140px;
 
-        justify-content:
-            center;
+            padding:
+                12px 22px;
 
-    }
+            border-radius: 10px;
 
+            background:
+                #dffafa;
 
-    .shiksha-welcome-brand {
+            color:
+                #0a1543;
 
-        max-width:
-            calc(100% - 78px);
+            font-family:
+                "Segoe Print",
+                cursive;
 
-        min-width:
-            0;
+            font-size: 20px;
 
-    }
+            font-weight: 700;
 
+            line-height: 1;
 
-    .welcome-text {
+            text-align: center;
 
-        font-size:
-            clamp(11px, 3.7vw, 17px);
+            text-decoration: none;
 
-    }
+            box-shadow:
+                0 6px 20px
+                rgba(0, 0, 0, 0.25);
 
+            transition:
+                all 0.25s ease;
 
-    .welcome-divider {
+        }
 
-        height:
-            clamp(25px, 8vw, 36px);
 
-        margin:
-            0 clamp(5px, 2vw, 10px);
+        .shiksha-continue-btn:hover {
 
-    }
+            background:
+                #ffffff;
 
+            color:
+                #0a1543;
 
-    .shiksha-brand-icon {
+            transform:
+                translateY(-52%);
 
-        width:
-            clamp(28px, 9vw, 40px);
+            box-shadow:
+                0 9px 26px
+                rgba(0, 0, 0, 0.32);
 
-    }
+        }
 
 
-    .shiksha-brand-text {
+        /* =====================================================
+           ENROLLMENT PAGE
+           ===================================================== */
 
-        width:
-            clamp(68px, 20vw, 94px);
+        .enrollment-page {
 
-    }
+            min-height:
+                calc(100vh - 100px);
 
+            padding:
+                80px 20px;
 
-    .shiksha-continue-btn {
+            background:
+                #f7f8fa;
 
-        right:
-            9px;
+            display:
+                flex;
 
-        min-width:
-            auto;
+            align-items:
+                center;
 
-        padding:
-            clamp(6px, 1.8vw, 8px)
-            clamp(8px, 2.4vw, 12px);
+            justify-content:
+                center;
 
-        font-size:
-            clamp(9px, 2.8vw, 12px);
+        }
 
-        border-radius:
-            6px;
 
-    }
+        .enrollment-container {
 
-}
+            width: 100%;
 
+            max-width: 760px;
 
-/* =====================================================
-   VERY SMALL MOBILE
-   ===================================================== */
+        }
 
-@media (max-width: 380px) {
 
-    .shiksha-welcome-header {
+        /* =====================================================
+           CARD
+           ===================================================== */
 
-        height:
-            64px;
+        .enrollment-card {
 
-    }
+            width: 100%;
 
+            background:
+                #ffffff;
 
-    .shiksha-header-inner {
+            border-radius:
+                18px;
 
-        padding:
-            0 7px;
+            padding:
+                55px 60px;
 
-    }
+            text-align:
+                center;
 
+            box-shadow:
+                0 18px 55px
+                rgba(0, 0, 0, 0.08);
 
-    .shiksha-welcome-brand {
+            box-sizing:
+                border-box;
 
-        max-width:
-            calc(100% - 68px);
+        }
 
-    }
 
+        /* =====================================================
+           SUCCESS ICON
+           ===================================================== */
 
-    .welcome-text {
+        .success-icon {
 
-        font-size:
-            clamp(9px, 3.2vw, 12px);
+            width: 78px;
 
-    }
+            height: 78px;
 
+            margin:
+                0 auto 25px;
 
-    .welcome-divider {
+            border-radius:
+                50%;
 
-        height:
-            24px;
+            background:
+                #eaf8ef;
 
-        margin:
-            0 5px;
+            display:
+                flex;
 
-    }
+            align-items:
+                center;
 
+            justify-content:
+                center;
 
-    .shiksha-brand-icon {
+        }
 
-        width:
-            26px;
 
-    }
+        .success-icon i {
 
+            font-size:
+                40px;
 
-    .shiksha-brand-text {
+            color:
+                #28a745;
 
-        width:
-            64px;
+        }
 
-    }
 
+        /* =====================================================
+           TEXT
+           ===================================================== */
 
-    .shiksha-continue-btn {
+        .enrollment-card .subtitle {
 
-        right:
-            7px;
+            margin-bottom:
+                10px;
 
-        padding:
-            5px 7px;
+            font-size:
+                13px;
 
-        font-size:
-            9px;
+            font-weight:
+                700;
 
-    }
+            letter-spacing:
+                1.8px;
 
-}
+            text-transform:
+                uppercase;
 
+            color:
+                #777;
 
-/* =====================================================
-   EXTRA SMALL SCREENS
-   ===================================================== */
+        }
 
-@media (max-width: 330px) {
 
-    .shiksha-welcome-brand {
+        .enrollment-card h1 {
 
-        max-width:
-            calc(100% - 62px);
+            margin:
+                0 0 15px;
 
-    }
+            font-size:
+                34px;
 
+            font-weight:
+                700;
 
-    .welcome-text {
+            color:
+                #222;
 
-        font-size:
-            8.5px;
+        }
 
-    }
 
+        .enrollment-card .intro {
 
-    .welcome-divider {
+            max-width:
+                560px;
 
-        margin:
-            0 4px;
+            margin:
+                0 auto 35px;
 
-    }
+            font-size:
+                15px;
 
+            line-height:
+                1.8;
 
-    .shiksha-brand-icon {
+            color:
+                #666;
 
-        width:
-            23px;
+        }
 
-    }
 
+        /* =====================================================
+           PAYMENT DETAILS
+           ===================================================== */
 
-    .shiksha-brand-text {
+        .payment-details {
 
-        width:
-            58px;
+            width: 100%;
 
-    }
+            border:
+                1px solid #e7e7e7;
 
+            border-radius:
+                12px;
 
-    .shiksha-continue-btn {
+            overflow:
+                hidden;
 
-        right:
-            5px;
+            margin-bottom:
+                30px;
 
-        padding:
-            5px 6px;
+            text-align:
+                left;
 
-        font-size:
-            8px;
+        }
 
-    }
 
-}
+        .payment-detail-row {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                20px;
+
+            padding:
+                17px 22px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+        }
+
+
+        .payment-detail-row:last-child {
+
+            border-bottom:
+                none;
+
+        }
+
+
+        .payment-detail-label {
+
+            font-size:
+                14px;
+
+            color:
+                #777;
+
+        }
+
+
+        .payment-detail-value {
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
+            color:
+                #222;
+
+            text-align:
+                right;
+
+        }
+
+
+        .payment-status {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                6px;
+
+            color:
+                #28a745;
+
+        }
+
+
+        .payment-status i {
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           ACTION BUTTONS
+           ===================================================== */
+
+        .enrollment-actions {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .enrollment-actions .btn {
+
+            min-width:
+                190px;
+
+        }
+
+
+        .secondary-button {
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            color:
+                #333;
+
+        }
+
+
+        .secondary-button:hover {
+
+            background:
+                #f5f5f5;
+
+            color:
+                #222;
+
+        }
+
+
+        /* =====================================================
+           NOTE
+           ===================================================== */
+
+        .enrollment-note {
+
+            margin-top:
+                30px;
+
+            padding:
+                15px 18px;
+
+            background:
+                #f8f8f8;
+
+            border-radius:
+                8px;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+
+            color:
+                #777;
+
+        }
+
+
+        /* =====================================================
+           VERIFICATION STATE
+           ===================================================== */
+
+        .verification-state {
+
+            display:
+                none;
+
+        }
+
+
+        .verification-state.active {
+
+            display:
+                block;
+
+        }
+
+
+        /* =====================================================
+           LOADING SPINNER
+           ===================================================== */
+
+        .verification-spinner {
+
+            width:
+                45px;
+
+            height:
+                45px;
+
+            margin:
+                0 auto 25px;
+
+            border:
+                4px solid #eeeeee;
+
+            border-top-color:
+                #0a1543;
+
+            border-radius:
+                50%;
+
+            animation:
+                spin
+                0.8s
+                linear
+                infinite;
+
+        }
+
+
+        @keyframes spin {
+
+            to {
+
+                transform:
+                    rotate(360deg);
+
+            }
+
+        }
+
+
+        /* =====================================================
+           ERROR
+           ===================================================== */
+
+        .error-state {
+
+            display:
+                none;
+
+        }
+
+
+        .error-state.active {
+
+            display:
+                block;
+
+        }
+
+
+        .error-icon {
+
+            width:
+                78px;
+
+            height:
+                78px;
+
+            margin:
+                0 auto 25px;
+
+            border-radius:
+                50%;
+
+            background:
+                #fff0f0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .error-icon i {
+
+            font-size:
+                40px;
+
+            color:
+                #dc3545;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .enrollment-footer {
+
+            text-align:
+                center;
+
+            margin-top:
+                25px;
+
+            font-size:
+                13px;
+
+            color:
+                #888;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .shiksha-welcome-header {
+
+                height:
+                    90px;
+
+            }
+
+
+            .shiksha-header-inner {
+
+                padding:
+                    0 14px;
+
+                justify-content:
+                    space-between;
+
+            }
+
+
+            .shiksha-welcome-brand {
+
+                margin:
+                    0;
+
+                transform:
+                    none;
+
+                min-width:
+                    0;
+
+            }
+
+
+            .welcome-text {
+
+                font-size:
+                    15px;
+
+            }
+
+
+            .welcome-divider {
+
+                width:
+                    2px;
+
+                height:
+                    35px;
+
+                margin:
+                    0 9px;
+
+            }
+
+
+            .shiksha-brand {
+
+                gap:
+                    3px;
+
+            }
+
+
+            .shiksha-brand-icon {
+
+                width:
+                    38px;
+
+            }
+
+
+            .shiksha-brand-text {
+
+                width:
+                    90px;
+
+            }
+
+
+            .shiksha-continue-btn {
+
+                position:
+                    relative;
+
+                right:
+                    auto;
+
+                top:
+                    auto;
+
+                transform:
+                    none;
+
+                min-width:
+                    auto;
+
+                padding:
+                    8px 11px;
+
+                margin-left:
+                    8px;
+
+                border-radius:
+                    7px;
+
+                font-size:
+                    12px;
+
+                flex-shrink:
+                    0;
+
+            }
+
+
+            .shiksha-continue-btn:hover {
+
+                transform:
+                    translateY(-1px);
+
+            }
+
+
+            .enrollment-page {
+
+                min-height:
+                    calc(100vh - 90px);
+
+                padding:
+                    45px 15px;
+
+            }
+
+
+            .enrollment-card {
+
+                padding:
+                    40px 22px;
+
+                border-radius:
+                    13px;
+
+            }
+
+
+            .enrollment-card h1 {
+
+                font-size:
+                    27px;
+
+            }
+
+
+            .enrollment-card .intro {
+
+                font-size:
+                    14px;
+
+            }
+
+
+            .payment-detail-row {
+
+                padding:
+                    15px;
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+
+                gap:
+                    5px;
+
+            }
+
+
+            .payment-detail-value {
+
+                text-align:
+                    left;
+
+                word-break:
+                    break-word;
+
+            }
+
+
+            .enrollment-actions {
+
+                flex-direction:
+                    column;
+
+            }
+
+
+            .enrollment-actions .btn {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 390px) {
+
+            .shiksha-welcome-header {
+
+                height:
+                    82px;
+
+            }
+
+
+            .shiksha-header-inner {
+
+                padding:
+                    0 9px;
+
+            }
+
+
+            .welcome-text {
+
+                font-size:
+                    11px;
+
+            }
+
+
+            .welcome-divider {
+
+                height:
+                    28px;
+
+                margin:
+                    0 6px;
+
+            }
+
+
+            .shiksha-brand-icon {
+
+                width:
+                    31px;
+
+            }
+
+
+            .shiksha-brand-text {
+
+                width:
+                    74px;
+
+            }
+
+
+            .shiksha-continue-btn {
+
+                padding:
+                    7px 9px;
+
+                margin-left:
+                    5px;
+
+                font-size:
+                    10px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCE MOTION ACCESSIBILITY
+           ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .shiksha-header-glow {
+
+                animation:
+                    none;
+
+            }
+
+        }
+
     </style>
 
 </head>
@@ -699,12 +1271,20 @@
 
                 <span class="shiksha-brand">
 
-    <img
-        src="assets/images/logo-2.png"
-        alt="AhámTvám Shiksha"
-        class="shiksha-full-logo">
+                    <img
+                        src="assets/images/logo-icon.png"
+                        alt="AhámTvám"
+                        class="shiksha-brand-icon"
+                    >
 
-</span>
+
+                    <img
+                        src="assets/images/text-logo.png"
+                        alt="Shiksha"
+                        class="shiksha-brand-text"
+                    >
+
+                </span>
 
             </a>
 
