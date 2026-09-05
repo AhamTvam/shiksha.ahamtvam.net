@@ -16,6 +16,13 @@ export default async function handler(req, res) {
         } = req.body || {};
 
         // --------------------------------------------------
+        // GOOGLE SHEETS WEB APP
+        // --------------------------------------------------
+
+        const GOOGLE_SHEET_WEBHOOK_URL =
+            "https://script.google.com/macros/s/AKfycbzJ9gBWB1N1DkS2ZiIaXUapyD_ad9D5hG5NmK9Fmzf9zxCJOfZ12kUtg6dkRFFG7Xhl/exec";
+
+        // --------------------------------------------------
         // FIXED COURSE PRICES
         // Never trust the amount sent from the frontend.
         // --------------------------------------------------
@@ -23,19 +30,30 @@ export default async function handler(req, res) {
         const courses = {
             vaali: {
                 name: "DaVinci Resolve Vaali (Basic)",
+                level: "Basic",
+                mrp: 1499,
                 amount: 999
             },
+
             sugreeva: {
                 name: "DaVinci Resolve Sugreeva (Intermediate)",
+                level: "Intermediate",
+                mrp: 4499,
                 amount: 3499
             },
+
             garuda: {
                 name: "DaVinci Resolve Garuda (Advanced)",
+                level: "Advanced",
+                mrp: 12999,
                 amount: 9499
             }
         };
 
-        // Validate course
+        // --------------------------------------------------
+        // VALIDATE COURSE
+        // --------------------------------------------------
+
         if (!course || !courses[course]) {
             return res.status(400).json({
                 success: false,
@@ -43,7 +61,10 @@ export default async function handler(req, res) {
             });
         }
 
-        // Validate customer details
+        // --------------------------------------------------
+        // VALIDATE CUSTOMER DETAILS
+        // --------------------------------------------------
+
         if (!name || !email || !phone) {
             return res.status(400).json({
                 success: false,
@@ -51,8 +72,12 @@ export default async function handler(req, res) {
             });
         }
 
-        // Basic email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // --------------------------------------------------
+        // BASIC EMAIL VALIDATION
+        // --------------------------------------------------
+
+        const emailRegex =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailRegex.test(email)) {
             return res.status(400).json({
@@ -61,17 +86,25 @@ export default async function handler(req, res) {
             });
         }
 
-        // Basic Indian phone validation
-        const cleanPhone = String(phone).replace(/\D/g, "");
+        // --------------------------------------------------
+        // BASIC INDIAN PHONE VALIDATION
+        // --------------------------------------------------
+
+        const cleanPhone =
+            String(phone).replace(/\D/g, "");
 
         if (cleanPhone.length !== 10) {
             return res.status(400).json({
                 success: false,
-                message: "Please enter a valid 10-digit phone number."
+                message:
+                    "Please enter a valid 10-digit phone number."
             });
         }
 
         const selectedCourse = courses[course];
+
+        const studentName = name.trim();
+        const studentEmail = email.trim();
 
         // --------------------------------------------------
         // CREATE UNIQUE REGISTRATION REFERENCE
@@ -81,63 +114,98 @@ export default async function handler(req, res) {
             "ATV-" +
             Date.now().toString(36).toUpperCase() +
             "-" +
-            Math.random().toString(36).substring(2, 7).toUpperCase();
+            Math.random()
+                .toString(36)
+                .substring(2, 7)
+                .toUpperCase();
 
         // --------------------------------------------------
-        // GET ZOHO ACCESS TOKEN USING REFRESH TOKEN
+        // GET ZOHO ACCESS TOKEN
         // --------------------------------------------------
 
         const tokenParams = new URLSearchParams({
-            refresh_token: process.env.ZOHO_REFRESH_TOKEN,
-            client_id: process.env.ZOHO_CLIENT_ID,
-            client_secret: process.env.ZOHO_CLIENT_SECRET,
-            grant_type: "refresh_token"
+            refresh_token:
+                process.env.ZOHO_REFRESH_TOKEN,
+
+            client_id:
+                process.env.ZOHO_CLIENT_ID,
+
+            client_secret:
+                process.env.ZOHO_CLIENT_SECRET,
+
+            grant_type:
+                "refresh_token"
         });
 
         const tokenResponse = await fetch(
             "https://accounts.zoho.in/oauth/v2/token",
             {
                 method: "POST",
+
                 headers: {
                     "Content-Type":
                         "application/x-www-form-urlencoded"
                 },
-                body: tokenParams.toString()
+
+                body:
+                    tokenParams.toString()
             }
         );
 
-        const tokenData = await tokenResponse.json();
+        const tokenData =
+            await tokenResponse.json();
 
-        if (!tokenResponse.ok || !tokenData.access_token) {
-            console.error("Zoho token error:", tokenData);
+        if (
+            !tokenResponse.ok ||
+            !tokenData.access_token
+        ) {
+            console.error(
+                "Zoho token error:",
+                tokenData
+            );
 
             return res.status(500).json({
                 success: false,
-                message: "Unable to authenticate with payment gateway."
+                message:
+                    "Unable to authenticate with payment gateway."
             });
         }
 
-        const accessToken = tokenData.access_token;
+        const accessToken =
+            tokenData.access_token;
 
         // --------------------------------------------------
         // CREATE ZOHO PAYMENT SESSION
         // --------------------------------------------------
 
         const paymentData = {
-            amount: selectedCourse.amount,
-            currency: "INR",
+            amount:
+                selectedCourse.amount,
+
+            currency:
+                "INR",
 
             description:
-               `Enrollment for ${selectedCourse.name}`,
+                `Enrollment for ${selectedCourse.name}`,
 
-            reference_number: registrationId,
+            reference_number:
+                registrationId,
 
             configurations: {
+
                 hosted_checkout_parameters: {
-                    phone_country_code: "IN",
-                    phone: cleanPhone,
-                    name: name.trim(),
-                    email: email.trim(),
+
+                    phone_country_code:
+                        "IN",
+
+                    phone:
+                        cleanPhone,
+
+                    name:
+                        studentName,
+
+                    email:
+                        studentEmail,
 
                     description:
                         `${selectedCourse.name} - Shiksha`,
@@ -148,58 +216,182 @@ export default async function handler(req, res) {
                     failure_url:
                         "https://shiksha.ahamtvam.net/after-enroll.html",
 
-                    udf1: course,
-udf2: registrationId,
-udf3: name
+                    // UDF1 = Course
+                    udf1:
+                        course,
+
+                    // UDF2 = Registration ID
+                    udf2:
+                        registrationId,
+
+                    // UDF3 = Student Name
+                    udf3:
+                        studentName
                 }
             }
         };
 
-        const paymentResponse = await fetch(
-            `https://payments.zoho.in/api/v1/paymentsessions?account_id=${process.env.ZOHO_PAYMENTS_ACCOUNT_ID}`,
-            {
-                method: "POST",
+        const paymentResponse =
+            await fetch(
+                `https://payments.zoho.in/api/v1/paymentsessions?account_id=${process.env.ZOHO_PAYMENTS_ACCOUNT_ID}`,
+                {
+                    method: "POST",
 
-                headers: {
-                    "Authorization":
-                        `Zoho-oauthtoken ${accessToken}`,
+                    headers: {
+                        "Authorization":
+                            `Zoho-oauthtoken ${accessToken}`,
 
-                    "Content-Type": "application/json"
-                },
+                        "Content-Type":
+                            "application/json"
+                    },
 
-                body: JSON.stringify(paymentData)
-            }
-        );
+                    body:
+                        JSON.stringify(paymentData)
+                }
+            );
 
-        const paymentResult = await paymentResponse.json();
+        const paymentResult =
+            await paymentResponse.json();
 
         // --------------------------------------------------
         // HANDLE ZOHO ERROR
         // --------------------------------------------------
 
         if (
-    !paymentResponse.ok ||
-    !paymentResult.payments_session ||
-    !paymentResult.payments_session.access_key
-) {
-    console.error(
-        "Zoho payment session error:",
-        paymentResult
-    );
+            !paymentResponse.ok ||
+            !paymentResult.payments_session ||
+            !paymentResult.payments_session.access_key
+        ) {
+            console.error(
+                "Zoho payment session error:",
+                paymentResult
+            );
 
-    return res.status(500).json({
-        success: false,
-        message: "Zoho payment session failed.",
-        zoho_error: paymentResult
-    });
-}
+            return res.status(500).json({
+                success: false,
+                message:
+                    "Zoho payment session failed.",
+                zoho_error:
+                    paymentResult
+            });
+        }
+
+        // --------------------------------------------------
+        // EXTRACT PAYMENT SESSION
+        // --------------------------------------------------
+
+        const paymentSession =
+            paymentResult.payments_session;
+
+        const paymentSessionId =
+            paymentSession.payments_session_id;
+
+        // --------------------------------------------------
+        // SAVE INITIAL REGISTRATION TO GOOGLE SHEET
+        // --------------------------------------------------
+
+        try {
+
+            const sheetResponse =
+                await fetch(
+                    GOOGLE_SHEET_WEBHOOK_URL,
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
+
+                        body:
+                            JSON.stringify({
+
+                                registration_id:
+                                    registrationId,
+
+                                student_name:
+                                    studentName,
+
+                                email:
+                                    studentEmail,
+
+                                phone:
+                                    cleanPhone,
+
+                                course:
+                                    course,
+
+                                course_level:
+                                    selectedCourse.level,
+
+                                mrp:
+                                    selectedCourse.mrp,
+
+                                offer_price:
+                                    selectedCourse.amount,
+
+                                payment_id:
+                                    "",
+
+                                payment_session_id:
+                                    paymentSessionId,
+
+                                payment_status:
+                                    "Payment Pending",
+
+                                payment_failed_count:
+                                    0,
+
+                                payment_attempt_count:
+                                    1,
+
+                                payment_method:
+                                    "",
+
+                                payment_amount:
+                                    selectedCourse.amount,
+
+                                registration_date:
+                                    new Date().toISOString()
+                            })
+                    }
+                );
+
+            if (!sheetResponse.ok) {
+
+                console.error(
+                    "Google Sheet error:",
+                    await sheetResponse.text()
+                );
+
+            } else {
+
+                const sheetResult =
+                    await sheetResponse.json();
+
+                console.log(
+                    "Google Sheet registration:",
+                    sheetResult
+                );
+            }
+
+        } catch (sheetError) {
+
+            // Do NOT stop the student's payment flow
+            // if Google Sheets has a temporary problem.
+
+            console.error(
+                "Google Sheet connection error:",
+                sheetError
+            );
+        }
 
         // --------------------------------------------------
         // CREATE HOSTED CHECKOUT URL
         // --------------------------------------------------
 
         const accessKey =
-            paymentResult.payments_session.access_key;
+            paymentSession.access_key;
 
         const checkoutUrl =
             `https://payments.zoho.in/hostedcheckout/${accessKey}`;
@@ -209,19 +401,25 @@ udf3: name
         // --------------------------------------------------
 
         return res.status(200).json({
-    success: true,
 
-    checkout_url: checkoutUrl,
+            success:
+                true,
 
-    registration_id: registrationId,
+            checkout_url:
+                checkoutUrl,
 
-    course: course,
+            registration_id:
+                registrationId,
 
-    amount: selectedCourse.amount,
+            course:
+                course,
 
-    payments_session_id:
-        paymentResult.payments_session.payments_session_id
-});
+            amount:
+                selectedCourse.amount,
+
+            payments_session_id:
+                paymentSessionId
+        });
 
     } catch (error) {
 
