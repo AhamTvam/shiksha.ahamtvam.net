@@ -692,27 +692,44 @@
 
         .whatsapp-button {
 
-            background:
-                #ffffff;
+    background:
+        #25D366;
 
-            border:
-                1px solid #dddddd;
+    border:
+        1px solid #25D366;
 
-            color:
-                #333;
+    color:
+        #ffffff;
 
-        }
+    font-weight:
+        600;
+
+    box-shadow:
+        0 6px 18px
+        rgba(37, 211, 102, 0.20);
+
+}
 
 
-        .whatsapp-button:hover {
+.whatsapp-button:hover {
 
-            background:
-                #f5f5f5;
+    background:
+        #20bd5a;
 
-            color:
-                #222;
+    border-color:
+        #20bd5a;
 
-        }
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 9px 24px
+        rgba(37, 211, 102, 0.28);
+
+}
 
 
         /* =====================================================
@@ -1805,9 +1822,10 @@ document.addEventListener(
                ------------------------------------------------- */
 
             document.getElementById(
-                "studentName"
-            ).textContent =
-                "—";
+    "studentName"
+).textContent =
+    data.student_name ||
+    "—";
 
 
             /* -------------------------------------------------
