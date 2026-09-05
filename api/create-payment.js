@@ -149,7 +149,8 @@ export default async function handler(req, res) {
                         "https://shiksha.ahamtvam.net/after-enroll.html",
 
                     udf1: course,
-                    udf2: registrationId
+udf2: registrationId,
+udf3: name
                 }
             }
         };
