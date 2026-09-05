@@ -9,18 +9,25 @@
     <title>Enrollment Confirmed - AhámTvám Shiksha</title>
 
     <meta name="robots" content="noindex, nofollow">
+
     <meta name="description"
         content="Your AhámTvám Shiksha course enrollment has been successfully confirmed.">
+
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Favicon -->
-    <link rel="shortcut icon"
+
+    <link
+        rel="shortcut icon"
         type="image/x-icon"
-        href="assets/images/favicon.ico">
+        href="assets/images/favicon.ico"
+    >
 
 
     <!-- Google Fonts -->
+
     <link rel="preconnect"
         href="https://fonts.googleapis.com">
 
@@ -30,23 +37,34 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
 
     <!-- Icon Font CSS -->
-    <link rel="stylesheet"
-        href="assets/css/plugins/icofont.min.css">
 
-    <link rel="stylesheet"
-        href="assets/css/plugins/flaticon.css">
+    <link
+        rel="stylesheet"
+        href="assets/css/plugins/icofont.min.css"
+    >
 
-    <link rel="stylesheet"
-        href="assets/css/plugins/font-awesome.min.css">
+    <link
+        rel="stylesheet"
+        href="assets/css/plugins/flaticon.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/plugins/font-awesome.min.css"
+    >
 
 
     <!-- Main Style CSS -->
-    <link rel="stylesheet"
-        href="assets/css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
 
 
     <style>
@@ -57,21 +75,35 @@
 
         html,
         body {
+
             margin: 0;
             padding: 0;
             width: 100%;
             min-height: 100%;
+
         }
 
 
         body {
+
             background: #f7f8fa;
-            font-family: "Montserrat", sans-serif;
+
+            /*
+             * Cascadia Mono is used throughout
+             * the enrollment page.
+             */
+
+            font-family:
+                "Cascadia Mono",
+                monospace;
+
         }
 
 
         .main-wrapper {
+
             min-height: 100vh;
+
         }
 
 
@@ -229,6 +261,8 @@
 
             justify-content: center;
 
+            box-sizing: border-box;
+
         }
 
 
@@ -248,9 +282,6 @@
 
             text-decoration: none;
 
-            transform:
-                translateX(55px);
-
         }
 
 
@@ -261,6 +292,11 @@
         .welcome-text {
 
             color: #ffffff;
+
+            /*
+             * Header / navigation text intentionally
+             * stays in the existing handwritten font.
+             */
 
             font-family:
                 "Segoe Print",
@@ -345,76 +381,6 @@
             display: block;
 
             object-fit: contain;
-
-        }
-
-
-        /* =====================================================
-           CONTINUE BUTTON
-           ===================================================== */
-
-        .shiksha-continue-btn {
-
-            position: absolute;
-
-            right: 42px;
-
-            top: 50%;
-
-            transform:
-                translateY(-50%);
-
-            min-width: 140px;
-
-            padding:
-                12px 22px;
-
-            border-radius: 10px;
-
-            background:
-                #dffafa;
-
-            color:
-                #0a1543;
-
-            font-family:
-                "Segoe Print",
-                cursive;
-
-            font-size: 20px;
-
-            font-weight: 700;
-
-            line-height: 1;
-
-            text-align: center;
-
-            text-decoration: none;
-
-            box-shadow:
-                0 6px 20px
-                rgba(0, 0, 0, 0.25);
-
-            transition:
-                all 0.25s ease;
-
-        }
-
-
-        .shiksha-continue-btn:hover {
-
-            background:
-                #ffffff;
-
-            color:
-                #0a1543;
-
-            transform:
-                translateY(-52%);
-
-            box-shadow:
-                0 9px 26px
-                rgba(0, 0, 0, 0.32);
 
         }
 
@@ -730,7 +696,11 @@
         }
 
 
-        .secondary-button {
+        /* -----------------------------------------------------
+           WHATSAPP BUTTON
+           ----------------------------------------------------- */
+
+        .whatsapp-button {
 
             background:
                 #ffffff;
@@ -744,7 +714,7 @@
         }
 
 
-        .secondary-button:hover {
+        .whatsapp-button:hover {
 
             background:
                 #f5f5f5;
@@ -951,7 +921,7 @@
                     0 14px;
 
                 justify-content:
-                    space-between;
+                    center;
 
             }
 
@@ -1012,49 +982,6 @@
 
                 width:
                     90px;
-
-            }
-
-
-            .shiksha-continue-btn {
-
-                position:
-                    relative;
-
-                right:
-                    auto;
-
-                top:
-                    auto;
-
-                transform:
-                    none;
-
-                min-width:
-                    auto;
-
-                padding:
-                    8px 11px;
-
-                margin-left:
-                    8px;
-
-                border-radius:
-                    7px;
-
-                font-size:
-                    12px;
-
-                flex-shrink:
-                    0;
-
-            }
-
-
-            .shiksha-continue-btn:hover {
-
-                transform:
-                    translateY(-1px);
 
             }
 
@@ -1199,20 +1126,6 @@
 
             }
 
-
-            .shiksha-continue-btn {
-
-                padding:
-                    7px 9px;
-
-                margin-left:
-                    5px;
-
-                font-size:
-                    10px;
-
-            }
-
         }
 
 
@@ -1286,16 +1199,6 @@
 
                 </span>
 
-            </a>
-
-
-            <!-- Continue -->
-
-            <a
-                href="student/index.html"
-                class="shiksha-continue-btn"
-            >
-                Continue
             </a>
 
 
@@ -1505,6 +1408,8 @@
                     <div class="enrollment-actions">
 
 
+                        <!-- Continue to Course -->
+
                         <a
                             href="courses-details.html"
                             class="btn btn-primary btn-hover-dark"
@@ -1513,11 +1418,15 @@
                         </a>
 
 
+                        <!-- WhatsApp Group -->
+
                         <a
-                            href="student/index.html"
-                            class="btn secondary-button"
+                            href="https://chat.whatsapp.com/CQTTIlFELlIFlJmdXEYMAJ?s=sw&p=a&mlu=4&ilr=4"
+                            class="btn whatsapp-button"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
-                            Back to Home
+                            Join WhatsApp Group
                         </a>
 
 
