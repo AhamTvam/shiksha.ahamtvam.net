@@ -1268,15 +1268,15 @@ content="AhámTvám Shiksha">
                 }
 
 
-                if (!/^[0-9]{10}$/.test(phone)) {
+                if (!phone.trim()) {
 
-                    if (errorBox) {
-                        errorBox.textContent =
-                            "Please enter a valid 10-digit phone number.";
-                    }
+   					if (errorBox) {
+        				errorBox.textContent =
+            				"Please enter a valid mobile number.";
+    				}
 
-                    return;
-                }
+    				return;
+				}
 
 
                 if (paymentBtn) {
