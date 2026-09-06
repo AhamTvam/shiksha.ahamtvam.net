@@ -32,6 +32,8 @@ export default async function handler(req, res) {
             name,
             email,
             phone,
+            phone_national,
+            phone_country_code,
             timezone
         } = req.body || {};
 
@@ -112,13 +114,61 @@ export default async function handler(req, res) {
 
         const cleanPhone = String(phone).trim();
 
-        if (!cleanPhone) {
-            return res.status(400).json({
-                success: false,
-                message:
-                    "Please enter a valid mobile number."
-            });
-        }
+        const cleanPhone =
+    String(phone_national || "")
+        .replace(/\D/g, "");
+
+const studentPhone =
+    String(phone || "").trim();
+
+const phoneCountryCode =
+    String(phone_country_code || "")
+        .trim()
+        .toUpperCase();
+
+
+if (!studentPhone) {
+
+    return res.status(400).json({
+        success: false,
+        message:
+            "Please enter a valid mobile number."
+    });
+
+}
+
+
+if (!/^\+[1-9]\d{6,14}$/.test(studentPhone)) {
+
+    return res.status(400).json({
+        success: false,
+        message:
+            "Please enter a valid international mobile number."
+    });
+
+}
+
+
+if (!/^[A-Z]{2}$/.test(phoneCountryCode)) {
+
+    return res.status(400).json({
+        success: false,
+        message:
+            "Invalid phone country."
+    });
+
+}
+
+
+if (!/^\d{4,15}$/.test(cleanPhone)) {
+
+    return res.status(400).json({
+        success: false,
+        message:
+            "Invalid phone number."
+    });
+
+}
 
         const selectedCourse = courses[course];
         
@@ -238,7 +288,7 @@ const registrationDateWithTimezone =
                 hosted_checkout_parameters: {
 
                     phone_country_code:
-                        "IN",
+                        phoneCountryCode,
 
                     phone:
                         cleanPhone,
@@ -358,7 +408,7 @@ const registrationDateWithTimezone =
                                     studentEmail,
 
                                 phone:
-                                    cleanPhone,
+                                    studentPhone,
 
                                 course:
                                     course,
