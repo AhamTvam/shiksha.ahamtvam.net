@@ -110,14 +110,13 @@ export default async function handler(req, res) {
         // BASIC INDIAN PHONE VALIDATION
         // --------------------------------------------------
 
-        const cleanPhone =
-            String(phone).replace(/\D/g, "");
+        const cleanPhone = String(phone).trim();
 
-        if (cleanPhone.length !== 10) {
+        if (!cleanPhone) {
             return res.status(400).json({
                 success: false,
                 message:
-                    "Please enter a valid 10-digit phone number."
+                    "Please enter a valid mobile number."
             });
         }
 
