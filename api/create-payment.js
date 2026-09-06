@@ -1,3 +1,22 @@
+function getTimezoneAbbreviation(timeZone) {
+    try {
+        const parts = new Intl.DateTimeFormat("en-US", {
+            timeZone,
+            timeZoneName: "short"
+        }).formatToParts(new Date());
+
+        return (
+            parts.find(
+                part => part.type === "timeZoneName"
+            )?.value || timeZone
+        );
+
+    } catch {
+        return timeZone;
+    }
+}
+
+
 export default async function handler(req, res) {
     // Only allow POST requests
     if (req.method !== "POST") {
@@ -103,6 +122,29 @@ export default async function handler(req, res) {
         }
 
         const selectedCourse = courses[course];
+        
+        const studentTimezone =
+    timezone || "Asia/Kolkata";
+
+const registrationDate =
+    new Intl.DateTimeFormat("en-IN", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+        timeZone: studentTimezone
+    }).format(new Date());
+
+const timezoneAbbreviation =
+    getTimezoneAbbreviation(studentTimezone);
+
+const registrationDateWithTimezone =
+    `${registrationDate} ${timezoneAbbreviation} (${studentTimezone})`;
+
+        
 
         const studentName = name.trim();
         const studentEmail = email.trim();
