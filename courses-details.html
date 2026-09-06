@@ -50,6 +50,18 @@ content="AhámTvám Shiksha">
 
     <!-- Main Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/css/intlTelInput.css">
+
+<style>
+    .iti {
+        width: 100%;
+    }
+
+    .iti input {
+        width: 100%;
+    }
+</style>
 
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
@@ -1042,23 +1054,23 @@ content="AhámTvám Shiksha">
                 </label>
 
                 <input
-                    type="tel"
-                    id="studentPhone"
-                    name="phone"
-                    placeholder="Enter your mobile number with country code (+91 XXXXX XXXXX)"
-                    autocomplete="tel"
-                    required
-                    style="
-                        display: block;
-                        width: 100%;
-                        height: 50px;
-                        padding: 0 15px;
-                        border: 1px solid #ddd;
-                        border-radius: 6px;
-                        box-sizing: border-box;
-                        font-size: 15px;
-                    "
-                >
+    type="tel"
+    id="studentPhone"
+    name="phone"
+    placeholder="Enter your mobile number with country code (+91 XXXXX XXXXX)"
+    autocomplete="tel"
+    required
+    style="
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 0 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 15px;
+    "
+>
 
             </div>
 
@@ -1122,31 +1134,94 @@ content="AhámTvám Shiksha">
 
 <!-- Vaali Enrollment Form End -->
 
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/intlTelInput.min.js"></script>
+
 <script>
 (function () {
     "use strict";
 
     function initEnrollmentModal() {
 
-        const enrollBtn = document.getElementById("enrollVaaliBtn");
-        const modal = document.getElementById("enrollmentModal");
-        const closeBtn = document.getElementById("closeEnrollmentModal");
-        const form = document.getElementById("vaaliEnrollmentForm");
-        const paymentBtn = document.getElementById("proceedPaymentBtn");
-        const errorBox = document.getElementById("enrollmentError");
+        const enrollBtn =
+            document.getElementById("enrollVaaliBtn");
+
+        const modal =
+            document.getElementById("enrollmentModal");
+
+        const closeBtn =
+            document.getElementById("closeEnrollmentModal");
+
+        const form =
+            document.getElementById("vaaliEnrollmentForm");
+
+        const paymentBtn =
+            document.getElementById("proceedPaymentBtn");
+
+        const errorBox =
+            document.getElementById("enrollmentError");
+
+        const phoneInput =
+            document.getElementById("studentPhone");
+
 
         console.log("Enrollment system loaded");
         console.log("Enroll button:", enrollBtn);
         console.log("Modal:", modal);
 
-        if (!enrollBtn || !modal) {
-            console.error("Enrollment elements not found.");
+
+        if (!enrollBtn || !modal || !phoneInput) {
+
+            console.error(
+                "Enrollment elements not found."
+            );
+
             return;
         }
 
+
+        /* =========================================
+           INTERNATIONAL PHONE INPUT
+           ========================================= */
+
+        const iti = window.intlTelInput(
+            phoneInput,
+            {
+                initialCountry: "in",
+
+                separateDialCode: true,
+
+                countrySelectorMode: "AUTO",
+
+                countrySearch: true,
+
+                formatAsYouType: true,
+
+                numberDisplayFormat: "INTERNATIONAL",
+
+                strictMode: true,
+
+                placeholderNumberType: "MOBILE",
+
+                countryOrder: [
+                    "in",
+                    "us",
+                    "ca",
+                    "gb",
+                    "ae",
+                    "au",
+                    "sg"
+                ],
+
+                loadUtils: () =>
+                    import(
+                        "https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/utils.js"
+                    )
+            }
+        );
+
+
         /* =========================================
            DEFAULT STATE
-           Modal stays hidden when page loads
            ========================================= */
 
         modal.style.display = "none";
@@ -1156,17 +1231,19 @@ content="AhámTvám Shiksha">
            OPEN MODAL
            ========================================= */
 
-        enrollBtn.addEventListener("click", function (event) {
+        enrollBtn.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
+                event.preventDefault();
 
-            console.log("Enroll Now clicked");
+                modal.style.display = "flex";
 
-            modal.style.display = "flex";
+                document.body.style.overflow =
+                    "hidden";
 
-            document.body.style.overflow = "hidden";
-
-        });
+            }
+        );
 
 
         /* =========================================
@@ -1175,60 +1252,69 @@ content="AhámTvám Shiksha">
 
         if (closeBtn) {
 
-            closeBtn.addEventListener("click", function () {
+            closeBtn.addEventListener(
+                "click",
+                function () {
 
-                modal.style.display = "none";
+                    modal.style.display = "none";
 
-                document.body.style.overflow = "";
+                    document.body.style.overflow = "";
 
-                if (errorBox) {
-                    errorBox.textContent = "";
+                    if (errorBox) {
+                        errorBox.textContent = "";
+                    }
+
                 }
-
-            });
+            );
 
         }
 
 
         /* =========================================
-           CLOSE WHEN CLICKING OUTSIDE
+           CLOSE OUTSIDE
            ========================================= */
 
-        modal.addEventListener("click", function (event) {
+        modal.addEventListener(
+            "click",
+            function (event) {
 
-            if (event.target === modal) {
+                if (event.target === modal) {
 
-                modal.style.display = "none";
+                    modal.style.display = "none";
 
-                document.body.style.overflow = "";
+                    document.body.style.overflow = "";
 
-                if (errorBox) {
-                    errorBox.textContent = "";
+                    if (errorBox) {
+                        errorBox.textContent = "";
+                    }
+
                 }
 
             }
-
-        });
+        );
 
 
         /* =========================================
-           CLOSE WITH ESC KEY
+           CLOSE WITH ESC
            ========================================= */
 
-        document.addEventListener("keydown", function (event) {
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
-            if (
-                event.key === "Escape" &&
-                modal.style.display === "flex"
-            ) {
+                if (
+                    event.key === "Escape" &&
+                    modal.style.display === "flex"
+                ) {
 
-                modal.style.display = "none";
+                    modal.style.display = "none";
 
-                document.body.style.overflow = "";
+                    document.body.style.overflow = "";
+
+                }
 
             }
-
-        });
+        );
 
 
         /* =========================================
@@ -1237,151 +1323,284 @@ content="AhámTvám Shiksha">
 
         if (form) {
 
-            form.addEventListener("submit", async function (event) {
+            form.addEventListener(
+                "submit",
+                async function (event) {
 
-                event.preventDefault();
+                    event.preventDefault();
 
-                if (errorBox) {
-                    errorBox.textContent = "";
-                }
-
-
-                const name =
-                    document.getElementById("studentName").value.trim();
-
-                const email =
-                    document.getElementById("studentEmail").value.trim();
-
-                const phone =
-                    document.getElementById("studentPhone").value.trim();
-
-
-                /* Basic validation */
-
-                if (!name || !email || !phone) {
 
                     if (errorBox) {
-                        errorBox.textContent =
-                            "Please fill in all the required details.";
+                        errorBox.textContent = "";
                     }
 
-                    return;
-                }
+
+                    const name =
+                        document
+                            .getElementById("studentName")
+                            .value
+                            .trim();
 
 
-                if (!phone.trim()) {
-
-   					if (errorBox) {
-        				errorBox.textContent =
-            				"Please enter a valid mobile number.";
-    				}
-
-    				return;
-				}
+                    const email =
+                        document
+                            .getElementById("studentEmail")
+                            .value
+                            .trim();
 
 
-                if (paymentBtn) {
+                    /* =================================
+                       BASIC VALIDATION
+                       ================================= */
 
-                    paymentBtn.disabled = true;
+                    if (!name || !email) {
 
-                    paymentBtn.textContent =
-                        "Creating Payment...";
+                        if (errorBox) {
 
-                }
+                            errorBox.textContent =
+                                "Please fill in all the required details.";
+
+                        }
+
+                        return;
+                    }
 
 
-                try {
+                    /* =================================
+                       WAIT FOR PHONE UTILS
+                       ================================= */
 
-                    const response = await fetch(
-    "/api/create-payment.js",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            course: "vaali",
-            name: name,
-            email: email,
-            phone: phone,
-			timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-        })
-    }
-);
+                    try {
 
-const responseText = await response.text();
+                        await iti.promise;
 
-let data;
+                    } catch (phoneInitError) {
 
-try {
-    data = JSON.parse(responseText);
-} catch (parseError) {
+                        console.error(
+                            "Phone input initialization error:",
+                            phoneInitError
+                        );
 
-    console.error(
-        "Invalid response from payment server:",
-        responseText
-    );
+                        if (errorBox) {
 
-    throw new Error(
-        "Unable to connect to the payment service. Please try again."
-    );
-}
+                            errorBox.textContent =
+                                "Unable to initialize phone validation. Please refresh and try again.";
 
-                    console.log(
-                        "Payment response:",
-                        data
-                    );
+                        }
+
+                        return;
+                    }
+
+
+                    /* =================================
+                       PHONE VALIDATION
+                       ================================= */
+
+                    if (!iti.isValidNumber()) {
+
+                        if (errorBox) {
+
+                            errorBox.textContent =
+                                "Please enter a valid mobile number for the selected country.";
+
+                        }
+
+                        return;
+                    }
+
+
+                    /* =================================
+                       GET INTERNATIONAL PHONE
+                       ================================= */
+
+                    const phoneE164 =
+                        iti.getNumber("E164");
+
+
+                    const selectedCountry =
+                        iti.getSelectedCountry();
 
 
                     if (
-                        !response.ok ||
-                        !data.success ||
-                        !data.checkout_url
+                        !selectedCountry ||
+                        !selectedCountry.iso2 ||
+                        !selectedCountry.dialCode
                     ) {
 
-                        throw new Error(
-                            data.message ||
-                            "Unable to create payment session."
+                        if (errorBox) {
+
+                            errorBox.textContent =
+                                "Please select your country.";
+
+                        }
+
+                        return;
+                    }
+
+
+                    const phoneCountryCode =
+                        selectedCountry.iso2
+                            .toUpperCase();
+
+
+                    const phoneNational =
+                        phoneE164.substring(
+                            selectedCountry.dialCode.length + 1
                         );
 
-                    }
+
+                    /* =================================
+                       DETECT TIMEZONE
+                       ================================= */
+
+                    const timezone =
+                        Intl.DateTimeFormat()
+                            .resolvedOptions()
+                            .timeZone;
 
 
-                    /* Redirect to Zoho Hosted Checkout */
-
-                    window.location.href =
-                        data.checkout_url;
-
-
-                } catch (error) {
-
-                    console.error(
-                        "Enrollment error:",
-                        error
-                    );
-
-
-                    if (errorBox) {
-
-                        errorBox.textContent =
-                            error.message ||
-                            "Something went wrong. Please try again.";
-
-                    }
-
+                    /* =================================
+                       DISABLE PAYMENT BUTTON
+                       ================================= */
 
                     if (paymentBtn) {
 
-                        paymentBtn.disabled = false;
+                        paymentBtn.disabled = true;
 
                         paymentBtn.textContent =
-                            "Proceed to Payment";
+                            "Creating Payment...";
+
+                    }
+
+
+                    try {
+
+                        const response =
+                            await fetch(
+                                "/api/create-payment.js",
+                                {
+                                    method: "POST",
+
+                                    headers: {
+                                        "Content-Type":
+                                            "application/json"
+                                    },
+
+                                    body:
+                                        JSON.stringify({
+
+                                            course:
+                                                "vaali",
+
+                                            name:
+                                                name,
+
+                                            email:
+                                                email,
+
+                                            phone:
+                                                phoneE164,
+
+                                            phone_national:
+                                                phoneNational,
+
+                                            phone_country_code:
+                                                phoneCountryCode,
+
+                                            timezone:
+                                                timezone
+
+                                        })
+                                }
+                            );
+
+
+                        const responseText =
+                            await response.text();
+
+
+                        let data;
+
+
+                        try {
+
+                            data =
+                                JSON.parse(
+                                    responseText
+                                );
+
+                        } catch (parseError) {
+
+                            console.error(
+                                "Invalid response from payment server:",
+                                responseText
+                            );
+
+                            throw new Error(
+                                "Unable to connect to the payment service. Please try again."
+                            );
+
+                        }
+
+
+                        console.log(
+                            "Payment response:",
+                            data
+                        );
+
+
+                        if (
+                            !response.ok ||
+                            !data.success ||
+                            !data.checkout_url
+                        ) {
+
+                            throw new Error(
+                                data.message ||
+                                "Unable to create payment session."
+                            );
+
+                        }
+
+
+                        /* =============================
+                           REDIRECT TO ZOHO
+                           ============================= */
+
+                        window.location.href =
+                            data.checkout_url;
+
+
+                    } catch (error) {
+
+                        console.error(
+                            "Enrollment error:",
+                            error
+                        );
+
+
+                        if (errorBox) {
+
+                            errorBox.textContent =
+                                error.message ||
+                                "Something went wrong. Please try again.";
+
+                        }
+
+
+                        if (paymentBtn) {
+
+                            paymentBtn.disabled = false;
+
+                            paymentBtn.textContent =
+                                "Proceed to Payment";
+
+                        }
 
                     }
 
                 }
-
-            });
+            );
 
         }
 
@@ -1392,7 +1611,10 @@ try {
        START AFTER PAGE LOAD
        ========================================= */
 
-    if (document.readyState === "loading") {
+    if (
+        document.readyState ===
+        "loading"
+    ) {
 
         document.addEventListener(
             "DOMContentLoaded",
