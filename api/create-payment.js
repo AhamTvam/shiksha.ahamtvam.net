@@ -112,11 +112,9 @@ export default async function handler(req, res) {
         // BASIC INDIAN PHONE VALIDATION
         // --------------------------------------------------
 
-        const cleanPhone = String(phone).trim();
-
         const cleanPhone =
-    String(phone_national || "")
-        .replace(/\D/g, "");
+            String(phone_national || "")
+                .replace(/\D/g, "");
 
 const studentPhone =
     String(phone || "").trim();
