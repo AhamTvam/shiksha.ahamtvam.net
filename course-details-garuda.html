@@ -993,7 +993,90 @@ content="AhámTvám Shiksha">
 
 
 
+	<!-- Enrollment Modal -->
+<div class="modal fade" id="enrollmentModal" tabindex="-1" aria-labelledby="enrollmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
+            <div class="modal-header">
+                <h5 class="modal-title" id="enrollmentModalLabel">
+                    Enroll in Garuda (Advanced)
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    id="closeEnrollmentModal"
+                    aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="garudaEnrollmentForm">
+
+                    <div class="mb-3">
+                        <label for="studentName" class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="studentName"
+                            name="name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentEmail" class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="studentEmail"
+                            name="email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="studentPhone" class="form-label">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="studentPhone"
+                            name="phone"
+                            autocomplete="tel"
+                            required>
+                    </div>
+
+                    <div
+                        id="enrollmentError"
+                        class="alert alert-danger"
+                        style="display: none;">
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100"
+                        id="proceedPaymentBtn">
+                        Proceed to Payment
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+	
     <!-- JS
     ============================================ -->
 
@@ -1018,6 +1101,218 @@ content="AhámTvám Shiksha">
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/intlTelInput.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enrollButton = document.getElementById("enrollGarudaBtn");
+    const modal = document.getElementById("enrollmentModal");
+    const closeButton = document.getElementById("closeEnrollmentModal");
+    const form = document.getElementById("garudaEnrollmentForm");
+
+    const phoneInput = document.getElementById("studentPhone");
+    const errorBox = document.getElementById("enrollmentError");
+    const proceedButton = document.getElementById("proceedPaymentBtn");
+
+    if (!enrollButton || !modal || !form || !phoneInput) {
+        console.error("Garuda enrollment elements not found.");
+        return;
+    }
+
+    const iti = window.intlTelInput(
+        phoneInput,
+        {
+            initialCountry: "in",
+            separateDialCode: true,
+            countrySelectorMode: "AUTO",
+            countrySearch: true,
+            formatAsYouType: true,
+            numberDisplayFormat: "INTERNATIONAL",
+            strictMode: true,
+            placeholderNumberType: "MOBILE",
+
+            countryOrder: [
+                "in",
+                "us",
+                "ca",
+                "gb",
+                "ae",
+                "au",
+                "sg"
+            ],
+
+            loadUtils: () =>
+                import(
+                    "https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/utils.js"
+                )
+        }
+    );
+
+    function openModal() {
+        modal.classList.add("show");
+        modal.style.display = "block";
+        modal.removeAttribute("aria-hidden");
+        document.body.classList.add("modal-open");
+
+        const backdrop = document.createElement("div");
+        backdrop.className = "modal-backdrop fade show";
+        backdrop.id = "garudaModalBackdrop";
+
+        document.body.appendChild(backdrop);
+    }
+
+    function closeModal() {
+        modal.classList.remove("show");
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+
+        const backdrop = document.getElementById("garudaModalBackdrop");
+
+        if (backdrop) {
+            backdrop.remove();
+        }
+    }
+
+    enrollButton.addEventListener("click", function () {
+        openModal();
+    });
+
+    closeButton.addEventListener("click", function () {
+        closeModal();
+    });
+
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        errorBox.style.display = "none";
+        errorBox.textContent = "";
+
+        const name =
+            document.getElementById("studentName")
+                .value
+                .trim();
+
+        const email =
+            document.getElementById("studentEmail")
+                .value
+                .trim();
+
+        if (!name) {
+            errorBox.textContent = "Please enter your full name.";
+            errorBox.style.display = "block";
+            return;
+        }
+
+        if (!email) {
+            errorBox.textContent = "Please enter your email address.";
+            errorBox.style.display = "block";
+            return;
+        }
+
+        try {
+
+            await iti.promise;
+
+            if (!iti.isValidNumber()) {
+                errorBox.textContent =
+                    "Please enter a valid phone number.";
+
+                errorBox.style.display = "block";
+                return;
+            }
+
+            const phoneE164 = iti.getNumber("E164");
+            const selectedCountry = iti.getSelectedCountry();
+
+            if (!selectedCountry || !selectedCountry.dialCode) {
+                errorBox.textContent =
+                    "Please select a valid country.";
+
+                errorBox.style.display = "block";
+                return;
+            }
+
+            const phoneCountryCode =
+                selectedCountry.iso2.toUpperCase();
+
+            const phoneNational =
+                phoneE164.substring(
+                    selectedCountry.dialCode.length + 1
+                );
+
+            proceedButton.disabled = true;
+            proceedButton.textContent = "Processing...";
+
+            const response = await fetch(
+                "/api/create-payment.js",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        course: "garuda",
+                        name: name,
+                        email: email,
+                        phone: phoneE164,
+                        phone_national: phoneNational,
+                        phone_country_code: phoneCountryCode,
+                        timezone:
+                            Intl.DateTimeFormat()
+                                .resolvedOptions()
+                                .timeZone
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(
+                    data.message ||
+                    "Unable to create payment session."
+                );
+            }
+
+            if (!data.payment_url) {
+                throw new Error(
+                    "Payment URL was not received."
+                );
+            }
+
+            window.location.href = data.payment_url;
+
+        } catch (error) {
+
+            console.error(
+                "Garuda enrollment error:",
+                error
+            );
+
+            errorBox.textContent =
+                error.message ||
+                "Something went wrong. Please try again.";
+
+            errorBox.style.display = "block";
+
+            proceedButton.disabled = false;
+            proceedButton.textContent = "Proceed to Payment";
+        }
+    });
+
+});
+</script>
 
 </body>
 
