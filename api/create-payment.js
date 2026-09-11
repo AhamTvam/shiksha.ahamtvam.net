@@ -61,7 +61,7 @@ export default async function handler(req, res) {
                 name: "DaVinci Resolve Sugreeva (Intermediate)",
                 level: "Intermediate",
                 mrp: 4499,
-                amount: 3499
+                amount: 3799
             },
 
             garuda: {
