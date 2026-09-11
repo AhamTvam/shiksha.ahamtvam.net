@@ -49,7 +49,10 @@ content="AhámTvám Shiksha">
 
     <!-- Main Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/css/intlTelInput.css"
+>
 
     <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
     <!-- <link rel="stylesheet" href="assets/css/vendor/plugins.min.css">
@@ -632,7 +635,12 @@ After completing the Intermediate Program, learners can continue with the Garuda
     </li>
 </ul>
 
-    <a class="btn btn-primary btn-hover-dark w-100" href="payment.html">Enroll Now</a>
+    <button
+    type="button"
+    class="btn btn-primary btn-hover-dark w-100"
+    id="enrollSugreevaBtn">
+    Enroll Now
+</button>
                                 </div>
                             </div>
                             <!-- Sidebar Widget Information End -->
@@ -808,6 +816,607 @@ After completing the Intermediate Program, learners can continue with the Garuda
 
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+	<!-- Sugreeva Enrollment Form Start -->
+
+<div
+    id="enrollmentModal"
+    style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.65);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999999;
+    "
+>
+
+    <div
+        style="
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        "
+    >
+
+        <!-- Close Button -->
+        <button
+            type="button"
+            id="closeEnrollmentModal"
+            style="
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                width: 36px;
+                height: 36px;
+                border: none;
+                background: transparent;
+                font-size: 28px;
+                line-height: 36px;
+                color: #555;
+                cursor: pointer;
+            "
+        >
+            &times;
+        </button>
+
+        <!-- Header -->
+        <h3
+            style="
+                margin: 0 40px 8px 0;
+                font-size: 25px;
+                font-weight: 700;
+                color: #111;
+            "
+        >
+            Enroll in Sugreeva
+        </h3>
+
+        <p
+            style="
+                margin: 0 0 25px;
+                color: #666;
+                font-size: 15px;
+            "
+        >
+            DaVinci Resolve — Sugreeva (Intermediate)
+        </p>
+
+        <form id="sugreevaEnrollmentForm">
+
+            <!-- Name -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentName"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
+            </div>
+
+            <!-- Email -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentEmail"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="studentEmail"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
+            </div>
+
+            <!-- Phone -->
+            <div style="margin-bottom: 18px;">
+
+                <label
+                    for="studentPhone"
+                    style="
+                        display: block;
+                        margin-bottom: 7px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: #333;
+                    "
+                >
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="studentPhone"
+                    name="phone"
+                    autocomplete="tel"
+                    required
+                    style="
+                        display: block;
+                        width: 100%;
+                        height: 50px;
+                        padding: 0 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                    "
+                >
+
+            </div>
+
+            <!-- Course Summary -->
+            <div
+                style="
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    gap: 8px 15px;
+                    margin: 20px 0;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background: #f5f7f6;
+                    font-size: 14px;
+                "
+            >
+
+                <span style="color:#666;">Course</span>
+                <strong style="color:#111;">
+                    Sugreeva (Intermediate)
+                </strong>
+
+                <span style="color:#666;">Amount</span>
+                <strong style="color:#111;">
+                    ₹3799
+                </strong>
+
+            </div>
+
+            <!-- Payment Button -->
+            <button
+                type="submit"
+                id="proceedPaymentBtn"
+                style="
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    border-radius: 6px;
+                    background: #0a1543;
+                    color: #ffffff;
+                    font-size: 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+                "
+            >
+                Proceed to Payment
+            </button>
+
+            <!-- Error -->
+            <p
+                id="enrollmentError"
+                style="
+                    margin: 10px 0 0;
+                    color: #dc3545;
+                    font-size: 13px;
+                "
+            ></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Sugreeva Enrollment Form End -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/intlTelInput.min.js"></script>
+
+<script>
+(function () {
+
+    "use strict";
+
+    function initEnrollmentModal() {
+
+        const enrollBtn =
+            document.getElementById("enrollSugreevaBtn");
+
+        const modal =
+            document.getElementById("enrollmentModal");
+
+        const closeBtn =
+            document.getElementById("closeEnrollmentModal");
+
+        const form =
+            document.getElementById("sugreevaEnrollmentForm");
+
+        const paymentBtn =
+            document.getElementById("proceedPaymentBtn");
+
+        const errorBox =
+            document.getElementById("enrollmentError");
+
+        const phoneInput =
+            document.getElementById("studentPhone");
+
+        if (!enrollBtn || !modal || !form || !phoneInput) {
+
+            console.error(
+                "Sugreeva enrollment elements not found."
+            );
+
+            return;
+        }
+
+        modal.style.display = "none";
+
+        /* =========================================
+           INTERNATIONAL PHONE INPUT
+        ========================================= */
+
+        const iti = window.intlTelInput(
+            phoneInput,
+            {
+                initialCountry: "in",
+
+                separateDialCode: true,
+
+                countrySelectorMode: "AUTO",
+
+                countrySearch: true,
+
+                formatAsYouType: true,
+
+                numberDisplayFormat: "INTERNATIONAL",
+
+                strictMode: true,
+
+                placeholderNumberType: "MOBILE",
+
+                countryOrder: [
+                    "in",
+                    "us",
+                    "ca",
+                    "gb",
+                    "ae",
+                    "au",
+                    "sg"
+                ],
+
+                loadUtils: () =>
+                    import(
+                        "https://cdn.jsdelivr.net/npm/intl-tel-input@29.2/dist/js/utils.js"
+                    )
+            }
+        );
+
+        /* =========================================
+           OPEN MODAL
+        ========================================= */
+
+        enrollBtn.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                modal.style.display = "flex";
+
+                document.body.style.overflow =
+                    "hidden";
+
+            }
+        );
+
+        /* =========================================
+           CLOSE MODAL
+        ========================================= */
+
+        function closeModal() {
+
+            modal.style.display = "none";
+
+            document.body.style.overflow = "";
+
+            if (errorBox) {
+                errorBox.textContent = "";
+            }
+
+        }
+
+        if (closeBtn) {
+
+            closeBtn.addEventListener(
+                "click",
+                closeModal
+            );
+
+        }
+
+        modal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === modal) {
+                    closeModal();
+                }
+
+            }
+        );
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    modal.style.display === "flex"
+                ) {
+                    closeModal();
+                }
+
+            }
+        );
+
+        /* =========================================
+           PAYMENT FORM
+        ========================================= */
+
+        form.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+                if (errorBox) {
+                    errorBox.textContent = "";
+                }
+
+                const name =
+                    document
+                        .getElementById("studentName")
+                        .value
+                        .trim();
+
+                const email =
+                    document
+                        .getElementById("studentEmail")
+                        .value
+                        .trim();
+
+                if (!name || !email) {
+
+                    errorBox.textContent =
+                        "Please fill in all the required details.";
+
+                    return;
+                }
+
+                await iti.promise;
+
+                if (!iti.isValidNumber()) {
+
+                    errorBox.textContent =
+                        "Please enter a valid mobile number.";
+
+                    return;
+                }
+
+                const phoneE164 =
+                    iti.getNumber("E164");
+
+                const selectedCountry =
+                    iti.getSelectedCountry();
+
+                const phoneCountryCode =
+                    selectedCountry.iso2.toUpperCase();
+
+                const phoneNational =
+                    phoneE164.substring(
+                        selectedCountry.dialCode.length + 1
+                    );
+
+                if (paymentBtn) {
+
+                    paymentBtn.disabled = true;
+
+                    paymentBtn.textContent =
+                        "Creating Payment...";
+
+                }
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "/api/create-payment.js",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Content-Type":
+                                        "application/json"
+                                },
+
+                                body:
+                                    JSON.stringify({
+
+                                        course:
+                                            "sugreeva",
+
+                                        name:
+                                            name,
+
+                                        email:
+                                            email,
+
+                                        phone:
+                                            phoneE164,
+
+                                        phone_national:
+                                            phoneNational,
+
+                                        phone_country_code:
+                                            phoneCountryCode,
+
+                                        timezone:
+                                            Intl.DateTimeFormat()
+                                                .resolvedOptions()
+                                                .timeZone
+
+                                    })
+                            }
+                        );
+
+                    const responseText =
+                        await response.text();
+
+                    let data;
+
+                    try {
+
+                        data =
+                            JSON.parse(
+                                responseText
+                            );
+
+                    } catch (parseError) {
+
+                        console.error(
+                            "Invalid response:",
+                            responseText
+                        );
+
+                        throw new Error(
+                            "Unable to connect to the payment service. Please try again."
+                        );
+
+                    }
+
+                    if (
+                        !response.ok ||
+                        !data.success ||
+                        !data.checkout_url
+                    ) {
+
+                        throw new Error(
+                            data.message ||
+                            "Unable to create payment session."
+                        );
+
+                    }
+
+                    window.location.href =
+                        data.checkout_url;
+
+                } catch (error) {
+
+                    console.error(
+                        "Enrollment error:",
+                        error
+                    );
+
+                    if (errorBox) {
+
+                        errorBox.textContent =
+                            error.message ||
+                            "Something went wrong. Please try again.";
+
+                    }
+
+                    if (paymentBtn) {
+
+                        paymentBtn.disabled = false;
+
+                        paymentBtn.textContent =
+                            "Proceed to Payment";
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+    if (
+        document.readyState === "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            initEnrollmentModal
+        );
+
+    } else {
+
+        initEnrollmentModal();
+
+    }
+
+})();
+</script>
+
 
 </body>
 
