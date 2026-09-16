@@ -7,178 +7,125 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Terms of Service | AhámTvám Shiksha</title>
-
     <meta name="description"
-        content="Read the Terms of Service governing the use of AhámTvám Shiksha courses, enrollment, payments, course access, learning materials, and related services.">
+        content="Read the Terms & Conditions governing the use of AhámTvám Shiksha, including course enrollment, payments, classes, learning materials, student conduct, and related services.">
 
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <meta name="robots"
+        content="index, follow">
+
+    <title>Terms & Conditions | AhámTvám Shiksha</title>
+
+    <link rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-    <!-- Your Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Main Website CSS -->
+    <link rel="stylesheet"
+        href="style.css">
 
     <!-- Terms Page CSS -->
-    <link rel="stylesheet" href="terms.css">
-
+    <link rel="stylesheet"
+        href="terms.css">
 </head>
 
 <body>
 
+    <!-- ================= HEADER ================= -->
 
-    <!-- ================================
-         HEADER
-    ================================= -->
+    <header class="terms-header">
 
-    <header class="site-header">
+        <div class="container">
 
-        <nav class="navbar navbar-expand-lg">
+            <div class="terms-nav">
 
-            <div class="container">
-
-                <a class="navbar-brand"
-                    href="index.html">
-
+                <a href="index.html"
+                    class="terms-logo">
                     <img
                         src="assets/images/logo.png"
                         alt="AhámTvám Shiksha">
-
                 </a>
 
+                <nav class="terms-menu">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <div class="terms-dropdown">
+
+                        <a href="courses.html">
+                            Courses
+                            <span class="dropdown-arrow">⌄</span>
+                        </a>
+
+                        <div class="terms-dropdown-menu">
+
+                            <a href="courses-details.html">
+                                DaVinci Resolve
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </nav>
 
                 <button
-                    class="navbar-toggler"
+                    class="mobile-menu-button"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Open menu"
+                    aria-expanded="false">
 
-                    <span class="navbar-toggler-icon"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
                 </button>
 
-
-                <div
-                    class="collapse navbar-collapse"
-                    id="mainNavbar">
-
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                        <li class="nav-item">
-
-                            <a
-                                class="nav-link"
-                                href="index.html">
-
-                                Home
-
-                            </a>
-
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false">
-
-                                Courses
-
-                            </a>
-
-
-                            <ul class="dropdown-menu">
-
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="courses.html">
-
-                                        Editing
-
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="#">
-
-                                        Content Writing
-                                        <span class="coming-soon">
-                                            (Coming Soon)
-                                        </span>
-
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a
-                                        class="dropdown-item"
-                                        href="#">
-
-                                        Communication
-                                        <span class="coming-soon">
-                                            (Coming Soon)
-                                        </span>
-
-                                    </a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-                        <li class="nav-item">
-
-                            <a
-                                class="nav-link"
-                                href="about.html">
-
-                                About
-
-                            </a>
-
-                        </li>
-
-
-                        <li class="nav-item ms-lg-3">
-
-                            <a
-                                class="nav-link contact-btn"
-                                href="contact.html">
-
-                                Contact
-
-                            </a>
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
             </div>
 
-        </nav>
+        </div>
 
     </header>
 
 
+    <!-- ================= MOBILE MENU ================= -->
 
-    <!-- ================================
-         PAGE HERO
-    ================================= -->
+    <div class="mobile-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="courses.html">
+            Courses
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+
+    <!-- ================= PAGE HERO ================= -->
 
     <section class="legal-hero">
 
@@ -191,13 +138,31 @@
                 </span>
 
                 <h1>
-                    Terms of Service
+                    Terms <span>&</span> Conditions
                 </h1>
 
                 <p>
                     Please read these terms carefully before
                     using our website or enrolling in a course.
                 </p>
+
+                <div class="legal-date">
+
+                    <strong>
+                        Effective Date:
+                    </strong>
+
+                    15 September 2026
+
+                    <span></span>
+
+                    <strong>
+                        Last Updated:
+                    </strong>
+
+                    15 September 2026
+
+                </div>
 
             </div>
 
@@ -206,781 +171,1546 @@
     </section>
 
 
+    <!-- ================= CONTENT ================= -->
 
-    <!-- ================================
-         TERMS CONTENT
-    ================================= -->
-
-    <main class="legal-page">
+    <main class="legal-main">
 
         <div class="container">
 
-            <div class="legal-container">
+            <div class="legal-layout">
 
-                <div class="legal-meta">
+                <!-- CONTENT -->
 
-                    <span>
-                        <strong>Effective Date:</strong>
-                        15 September 2026
-                    </span>
+                <article class="legal-content">
 
-                    <span>
-                        <strong>Last Updated:</strong>
-                        15 September 2026
-                    </span>
 
-                </div>
+                    <!-- 01 -->
 
+                    <section class="legal-section">
 
+                        <div class="section-number">
+                            01
+                        </div>
 
-                <section class="legal-section">
+                        <div>
 
-                    <h2>1. Introduction</h2>
+                            <h2>
+                                Introduction
+                            </h2>
 
-                    <p>
-                        Welcome to <strong>AhámTvám Shiksha</strong>,
-                        the online learning platform operated by
-                        <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
-                        ("AhámTvám", "we", "us", or "our").
-                    </p>
+                            <p>
+                                Welcome to <strong>AhámTvám Shiksha</strong>,
+                                the online learning platform operated by
+                                <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
+                                ("AhámTvám", "we", "us", or "our").
+                            </p>
 
-                    <p>
-                        These Terms of Service ("Terms") govern your
-                        access to and use of the AhámTvám Shiksha
-                        website, courses, enrollment services,
-                        learning materials, communications, and
-                        related services.
-                    </p>
+                            <p>
+                                These Terms & Conditions ("Terms") govern
+                                your access to and use of the AhámTvám
+                                Shiksha website, online courses, enrollment
+                                services, learning materials, student
+                                communications, and related services.
+                            </p>
 
-                    <p>
-                        By accessing our website, enrolling in a
-                        course, making a payment, or otherwise using
-                        our services, you agree to these Terms.
-                        If you do not agree with these Terms,
-                        please do not use the website or enroll
-                        in our courses.
-                    </p>
+                            <p>
+                                By accessing the website, submitting an
+                                enrollment form, making a payment, joining
+                                a course, or otherwise using AhámTvám
+                                Shiksha, you acknowledge that you have
+                                read, understood, and agreed to these Terms.
+                            </p>
 
-                </section>
+                            <div class="legal-note">
+                                If you do not agree with these Terms,
+                                please do not enroll in or use our
+                                courses or services.
+                            </div>
 
+                        </div>
 
+                    </section>
 
-                <section class="legal-section">
 
-                    <h2>2. About AhámTvám Shiksha</h2>
+                    <!-- 02 -->
 
-                    <p>
-                        AhámTvám Shiksha provides online educational
-                        and skill-development courses, including
-                        courses relating to video editing and other
-                        creative or professional skills.
-                    </p>
+                    <section class="legal-section">
 
-                    <p>
-                        Our courses may be offered through live
-                        online classes, course materials,
-                        assignments, demonstrations, or other
-                        educational formats as specified for the
-                        applicable course.
-                    </p>
+                        <div class="section-number">
+                            02
+                        </div>
 
-                    <p>
-                        AhámTvám Shiksha is operated by:
-                    </p>
+                        <div>
 
-                    <address>
-                        <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
-                        <br> Bhagyanagaram (Hyderabad), Telangana, Bharath (India)
-                    </address>
+                            <h2>
+                                About AhámTvám Shiksha
+                            </h2>
 
-                </section>
+                            <p>
+                                AhámTvám Shiksha is the education and
+                                skill-development initiative of
+                                <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>.
+                            </p>
 
+                            <p>
+                                The platform currently provides online
+                                learning programs focused on practical
+                                and creative professional skills,
+                                including <strong>DaVinci Resolve
+                                video editing</strong>.
+                            </p>
 
+                            <p>
+                                Our courses are designed to provide
+                                structured learning through live online
+                                sessions, guided instruction, practical
+                                demonstrations, and course-related
+                                learning materials.
+                            </p>
 
-                <section class="legal-section">
+                            <div class="company-card">
 
-                    <h2>3. Eligibility</h2>
+                                <span>
+                                    OPERATED BY
+                                </span>
 
-                    <p>
-                        You must provide accurate and complete
-                        information when enrolling in a course.
-                    </p>
+                                <strong>
+                                    AHAMTVAM WORLD PRIVATE LIMITED
+                                </strong>
 
-                    <p>
-                        If you are under the age required to
-                        independently enter into a legally
-                        enforceable agreement under applicable law,
-                        you must use the services with the involvement
-                        and consent of your parent or legal guardian.
-                    </p>
+                                <p>
+                                    304, SVR Heights, Road No. 10,<br>
+                                    Srivani Nagar, Ameenpur,<br>
+                                    Medak, Ramachandrapuram,<br>
+                                    Telangana – 502032, India.
+                                </p>
 
-                    <p>
-                        You are responsible for ensuring that the
-                        information submitted during enrollment,
-                        including your name, email address, phone
-                        number, and other details, is accurate.
-                    </p>
+                            </div>
 
-                </section>
+                        </div>
 
+                    </section>
 
 
-                <section class="legal-section">
+                    <!-- 03 -->
 
-                    <h2>4. Course Enrollment</h2>
+                    <section class="legal-section">
 
-                    <p>
-                        Enrollment is completed through the enrollment
-                        process available on the AhámTvám Shiksha
-                        website.
-                    </p>
-
-                    <p>
-                        Submitting an enrollment form does not by
-                        itself guarantee enrollment. Enrollment is
-                        subject to successful payment verification
-                        and availability of the applicable course
-                        or batch.
-                    </p>
+                        <div class="section-number">
+                            03
+                        </div>
 
-                    <p>
-                        After successful payment verification, we
-                        may provide enrollment confirmation and
-                        relevant course information through the
-                        contact details provided during enrollment.
-                    </p>
+                        <div>
 
-                    <p>
-                        Each enrollment is intended for the individual
-                        student whose details were submitted during
-                        registration.
-                    </p>
+                            <h2>
+                                Courses Offered
+                            </h2>
 
-                </section>
+                            <p>
+                                AhámTvám Shiksha may offer different
+                                courses, levels, batches, and learning
+                                programs from time to time.
+                            </p>
 
+                            <div class="course-terms">
 
+                                <div class="course-term">
 
-                <section class="legal-section">
+                                    <strong>
+                                        Vaali
+                                    </strong>
 
-                    <h2>5. Course Fees and Payments</h2>
+                                    <span>
+                                        Foundation / Basic
+                                    </span>
 
-                    <p>
-                        Course fees are displayed on the website at
-                        the time of enrollment.
-                    </p>
+                                    <p>
+                                        A 4-weekend beginner-level
+                                        program covering the fundamentals
+                                        of DaVinci Resolve and video editing.
+                                    </p>
 
-                    <p>
-                        Prices may be displayed using a maximum retail
-                        price ("MRP") and an applicable offer or
-                        promotional price. The amount payable by the
-                        student is the amount displayed as the applicable
-                        enrollment price at the time of payment.
-                    </p>
+                                </div>
 
-                    <p>
-                        Payments are processed through the payment
-                        services made available by our third-party
-                        payment provider.
-                    </p>
 
-                    <p>
-                        We do not store your complete card, UPI,
-                        banking, or other payment credentials on
-                        our website.
-                    </p>
+                                <div class="course-term">
 
-                    <p>
-                        An enrollment may be considered confirmed only
-                        after the payment has been successfully processed
-                        and verified.
-                    </p>
+                                    <strong>
+                                        Sugreeva
+                                    </strong>
 
-                    <p>
-                        If a payment fails, is cancelled, expires,
-                        or cannot be verified, the enrollment may
-                        remain incomplete.
-                    </p>
+                                    <span>
+                                        Professional / Intermediate
+                                    </span>
 
-                </section>
+                                    <p>
+                                        A 6-weekend program that includes
+                                        foundational learning along with
+                                        intermediate editing, storytelling,
+                                        motion, and workflow concepts.
+                                    </p>
 
+                                </div>
 
 
-                <section class="legal-section">
+                                <div class="course-term">
 
-                    <h2>6. Course Access and Delivery</h2>
+                                    <strong>
+                                        Garuda
+                                    </strong>
 
-                    <p>
-                        Course delivery will follow the schedule and
-                        format communicated for the applicable course.
-                    </p>
+                                    <span>
+                                        Master / Advanced
+                                    </span>
 
-                    <p>
-                        For live weekend courses, classes are generally
-                        conducted online on Saturdays and Sundays for
-                        the duration specified on the relevant course
-                        page.
-                    </p>
+                                    <p>
+                                        An 8-weekend program that builds
+                                        upon earlier levels and introduces
+                                        advanced editing, professional
+                                        workflows, effects, color grading,
+                                        freelancing, and career-oriented
+                                        concepts.
+                                    </p>
 
-                    <p>
-                        Course duration, schedule, class timings,
-                        curriculum, instructors, and delivery methods
-                        may be subject to reasonable changes where
-                        necessary.
-                    </p>
+                                </div>
 
-                    <p>
-                        Students are responsible for having a suitable
-                        device, internet connection, required software,
-                        and other technical requirements necessary to
-                        participate in the course.
-                    </p>
+                            </div>
 
-                </section>
+                            <p>
+                                Course names, curriculum, duration, batch
+                                schedules, fees, and other course details
+                                may be updated for future batches.
+                            </p>
 
+                            <p>
+                                The course information displayed on the
+                                website at the time of enrollment will
+                                apply to the relevant enrollment, subject
+                                to these Terms and any applicable policy.
+                            </p>
 
+                        </div>
 
-                <section class="legal-section">
+                    </section>
 
-                    <h2>7. Classes and Attendance</h2>
 
-                    <p>
-                        Students are expected to attend classes regularly
-                        and participate responsibly.
-                    </p>
+                    <!-- 04 -->
 
-                    <p>
-                        Missing a live class does not automatically
-                        create a right to a refund, fee reduction,
-                        or replacement session.
-                    </p>
+                    <section class="legal-section">
 
-                    <p>
-                        Where applicable, any additional support or
-                        arrangements for missed classes will be
-                        communicated separately by AhámTvám Shiksha.
-                    </p>
+                        <div class="section-number">
+                            04
+                        </div>
 
-                    <p>
-                        Students must follow reasonable instructions
-                        provided by the instructor or AhámTvám Shiksha
-                        team during classes.
-                    </p>
+                        <div>
 
-                </section>
+                            <h2>
+                                Course Schedule and Class Format
+                            </h2>
 
+                            <p>
+                                AhámTvám Shiksha currently conducts its
+                                DaVinci Resolve classes through
+                                <strong>live online sessions</strong>.
+                            </p>
 
+                            <ul>
+                                <li>
+                                    Classes are conducted on Saturdays
+                                    and Sundays.
+                                </li>
 
-                <section class="legal-section">
+                                <li>
+                                    Each session is approximately
+                                    90 minutes.
+                                </li>
 
-                    <h2>8. WhatsApp and Student Communication</h2>
+                                <li>
+                                    The course duration depends on the
+                                    level enrolled in.
+                                </li>
 
-                    <p>
-                        AhámTvám Shiksha may use WhatsApp groups or
-                        other communication channels to communicate
-                        course-related information to enrolled students.
-                    </p>
+                                <li>
+                                    Batch schedules are communicated
+                                    to enrolled students through the
+                                    designated communication channels.
+                                </li>
+                            </ul>
 
-                    <p>This may include:</p>
+                            <p>
+                                Class schedules may occasionally need
+                                to be changed because of instructor
+                                availability, technical issues, public
+                                holidays, operational requirements, or
+                                other circumstances.
+                            </p>
 
-                    <ul>
-                        <li>Class-related announcements</li>
-                        <li>Schedule updates</li>
-                        <li>Course reminders</li>
-                        <li>Student communication</li>
-                        <li>Live class information or links</li>
-                        <li>Important notices</li>
-                    </ul>
+                            <p>
+                                Where reasonably possible, students will
+                                be informed of significant schedule
+                                changes in advance.
+                            </p>
 
-                    <p>
-                        Students are responsible for providing an
-                        active phone number and monitoring the
-                        communication channel used for their enrolled
-                        course.
-                    </p>
+                        </div>
 
-                    <p>
-                        Students must use such groups responsibly
-                        and must not send spam, abusive content,
-                        unlawful material, advertisements, or
-                        unrelated promotional content.
-                    </p>
+                    </section>
 
-                </section>
 
+                    <!-- 05 -->
 
+                    <section class="legal-section">
 
-                <section class="legal-section">
+                        <div class="section-number">
+                            05
+                        </div>
 
-                    <h2>9. Course Materials and Intellectual Property</h2>
+                        <div>
 
-                    <p>
-                        All course materials provided by AhámTvám
-                        Shiksha, including but not limited to videos,
-                        documents, presentations, graphics, templates,
-                        exercises, written materials, branding,
-                        website content, and course curriculum are
-                        owned by or licensed to AhámTvám and are
-                        protected by applicable intellectual-property
-                        laws.
-                    </p>
+                            <h2>
+                                Eligibility and Student Information
+                            </h2>
 
-                    <p>
-                        Enrollment provides you with a limited,
-                        personal, non-exclusive, non-transferable
-                        right to access and use the course materials
-                        for your own educational purposes.
-                    </p>
+                            <p>
+                                You must provide accurate and complete
+                                information during enrollment.
+                            </p>
 
-                    <p>You may not, without prior written permission:</p>
+                            <p>
+                                This may include your full name, email
+                                address, phone number, course selection,
+                                and other information reasonably required
+                                to process your enrollment.
+                            </p>
 
-                    <ul>
-                        <li>
-                            Copy or reproduce course materials
-                            for commercial use
-                        </li>
+                            <p>
+                                You are responsible for ensuring that
+                                the information submitted to AhámTvám
+                                Shiksha is accurate and remains reasonably
+                                up to date.
+                            </p>
 
-                        <li>
-                            Sell or redistribute course materials
-                        </li>
+                            <p>
+                                If you are below the age at which you can
+                                independently enter into a legally
+                                enforceable agreement under applicable law,
+                                you should use the services with the
+                                involvement and consent of your parent
+                                or lawful guardian.
+                            </p>
 
-                        <li>
-                            Upload course materials to public platforms
-                        </li>
+                        </div>
 
-                        <li>
-                            Share paid course materials with
-                            non-enrolled persons
-                        </li>
+                    </section>
 
-                        <li>
-                            Record and commercially distribute
-                            live classes
-                        </li>
 
-                        <li>
-                            Claim AhámTvám's course materials as
-                            your own
-                        </li>
+                    <!-- 06 -->
 
-                        <li>
-                            Use the course materials to create a
-                            competing commercial course
-                        </li>
-                    </ul>
+                    <section class="legal-section">
 
-                </section>
+                        <div class="section-number">
+                            06
+                        </div>
 
+                        <div>
 
+                            <h2>
+                                Course Enrollment
+                            </h2>
 
-                <section class="legal-section">
+                            <p>
+                                Enrollment is completed through the
+                                enrollment process provided on the
+                                AhámTvám Shiksha website.
+                            </p>
 
-                    <h2>10. Student Conduct</h2>
+                            <p>
+                                Submitting an enrollment form does not,
+                                by itself, guarantee a confirmed seat.
+                            </p>
 
-                    <p>
-                        Students must behave respectfully toward
-                        instructors, staff, and other students.
-                    </p>
+                            <p>
+                                Enrollment becomes confirmed only after
+                                the applicable payment has been successfully
+                                processed and verified by AhámTvám Shiksha.
+                            </p>
 
-                    <p>You must not:</p>
+                            <p>
+                                After successful payment verification,
+                                AhámTvám Shiksha may generate a
+                                <strong>Registration ID</strong> and
+                                provide the student with relevant course
+                                and batch information.
+                            </p>
 
-                    <ul>
-                        <li>
-                            Harass, threaten, abuse, or intimidate
-                            another person
-                        </li>
+                            <p>
+                                Each enrollment is intended for the
+                                individual student whose information was
+                                submitted during registration.
+                            </p>
 
-                        <li>
-                            Disrupt classes intentionally
-                        </li>
+                            <p>
+                                Enrollment details must not be transferred
+                                to another person without prior written
+                                approval from AhámTvám Shiksha.
+                            </p>
 
-                        <li>
-                            Share another student's personal
-                            information without permission
-                        </li>
+                        </div>
 
-                        <li>
-                            Attempt to gain unauthorized access
-                            to systems or accounts
-                        </li>
+                    </section>
 
-                        <li>
-                            Upload malicious software or harmful
-                            material
-                        </li>
 
-                        <li>
-                            Use the platform for unlawful activities
-                        </li>
+                    <!-- 07 -->
 
-                        <li>
-                            Misuse course materials or communication
-                            groups
-                        </li>
-                    </ul>
+                    <section class="legal-section">
 
-                    <p>
-                        We reserve the right to take appropriate
-                        action where a student's conduct materially
-                        disrupts the learning environment or violates
-                        these Terms.
-                    </p>
+                        <div class="section-number">
+                            07
+                        </div>
 
-                </section>
+                        <div>
 
+                            <h2>
+                                Course Fees and Payments
+                            </h2>
 
+                            <p>
+                                Course fees are displayed on the AhámTvám
+                                Shiksha website at the time of enrollment.
+                            </p>
 
-                <section class="legal-section">
+                            <p>
+                                The applicable amount payable by the
+                                student is the amount displayed for the
+                                selected course and offer at the time
+                                the payment process is initiated,
+                                subject to successful payment processing.
+                            </p>
 
-                    <h2>11. Certificates</h2>
+                            <p>
+                                AhámTvám Shiksha may offer promotional
+                                pricing, introductory offers, limited-period
+                                discounts, or other pricing structures
+                                for particular batches.
+                            </p>
 
-                    <p>
-                        Where a course provides a certificate,
-                        eligibility and issuance requirements may
-                        depend on the applicable course and the
-                        student's participation or completion
-                        requirements.
-                    </p>
+                            <p>
+                                Such offers may have their own eligibility
+                                conditions and validity periods.
+                            </p>
 
-                    <p>
-                        A certificate does not constitute a
-                        government-issued qualification, professional
-                        license, employment guarantee, or accreditation
-                        unless expressly stated otherwise.
-                    </p>
+                            <p>
+                                Payments may be processed through
+                                third-party payment service providers
+                                integrated with AhámTvám Shiksha.
+                            </p>
 
-                    <p>
-                        Certificate-related requirements may be
-                        communicated separately for the applicable
-                        course.
-                    </p>
+                            <p>
+                                AhámTvám Shiksha does not store complete
+                                payment-card details on its own website.
+                            </p>
 
-                </section>
+                        </div>
 
+                    </section>
 
 
-                <section class="legal-section">
+                    <!-- 08 -->
 
-                    <h2>12. Changes to Courses or Schedules</h2>
+                    <section class="legal-section">
 
-                    <p>
-                        We may make reasonable changes to course
-                        schedules, class timings, instructors,
-                        curriculum structure, learning materials,
-                        or delivery methods when necessary.
-                    </p>
+                        <div class="section-number">
+                            08
+                        </div>
 
-                    <p>Examples may include:</p>
+                        <div>
 
-                    <ul>
-                        <li>Instructor availability</li>
-                        <li>Technical issues</li>
-                        <li>Batch scheduling requirements</li>
-                        <li>Public holidays</li>
-                        <li>Force majeure events</li>
-                        <li>Operational requirements</li>
-                    </ul>
+                            <h2>
+                                Payment Verification and Registration
+                            </h2>
 
-                    <p>
-                        Where a material change affects an enrolled
-                        student, we will make reasonable efforts to
-                        communicate the change through the contact
-                        details or communication channels available
-                        to us.
-                    </p>
+                            <p>
+                                A payment may require verification before
+                                an enrollment is treated as successfully
+                                completed.
+                            </p>
 
-                </section>
+                            <p>
+                                Where a payment is unsuccessful, cancelled,
+                                declined, interrupted, or otherwise not
+                                confirmed by the payment provider,
+                                enrollment may remain incomplete or pending.
+                            </p>
 
+                            <p>
+                                Students should not make repeated payments
+                                solely because the website appears to be
+                                processing a previous payment. If a payment
+                                issue occurs, the student should contact
+                                AhámTvám Shiksha support with the relevant
+                                payment or registration information.
+                            </p>
 
+                            <p>
+                                Where available, the Registration ID and
+                                payment details may be used by AhámTvám
+                                Shiksha to identify and resolve
+                                payment-related issues.
+                            </p>
 
-                <section class="legal-section">
+                        </div>
 
-                    <h2>13. Cancellation and Refunds</h2>
+                    </section>
 
-                    <p>
-                        Cancellation and refund requests are governed
-                        by our separate
-                        <a href="refund-cancellation-policy.html">
-                            Refund &amp; Cancellation Policy
-                        </a>.
-                    </p>
 
-                    <p>
-                        Please review that policy before enrolling
-                        in a course.
-                    </p>
+                    <!-- 09 -->
 
-                    <p>
-                        Nothing in these Terms is intended to remove
-                        or restrict any consumer rights or other
-                        rights that cannot lawfully be excluded under
-                        applicable law.
-                    </p>
+                    <section class="legal-section">
 
-                </section>
+                        <div class="section-number">
+                            09
+                        </div>
 
+                        <div>
 
+                            <h2>
+                                Student Communication and WhatsApp Groups
+                            </h2>
 
-                <section class="legal-section">
+                            <p>
+                                AhámTvám Shiksha may use the student's
+                                registered email address and phone number
+                                for course-related communication.
+                            </p>
 
-                    <h2>14. Disclaimer</h2>
+                            <p>
+                                For applicable batches, students may be
+                                added to a designated
+                                <strong>WhatsApp group</strong> for
+                                course communication.
+                            </p>
 
-                    <p>
-                        AhámTvám Shiksha provides educational and
-                        skill-development content for learning purposes.
-                    </p>
+                            <p>
+                                The WhatsApp group may be used for:
+                            </p>
 
-                    <p>
-                        Completion of a course does not guarantee:
-                    </p>
+                            <ul>
+                                <li>
+                                    Batch announcements
+                                </li>
 
-                    <ul>
-                        <li>Employment</li>
-                        <li>Freelance work</li>
-                        <li>Income</li>
-                        <li>Clients</li>
-                        <li>Business opportunities</li>
-                        <li>Specific professional results</li>
-                    </ul>
+                                <li>
+                                    Schedule updates
+                                </li>
 
-                    <p>
-                        Individual outcomes depend on factors including
-                        the student's effort, experience, skills, market
-                        conditions, and other circumstances.
-                    </p>
+                                <li>
+                                    Class-related communication
+                                </li>
 
-                    <p>
-                        We make reasonable efforts to provide accurate
-                        and useful educational content, but we do not
-                        guarantee that every course will produce a
-                        particular result for every student.
-                    </p>
+                                <li>
+                                    Student coordination
+                                </li>
 
-                </section>
+                                <li>
+                                    Sharing live class links
+                                </li>
 
+                                <li>
+                                    Important course notifications
+                                </li>
+                            </ul>
 
+                            <p>
+                                The student is responsible for ensuring
+                                that the registered phone number can
+                                receive the relevant communications.
+                            </p>
 
-                <section class="legal-section">
+                            <p>
+                                The WhatsApp group is a communication
+                                channel for enrolled students. Students
+                                must follow reasonable group rules and
+                                must not misuse the group for spam,
+                                harassment, unauthorized promotion,
+                                or unrelated commercial activity.
+                            </p>
 
-                    <h2>15. Limitation of Liability</h2>
+                            <p>
+                                WhatsApp is a third-party service and
+                                its own terms and privacy practices
+                                also apply.
+                            </p>
 
-                    <p>
-                        To the extent permitted by applicable law,
-                        AhámTvám shall not be responsible for indirect,
-                        incidental, special, or consequential losses
-                        arising from the use of the website or courses.
-                    </p>
+                        </div>
 
-                    <p>
-                        We are not responsible for interruptions caused
-                        by circumstances outside our reasonable control,
-                        including internet failures, third-party service
-                        outages, payment-provider issues,
-                        communication-platform outages, power failures,
-                        natural events, or other force majeure circumstances.
-                    </p>
+                    </section>
 
-                    <p>
-                        Nothing in these Terms excludes or limits
-                        liability that cannot legally be excluded or
-                        limited under applicable law.
-                    </p>
 
-                </section>
+                    <!-- 10 -->
 
+                    <section class="legal-section">
 
+                        <div class="section-number">
+                            10
+                        </div>
 
-                <section class="legal-section">
+                        <div>
 
-                    <h2>16. Suspension or Termination</h2>
+                            <h2>
+                                Live Classes and Student Participation
+                            </h2>
 
-                    <p>
-                        We may suspend or terminate a student's access
-                        to course services where reasonably necessary
-                        due to:
-                    </p>
+                            <p>
+                                Students are expected to attend their
+                                scheduled live sessions and participate
+                                responsibly.
+                            </p>
 
-                    <ul>
-                        <li>Serious violation of these Terms</li>
-                        <li>Misuse of course materials</li>
-                        <li>Fraudulent activity</li>
-                        <li>Abusive or threatening conduct</li>
-                        <li>Unauthorized sharing of paid content</li>
-                        <li>Attempts to compromise our systems</li>
-                        <li>
-                            Other unlawful or materially disruptive
-                            conduct
-                        </li>
-                    </ul>
+                            <p>
+                                AhámTvám Shiksha provides structured
+                                instruction, demonstrations, and learning
+                                guidance. However, individual learning
+                                outcomes depend on several factors,
+                                including attendance, practice, effort,
+                                prior knowledge, and application of the
+                                concepts taught.
+                            </p>
 
-                    <p>
-                        Where appropriate, we may provide notice before
-                        taking such action.
-                    </p>
+                            <div class="legal-note">
 
-                    <p>
-                        Termination or suspension does not automatically
-                        create a right to a refund. Any applicable refund
-                        will be determined in accordance with the Refund
-                        &amp; Cancellation Policy and applicable law.
-                    </p>
+                                Enrollment does not guarantee employment,
+                                freelance projects, income, client
+                                acquisition, business results, or any
+                                particular professional outcome.
 
-                </section>
+                            </div>
 
+                            <p>
+                                Any career-oriented information provided
+                                during a course is educational guidance
+                                and should not be treated as a guarantee
+                                of future results.
+                            </p>
 
+                        </div>
 
-                <section class="legal-section">
+                    </section>
 
-                    <h2>17. Third-Party Services</h2>
 
-                    <p>
-                        AhámTvám Shiksha may use third-party services
-                        for purposes such as payment processing, website
-                        hosting, communication, analytics, and other
-                        technical services.
-                    </p>
+                    <!-- 11 -->
 
-                    <p>
-                        Your use of certain third-party services may
-                        also be subject to the terms and policies of
-                        those third parties.
-                    </p>
+                    <section class="legal-section">
 
-                    <p>
-                        AhámTvám is not responsible for independent
-                        outages, failures, or policy changes of
-                        third-party services, subject to applicable law.
-                    </p>
+                        <div class="section-number">
+                            11
+                        </div>
 
-                </section>
+                        <div>
 
+                            <h2>
+                                Course Materials and Intellectual Property
+                            </h2>
 
+                            <p>
+                                Course materials provided by AhámTvám
+                                Shiksha may include, depending on the course:
+                            </p>
 
-                <section class="legal-section">
+                            <ul>
+                                <li>
+                                    Learning documents
+                                </li>
 
-                    <h2>18. Privacy</h2>
+                                <li>
+                                    Course notes
+                                </li>
 
-                    <p>
-                        Your personal information is handled in
-                        accordance with our
-                        <a href="privacy-policy.html">
+                                <li>
+                                    Demonstrations
+                                </li>
+
+                                <li>
+                                    Project-related materials
+                                </li>
+
+                                <li>
+                                    Examples
+                                </li>
+
+                                <li>
+                                    Reference resources
+                                </li>
+
+                                <li>
+                                    Other educational content
+                                </li>
+                            </ul>
+
+                            <p>
+                                Unless expressly stated otherwise, these
+                                materials are provided only for the personal
+                                educational use of the enrolled student.
+                            </p>
+
+                            <p>
+                                The student must not, without prior written
+                                permission:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Sell or resell course materials.
+                                </li>
+
+                                <li>
+                                    Upload course materials to public
+                                    platforms.
+                                </li>
+
+                                <li>
+                                    Distribute materials to
+                                    non-enrolled persons.
+                                </li>
+
+                                <li>
+                                    Reproduce substantial portions of
+                                    the materials commercially.
+                                </li>
+
+                                <li>
+                                    Use course materials to operate a
+                                    competing training program.
+                                </li>
+
+                                <li>
+                                    Claim AhámTvám Shiksha materials as
+                                    their own work.
+                                </li>
+                            </ul>
+
+                            <p>
+                                All applicable intellectual property
+                                rights remain with their respective owners.
+                            </p>
+
+                            <p>
+                                Third-party software, fonts, assets,
+                                music, plugins, or other resources used
+                                during a course may be subject to their
+                                own licenses and terms.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 12 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            12
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Class Recording and Content Protection
+                            </h2>
+
+                            <p>
+                                Students must not record, reproduce,
+                                redistribute, publicly upload, or
+                                commercially exploit live classes or
+                                course sessions without prior written
+                                permission from AhámTvám Shiksha.
+                            </p>
+
+                            <p>
+                                If AhámTvám Shiksha provides recordings
+                                or recorded educational material for a
+                                particular course or batch, such access
+                                will be subject to the conditions
+                                communicated for that course.
+                            </p>
+
+                            <p>
+                                A student must not share private class
+                                recordings, student discussions, WhatsApp
+                                communications, or other restricted course
+                                content publicly or with non-enrolled persons.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 13 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            13
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Student Conduct
+                            </h2>
+
+                            <p>
+                                Students are expected to maintain respectful
+                                and professional behaviour while interacting
+                                with instructors, staff, and other students.
+                            </p>
+
+                            <p>
+                                Students must not use AhámTvám Shiksha's
+                                website, classes, communication channels,
+                                or student groups to:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Harass or threaten another person.
+                                </li>
+
+                                <li>
+                                    Engage in abusive or discriminatory
+                                    behaviour.
+                                </li>
+
+                                <li>
+                                    Disrupt live classes.
+                                </li>
+
+                                <li>
+                                    Spam students or instructors.
+                                </li>
+
+                                <li>
+                                    Share malicious or unlawful content.
+                                </li>
+
+                                <li>
+                                    Promote unrelated commercial services
+                                    without permission.
+                                </li>
+
+                                <li>
+                                    Attempt unauthorized access to
+                                    website systems.
+                                </li>
+
+                                <li>
+                                    Misuse another student's personal
+                                    information.
+                                </li>
+
+                                <li>
+                                    Distribute unauthorized course materials.
+                                </li>
+                            </ul>
+
+                            <p>
+                                AhámTvám Shiksha may take appropriate action
+                                where a student's conduct materially disrupts
+                                the learning environment or violates these Terms.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 14 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            14
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Course Completion and Certificates
+                            </h2>
+
+                            <p>
+                                Where a course provides a certificate of
+                                completion, eligibility and issuance may
+                                depend on the applicable course requirements
+                                communicated to students.
+                            </p>
+
+                            <p>
+                                A certificate represents completion of
+                                the applicable AhámTvám Shiksha learning
+                                program and does not represent a government
+                                qualification, university degree, statutory
+                                professional license, or employment guarantee
+                                unless expressly stated otherwise.
+                            </p>
+
+                            <p>
+                                Certificate formats, eligibility requirements,
+                                and issuance procedures may vary by course
+                                or batch.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 15 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            15
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Course Changes, Rescheduling and Batch Adjustments
+                            </h2>
+
+                            <p>
+                                AhámTvám Shiksha may make reasonable changes
+                                to a course where necessary for educational,
+                                operational, technical, or scheduling reasons.
+                            </p>
+
+                            <p>
+                                These may include:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Adjusting class dates.
+                                </li>
+
+                                <li>
+                                    Rescheduling a session.
+                                </li>
+
+                                <li>
+                                    Replacing an instructor.
+                                </li>
+
+                                <li>
+                                    Updating learning materials.
+                                </li>
+
+                                <li>
+                                    Improving the course curriculum.
+                                </li>
+
+                                <li>
+                                    Adjusting the sequence in which topics
+                                    are taught.
+                                </li>
+
+                                <li>
+                                    Making reasonable technical or
+                                    operational changes.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Where a significant change materially affects
+                                an enrolled student's course, AhámTvám Shiksha
+                                will make reasonable efforts to communicate
+                                the change.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 16 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            16
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Cancellation and Refunds
+                            </h2>
+
+                            <p>
+                                Cancellation and refund requests are governed
+                                by the <strong>Refund & Cancellation Policy</strong>
+                                applicable to AhámTvám Shiksha.
+                            </p>
+
+                            <p>
+                                Students should review that policy before
+                                completing an enrollment.
+                            </p>
+
+                            <p>
+                                Nothing in these Terms is intended to remove
+                                or restrict any consumer right or legal remedy
+                                that cannot lawfully be excluded under
+                                applicable Indian law.
+                            </p>
+
+                            <a href="refund-cancellation-policy.html"
+                                class="legal-link">
+                                View Refund & Cancellation Policy
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 17 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            17
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Website Availability and Technical Issues
+                            </h2>
+
+                            <p>
+                                We aim to keep the AhámTvám Shiksha website
+                                and enrollment system available and functional.
+                            </p>
+
+                            <p>
+                                However, temporary interruptions may occur
+                                because of:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Server or hosting issues.
+                                </li>
+
+                                <li>
+                                    Internet connectivity.
+                                </li>
+
+                                <li>
+                                    Payment gateway issues.
+                                </li>
+
+                                <li>
+                                    Third-party service outages.
+                                </li>
+
+                                <li>
+                                    Maintenance.
+                                </li>
+
+                                <li>
+                                    Security incidents.
+                                </li>
+
+                                <li>
+                                    Technical failures.
+                                </li>
+
+                                <li>
+                                    Circumstances outside our reasonable control.
+                                </li>
+                            </ul>
+
+                            <p>
+                                AhámTvám Shiksha will make reasonable efforts
+                                to restore affected services where practicable.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 18 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            18
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Third-Party Services
+                            </h2>
+
+                            <p>
+                                AhámTvám Shiksha may use third-party services
+                                to support its operations, including payment
+                                processing, website hosting, communication,
+                                analytics, email, and messaging services.
+                            </p>
+
+                            <p>
+                                Examples may include payment gateways and
+                                communication platforms such as WhatsApp.
+                            </p>
+
+                            <p>
+                                Your use of third-party services may also
+                                be subject to the respective provider's
+                                terms, policies, and privacy practices.
+                            </p>
+
+                            <p>
+                                AhámTvám Shiksha is not responsible for
+                                independent changes, interruptions, or
+                                policies of third-party services that are
+                                outside our reasonable control.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 19 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            19
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Privacy and Personal Information
+                            </h2>
+
+                            <p>
+                                Information collected during website visits,
+                                enrollment, payment, and course participation
+                                may include personal information such as your
+                                name, email address, phone number, payment-related
+                                identifiers, and course enrollment information.
+                            </p>
+
+                            <p>
+                                Such information will be handled in accordance
+                                with our <strong>Privacy Policy</strong> and
+                                applicable law.
+                            </p>
+
+                            <p>
+                                Personal information may be processed where
+                                reasonably necessary for purposes such as:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Processing enrollment.
+                                </li>
+
+                                <li>
+                                    Verifying payments.
+                                </li>
+
+                                <li>
+                                    Providing course services.
+                                </li>
+
+                                <li>
+                                    Communicating with students.
+                                </li>
+
+                                <li>
+                                    Maintaining enrollment records.
+                                </li>
+
+                                <li>
+                                    Providing customer support.
+                                </li>
+
+                                <li>
+                                    Meeting legal or regulatory requirements.
+                                </li>
+
+                                <li>
+                                    Protecting the security and integrity
+                                    of our services.
+                                </li>
+                            </ul>
+
+                            <a href="privacy-policy.html"
+                                class="legal-link">
+                                View Privacy Policy
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 20 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            20
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Disclaimer Regarding Educational Outcomes
+                            </h2>
+
+                            <p>
+                                AhámTvám Shiksha provides educational and
+                                skill-development services.
+                            </p>
+
+                            <p>
+                                We do not guarantee that completing a course
+                                will result in:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Employment.
+                                </li>
+
+                                <li>
+                                    Freelance work.
+                                </li>
+
+                                <li>
+                                    Client acquisition.
+                                </li>
+
+                                <li>
+                                    Business opportunities.
+                                </li>
+
+                                <li>
+                                    A particular income.
+                                </li>
+
+                                <li>
+                                    A particular salary.
+                                </li>
+
+                                <li>
+                                    Professional certification from
+                                    another organization.
+                                </li>
+
+                                <li>
+                                    Any specific career outcome.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Course content is intended to provide
+                                structured learning and practical guidance.
+                                Individual results may vary based on the
+                                student's effort, practice, experience,
+                                market conditions, and other factors.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 21 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            21
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Limitation of Liability
+                            </h2>
+
+                            <p>
+                                To the extent permitted by applicable law,
+                                AhámTvám World Private Limited will not be
+                                responsible for indirect, incidental, special,
+                                or consequential losses arising from the use
+                                of the website or educational services.
+                            </p>
+
+                            <p>
+                                This limitation does not apply to liabilities
+                                that cannot lawfully be excluded or limited
+                                under applicable law.
+                            </p>
+
+                            <p>
+                                Nothing in these Terms is intended to restrict
+                                statutory consumer rights or other rights that
+                                cannot legally be waived.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 22 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            22
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Suspension or Termination
+                            </h2>
+
+                            <p>
+                                AhámTvám Shiksha may suspend or terminate a
+                                student's access to course services where
+                                reasonably necessary due to:
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Serious violation of these Terms.
+                                </li>
+
+                                <li>
+                                    Unauthorized sharing or distribution
+                                    of course materials.
+                                </li>
+
+                                <li>
+                                    Fraudulent or abusive activity.
+                                </li>
+
+                                <li>
+                                    Serious disruption of classes or
+                                    student groups.
+                                </li>
+
+                                <li>
+                                    Unauthorized access attempts.
+                                </li>
+
+                                <li>
+                                    Other conduct that materially harms
+                                    the platform, instructors, students,
+                                    or the company.
+                                </li>
+                            </ul>
+
+                            <p>
+                                Where appropriate and practicable,
+                                AhámTvám Shiksha may communicate the
+                                reason for such action.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 23 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            23
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Governing Law and Jurisdiction
+                            </h2>
+
+                            <p>
+                                These Terms shall be governed by the laws
+                                applicable in India.
+                            </p>
+
+                            <p>
+                                Subject to applicable consumer protection
+                                laws and the jurisdiction available to a
+                                consumer under applicable law, disputes
+                                relating to these Terms or AhámTvám Shiksha
+                                services shall be subject to the jurisdiction
+                                of the competent courts and authorities in
+                                <strong>Telangana, India</strong>.
+                            </p>
+
+                            <p>
+                                Nothing in this section is intended to
+                                prevent a consumer from exercising any
+                                statutory right or remedy available under
+                                applicable law.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 24 -->
+
+                    <section class="legal-section">
+
+                        <div class="section-number">
+                            24
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Changes to These Terms
+                            </h2>
+
+                            <p>
+                                AhámTvám Shiksha may update these Terms &
+                                Conditions from time to time to reflect
+                                changes in our courses, services, business
+                                operations, legal requirements, or policies.
+                            </p>
+
+                            <p>
+                                The updated version will be published on
+                                this website with a revised
+                                <strong>"Last Updated"</strong> date.
+                            </p>
+
+                            <p>
+                                Your continued use of the website or services
+                                after the updated Terms become effective may
+                                constitute acceptance of the updated Terms,
+                                to the extent permitted by applicable law.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- 25 -->
+
+                    <section class="legal-section contact-section">
+
+                        <div class="section-number">
+                            25
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Contact Us
+                            </h2>
+
+                            <p>
+                                If you have questions regarding these
+                                Terms & Conditions, enrollment, payments,
+                                or AhámTvám Shiksha services, you may
+                                contact us through:
+                            </p>
+
+                            <div class="contact-card">
+
+                                <span>
+                                    AHÁMTVÁM SHIKSHA
+                                </span>
+
+                                <strong>
+                                    AHAMTVAM WORLD PRIVATE LIMITED
+                                </strong>
+
+                                <div class="contact-details">
+
+                                    <p>
+                                        <b>Email</b>
+                                        <a href="mailto:support.atshiksha@gmail.com">
+                                            support.atshiksha@gmail.com
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <b>Phone</b>
+                                        <a href="tel:+919494890522">
+                                            +91 9494 890 522
+                                        </a>
+                                    </p>
+
+                                    <p>
+                                        <b>Website</b>
+                                        shiksha.ahamtvam.net
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </article>
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="legal-sidebar">
+
+                    <div class="sidebar-inner">
+
+                        <span class="sidebar-label">
+                            ON THIS PAGE
+                        </span>
+
+                        <a href="#"
+                            class="sidebar-link active">
+                            Terms & Conditions
+                        </a>
+
+                        <a href="privacy-policy.html"
+                            class="sidebar-link">
                             Privacy Policy
-                        </a>.
-                    </p>
-
-                    <p>
-                        By using our services, you acknowledge that
-                        certain information is required to process
-                        enrollment, payments, course communication,
-                        and related services.
-                    </p>
-
-                </section>
-
-
-
-                <section class="legal-section">
-
-                    <h2>19. Governing Law and Jurisdiction</h2>
-
-                    <p>
-                        These Terms shall be governed by and interpreted
-                        in accordance with the laws applicable in India.
-                    </p>
-
-                    <p>
-                        Subject to applicable law, disputes relating to
-                        these Terms or the services provided by AhámTvám
-                        Shiksha shall be subject to the jurisdiction of
-                        the appropriate courts having jurisdiction over
-                        the relevant matter and location.
-                    </p>
-
-                </section>
-
-
-
-                <section class="legal-section">
-
-                    <h2>20. Changes to These Terms</h2>
-
-                    <p>
-                        We may update these Terms from time to time to
-                        reflect changes to our services, legal requirements,
-                        or operational practices.
-                    </p>
-
-                    <p>
-                        The updated version will be published on this
-                        page with a revised "Last Updated" date.
-                    </p>
-
-                    <p>
-                        Your continued use of the website or services
-                        after an updated version becomes effective
-                        constitutes acceptance of the updated Terms,
-                        to the extent permitted by applicable law.
-                    </p>
-
-                </section>
-
-
-
-                <section class="legal-section">
-
-                    <h2>21. Contact Us</h2>
-
-                    <p>
-                        For questions regarding these Terms or
-                        AhámTvám Shiksha services, you may contact us at:
-                    </p>
-
-                    <address>
-
-                        <strong>
-                            AHAMTVAM WORLD PRIVATE LIMITED
-                        </strong><br>
-
-                        Email:
-                        <a href="mailto:contactahamtvam@gmail.com">
-                            contactahamtvam@gmail.com
-                        </a>
-                        <br>
-
-                        Phone:
-                        <a href="tel:+919494890522">
-                            +91 9494 890 522
-                        </a>
-                        <br>
-
-                        Website:
-                        <a href="https://shiksha.ahamtvam.net">
-                            shiksha.ahamtvam.net
                         </a>
 
-                    </address>
-
-                    <p class="support-line">
-
-                        <strong>Student Support</strong><br>
-
-                        Email:
-                        <a href="mailto:support.atshiksha@gmail.com">
-                            support.atshiksha@gmail.com
+                        <a href="refund-cancellation-policy.html"
+                            class="sidebar-link">
+                            Refund & Cancellation
                         </a>
 
-                    </p>
+                    </div>
 
-                </section>
-
-
-
-                <div class="legal-final-note">
-
-                    By enrolling in an AhámTvám Shiksha course,
-                    you acknowledge that you have read and understood
-                    these Terms of Service.
-
-                </div>
+                </aside>
 
             </div>
 
@@ -989,32 +1719,81 @@
     </main>
 
 
+    <!-- ================= FOOTER ================= -->
 
-    <!-- ================================
-         FOOTER
-    ================================= -->
-
-    <footer class="site-footer">
+    <footer class="terms-footer">
 
         <div class="container">
 
-            <div class="footer-policy-links">
+            <div class="footer-main">
 
-                <a href="terms-of-service.html">
-                    Terms of Service
-                </a>
+                <div class="footer-brand">
 
-                <span>*</span>
+                    <img
+                        src="assets/images/logo.png"
+                        alt="AhámTvám Shiksha">
 
-                <a href="privacy-policy.html">
-                    Privacy Policy
-                </a>
+                    <p>
+                        Learn. Create. Build your career.
+                    </p>
 
-                <span>*</span>
+                </div>
 
-                <a href="refund-cancellation-policy.html">
-                    Refund &amp; Cancellation Policy
-                </a>
+
+                <div class="footer-links">
+
+                    <h5>
+                        Quick Links
+                    </h5>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="courses.html">
+                        Courses
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h5>
+                        Legal
+                    </h5>
+
+                    <a href="terms-and-conditions.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="refund-cancellation-policy.html">
+                        Refund & Cancellation
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 AHAMTVAM WORLD PRIVATE LIMITED.
+                    All rights reserved.
+                </p>
 
             </div>
 
@@ -1023,10 +1802,50 @@
     </footer>
 
 
+    <!-- ================= JAVASCRIPT ================= -->
 
-    <!-- Bootstrap JS -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    <script>
+
+        const menuButton =
+            document.querySelector(".mobile-menu-button");
+
+        const mobileMenu =
+            document.querySelector(".mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+
+            const isOpen =
+                mobileMenu.classList.toggle("active");
+
+            menuButton.classList.toggle("active");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        });
+
+
+        document
+            .querySelectorAll(".mobile-menu a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    mobileMenu.classList.remove("active");
+
+                    menuButton.classList.remove("active");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
     </script>
 
 </body>
