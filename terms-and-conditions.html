@@ -312,21 +312,14 @@
         ========================================================= */
 
         .legal-hero {
-            background:
-                linear-gradient(
-                    135deg,
-                    #f7fbfd 0%,
-                    #ffffff 65%
-                );
-
+            background: var(--light);
             border-bottom: 1px solid var(--border);
         }
 
         .hero-container {
-            width: min(1000px, calc(100% - 40px));
+            max-width: 1000px;
             margin: 0 auto;
-
-            padding: 70px 0 60px;
+            padding: 70px 25px 60px;
         }
 
         .eyebrow {
@@ -391,8 +384,9 @@
         }
 
         .legal-container {
-            width: min(1000px, calc(100% - 40px));
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 25px;
         }
 
         .legal-content {
@@ -678,8 +672,7 @@
             }
 
             .hero-container {
-                width: min(100% - 30px, 1000px);
-                padding: 50px 0 45px;
+                padding: 50px 20px 45px;
             }
 
             .hero-title {
@@ -695,7 +688,7 @@
             }
 
             .legal-container {
-                width: min(100% - 30px, 1000px);
+                padding: 0 20px;
             }
 
             .legal-block {
