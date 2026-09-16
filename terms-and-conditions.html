@@ -261,6 +261,51 @@
             display: block;
         }
 
+        .mobile-courses-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 11px 0;
+
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 14px;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.mobile-courses-arrow {
+    font-size: 10px;
+    transition: transform 0.2s ease;
+}
+
+.mobile-courses-toggle.active
+.mobile-courses-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-courses-menu {
+    display: none;
+    padding-left: 15px;
+}
+
+.mobile-courses-menu.active {
+    display: block;
+}
+
+.mobile-courses-menu a {
+    padding: 9px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
 
         /* =========================================================
            PAGE HERO
@@ -765,7 +810,7 @@
 
                     <div class="dropdown-menu">
 
-                        <a href="courses-details.html">
+                        <a href="courses.html">
                             Editing
                         </a>
 
@@ -823,9 +868,38 @@
                 Home
             </a>
 
-            <a href="courses-details.html">
-                Courses
-            </a>
+            <div class="mobile-courses">
+
+    <button
+        type="button"
+        class="mobile-courses-toggle"
+        aria-expanded="false"
+    >
+        Courses
+        <span class="mobile-courses-arrow">▼</span>
+    </button>
+
+    <div class="mobile-courses-menu">
+
+        <a href="courses.html">
+            Editing
+        </a>
+
+        <a href="writing.html">
+            Writing (Coming Soon)
+        </a>
+
+        <a href="communication.html">
+            Communication (Coming Soon)
+        </a>
+
+        <a href="marketing.html">
+            Marketing (Coming Soon)
+        </a>
+
+    </div>
+
+</div>
 
             <a href="about.html">
                 About
@@ -2193,17 +2267,21 @@
                         Courses
                     </h4>
 
-                    <a href="courses-details.html">
-                        Vaali — Beginner
-                    </a>
+                    <a href="courses.html">
+                            Editing
+                        </a>
 
-                    <a href="courses-details.html">
-                        Sugreeva — Intermediate
-                    </a>
+                        <a href="writing.html">
+                            Writing (Coming Soon)
+                        </a>
 
-                    <a href="courses-details.html">
-                        Garuda — Advanced
-                    </a>
+                        <a href="communication.html">
+                            Communication (Coming Soon)
+                        </a>
+
+                        <a href="marketing.html">
+                            Marketing (Coming Soon)
+                        </a>
 
                 </div>
 
@@ -2292,6 +2370,36 @@
 
             }
         );
+
+        const mobileCoursesToggle =
+    document.querySelector(".mobile-courses-toggle");
+
+const mobileCoursesMenu =
+    document.querySelector(".mobile-courses-menu");
+
+if (mobileCoursesToggle && mobileCoursesMenu) {
+
+    mobileCoursesToggle.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                mobileCoursesMenu.classList.toggle("active");
+
+            mobileCoursesToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            mobileCoursesToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        }
+    );
+
+}
 
     </script>
 
