@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Policy | AhámTvám Shiksha
+    </title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for AhámTvám Shiksha, operated by AHAMTVAM WORLD PRIVATE LIMITED."
+    >
+
+    <style>
+
+        :root {
+            --navy: #0A1543;
+            --orange: #FFA500;
+            --aqua: #05C3DD;
+            --light: #f7fbfd;
+            --white: #ffffff;
+            --text: #222222;
+            --muted: #666666;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Cascadia Mono",
+                "SFMono-Regular",
+                Consolas,
+                "Liberation Mono",
+                Menlo,
+                monospace;
+
+            font-weight: 400;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.75;
+            font-size: 15px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .desktop-nav > a,
+        .courses-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: 0.2s ease;
+        }
+
+        .desktop-nav > a:hover,
+        .courses-link:hover {
+            color: var(--orange);
+        }
+
+        .courses-dropdown {
+            position: relative;
+        }
+
+        .courses-link {
+            background: none;
+            border: 0;
+            cursor: pointer;
+            font-family: inherit;
+            padding: 0;
+        }
+
+        .courses-arrow {
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 50%;
+            transform: translateX(-50%);
+
+            min-width: 210px;
+            background: var(--white);
+
+            border: 1px solid var(--border);
+            border-radius: 8px;
+
+            padding: 8px 0;
+
+            box-shadow:
+                0 10px 30px rgba(10, 21, 67, 0.08);
+
+            display: none;
+        }
+
+        .courses-dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 9px 16px;
+
+            text-decoration: none;
+            color: var(--navy);
+
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--light);
+            color: var(--orange);
+        }
+
+        .mobile-menu-button {
+            display: none;
+
+            background: none;
+            border: 0;
+
+            color: var(--navy);
+
+            font-family: inherit;
+            font-size: 22px;
+
+            cursor: pointer;
+        }
+
+        /* =========================
+           MOBILE NAV
+        ========================= */
+
+        .mobile-nav {
+            display: none;
+
+            border-top: 1px solid var(--border);
+
+            padding: 12px 20px 18px;
+
+            background: var(--white);
+        }
+
+        .mobile-nav a {
+            display: block;
+
+            padding: 11px 0;
+
+            color: var(--navy);
+
+            font-size: 14px;
+
+            border-bottom: 1px solid #f0f0f0;
+
+            text-decoration: none;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: 0;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-courses-toggle {
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 11px 0;
+
+            background: none;
+            border: 0;
+            border-bottom: 1px solid #f0f0f0;
+
+            color: var(--navy);
+
+            font-family: inherit;
+            font-size: 14px;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .mobile-courses-arrow {
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .mobile-courses-toggle.active
+        .mobile-courses-arrow {
+            transform: rotate(180deg);
+        }
+
+        .mobile-courses-menu {
+            display: none;
+            padding-left: 15px;
+        }
+
+        .mobile-courses-menu.active {
+            display: block;
+        }
+
+        .mobile-courses-menu a {
+            padding: 9px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .legal-hero {
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px 25px 60px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            color: var(--orange);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--navy);
+
+            font-size: clamp(32px, 5vw, 52px);
+
+            line-height: 1.15;
+
+            font-weight: 700;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+        }
+
+        .effective-date {
+            margin-top: 22px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        .effective-date strong {
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        /* =========================
+           LEGAL CONTENT
+        ========================= */
+
+        .legal-section {
+            padding: 65px 0 90px;
+        }
+
+        .legal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .legal-content {
+            max-width: 900px;
+        }
+
+        .legal-block {
+            margin-bottom: 48px;
+        }
+
+        .legal-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-block h2 {
+            color: var(--navy);
+
+            font-size: 21px;
+
+            line-height: 1.4;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+        .legal-block h3 {
+            color: var(--navy);
+
+            font-size: 16px;
+
+            line-height: 1.5;
+
+            font-weight: 700;
+
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        .legal-block p {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .legal-block ul {
+            margin: 12px 0 16px 22px;
+        }
+
+        .legal-block li {
+            margin-bottom: 8px;
+        }
+
+        .legal-block a {
+            color: var(--navy);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .legal-block a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           CONTACT BOX
+        ========================= */
+
+        .contact-box {
+            margin-top: 20px;
+
+            background: var(--navy);
+            color: var(--white);
+
+            padding: 28px 30px;
+
+            border-radius: 10px;
+        }
+
+        .contact-box h3 {
+            color: var(--white);
+
+            margin: 0 0 12px;
+
+            font-weight: 700;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.88);
+
+            margin-bottom: 7px;
+        }
+
+        .contact-box p strong {
+            color: var(--white);
+        }
+
+        .contact-box a {
+            color: var(--white);
+
+            text-decoration: underline;
+
+            text-underline-offset: 3px;
+        }
+
+        .contact-box a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
+            background: var(--navy);
+            color: var(--white);
+
+            padding: 55px 0 25px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr
+                1fr
+                1fr;
+
+            gap: 50px;
+        }
+
+        .footer-brand img {
+            width: 180px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 360px;
+
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 13px;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+
+            font-weight: 700;
+        }
+
+        .footer-column a {
+            display: block;
+
+            color: rgba(255, 255, 255, 0.75);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            margin-bottom: 9px;
+        }
+
+        .footer-column a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+
+            padding: 20px 25px 0;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.55);
+
+            font-size: 12px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.65);
+
+            text-decoration: none;
+
+            font-size: 12px;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--orange);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .header-container {
+                padding: 14px 20px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .hero-container {
+                padding: 50px 20px 45px;
+            }
+
+            .hero-title {
+                font-size: 34px;
+            }
+
+            .legal-section {
+                padding: 45px 0 65px;
+            }
+
+            .legal-container {
+                padding: 0 20px;
+            }
+
+            .legal-block {
+                margin-bottom: 38px;
+            }
+
+            .legal-block h2 {
+                font-size: 19px;
+            }
+
+            .contact-box {
+                padding: 24px 22px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                padding: 0 20px;
+            }
+
+            .footer-bottom {
+                margin-top: 35px;
+
+                padding:
+                    18px 20px 0;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                gap: 12px 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="AhámTvám Shiksha Home"
+            >
+                <img
+                    src="assets/images/logo-2.png"
+                    alt="AhámTvám Shiksha"
+                >
+            </a>
+
+            <nav
+                class="desktop-nav"
+                aria-label="Main Navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <div class="courses-dropdown">
+
+                    <button
+                        type="button"
+                        class="courses-link"
+                    >
+                        Courses
+                        <span class="courses-arrow">
+                            ▼
+                        </span>
+                    </button>
+
+                    <div class="dropdown-menu">
+
+                        <a href="courses.html">
+                            Editing
+                        </a>
+
+                        <a href="writing.html">
+                            Writing (Coming Soon)
+                        </a>
+
+                        <a href="communication.html">
+                            Communication (Coming Soon)
+                        </a>
+
+                        <a href="marketing.html">
+                            Marketing (Coming Soon)
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+        <!-- MOBILE NAV -->
+
+        <nav
+            class="mobile-nav"
+            id="mobileNav"
+            aria-label="Mobile Navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <div class="mobile-courses">
+
+                <button
+                    type="button"
+                    class="mobile-courses-toggle"
+                    aria-expanded="false"
+                >
+                    Courses
+
+                    <span class="mobile-courses-arrow">
+                        ▼
+                    </span>
+
+                </button>
+
+                <div class="mobile-courses-menu">
+
+                    <a href="courses.html">
+                        Editing
+                    </a>
+
+                    <a href="writing.html">
+                        Writing (Coming Soon)
+                    </a>
+
+                    <a href="communication.html">
+                        Communication (Coming Soon)
+                    </a>
+
+                    <a href="marketing.html">
+                        Marketing (Coming Soon)
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="legal-hero">
+
+        <div class="hero-container">
+
+            <span class="eyebrow">
+                AhámTvám Shiksha
+            </span>
+
+            <h1 class="hero-title">
+                Privacy Policy
+            </h1>
+
+            <p class="hero-description">
+                This Privacy Policy explains how AhámTvám Shiksha
+                collects, uses, stores, and protects personal information
+                provided by students and visitors through our website
+                and enrollment services.
+            </p>
+
+            <p class="effective-date">
+                <strong>Effective Date:</strong>
+                15 September 2026
+            </p>
+
+            <p class="effective-date">
+                <strong>Last Updated:</strong>
+                15 September 2026
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRIVACY CONTENT
+    ========================= -->
+
+    <main>
+
+        <section class="legal-section">
+
+            <div class="legal-container">
+
+                <div class="legal-content">
+
+
+                    <!-- 1 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            1. Introduction
+                        </h2>
+
+                        <p>
+                            AhámTvám Shiksha is an educational initiative
+                            operated by <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
+                            ("AhámTvám", "we", "us", or "our").
+                        </p>
+
+                        <p>
+                            This Privacy Policy explains how we handle
+                            personal information when you visit our website,
+                            enquire about our courses, register for a course,
+                            make a payment, or communicate with us regarding
+                            our educational services.
+                        </p>
+
+                        <p>
+                            By using our website or providing personal
+                            information to us, you acknowledge this Privacy
+                            Policy and the manner in which your information
+                            may be processed for the purposes described below.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            2. Information We Collect
+                        </h2>
+
+                        <p>
+                            Depending on how you interact with AhámTvám
+                            Shiksha, we may collect the following information:
+                        </p>
+
+                        <h3>
+                            Information provided during enrollment
+                        </h3>
+
+                        <ul>
+
+                            <li>
+                                Full name
+                            </li>
+
+                            <li>
+                                Email address
+                            </li>
+
+                            <li>
+                                Mobile phone number
+                            </li>
+
+                            <li>
+                                Selected course
+                            </li>
+
+                            <li>
+                                Course level
+                            </li>
+
+                            <li>
+                                Registration ID
+                            </li>
+
+                            <li>
+                                Time zone or related location information
+                                provided through the enrollment process
+                            </li>
+
+                        </ul>
+
+                        <h3>
+                            Payment-related information
+                        </h3>
+
+                        <p>
+                            When you make a course payment, payment-related
+                            information such as payment ID, payment session
+                            ID, payment status, payment amount, payment
+                            attempts, and payment method may be processed
+                            for enrollment verification and transaction
+                            records.
+                        </p>
+
+                        <p>
+                            Payment card, UPI, banking, or other sensitive
+                            payment credentials are processed through our
+                            payment service provider and are not intended
+                            to be stored directly by AhámTvám Shiksha.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            3. Information Collected Through Website Use
+                        </h2>
+
+                        <p>
+                            When you visit our website, certain technical
+                            information may be processed by the website,
+                            hosting infrastructure, security systems, or
+                            third-party services used to operate the website.
+                        </p>
+
+                        <p>
+                            Depending on the services enabled on the website,
+                            this may include information such as IP address,
+                            browser type, device information, operating system,
+                            pages accessed, referring information, and
+                            technical logs required for security and reliable
+                            operation.
+                        </p>
+
+                        <p>
+                            We do not use such information for the purpose of
+                            identifying you personally unless reasonably
+                            necessary for security, technical support,
+                            legal compliance, or another stated purpose.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            4. How We Use Your Information
+                        </h2>
+
+                        <p>
+                            We may use personal information for the following
+                            purposes:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Processing course enrollment requests.
+                            </li>
+
+                            <li>
+                                Creating and maintaining student registration
+                                records.
+                            </li>
+
+                            <li>
+                                Processing and verifying course payments.
+                            </li>
+
+                            <li>
+                                Generating and maintaining registration IDs.
+                            </li>
+
+                            <li>
+                                Communicating with students regarding
+                                enrollment and classes.
+                            </li>
+
+                            <li>
+                                Providing information about course schedules,
+                                class participation, and related updates.
+                            </li>
+
+                            <li>
+                                Providing access to relevant student
+                                communication channels, including WhatsApp
+                                groups where applicable.
+                            </li>
+
+                            <li>
+                                Responding to support requests and enquiries.
+                            </li>
+
+                            <li>
+                                Maintaining financial, transaction, and
+                                business records.
+                            </li>
+
+                            <li>
+                                Detecting, preventing, and addressing fraud,
+                                misuse, security incidents, or technical
+                                problems.
+                            </li>
+
+                            <li>
+                                Complying with applicable legal and regulatory
+                                obligations.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            5. Course Enrollment Information
+                        </h2>
+
+                        <p>
+                            When you submit the enrollment form, the
+                            information you provide is used to identify
+                            your enrollment and facilitate the course
+                            registration process.
+                        </p>
+
+                        <p>
+                            This information may be recorded in our internal
+                            student registration records, including records
+                            maintained through business productivity and
+                            record-management services.
+                        </p>
+
+                        <p>
+                            We use the information necessary to associate
+                            your payment, registration ID, selected course,
+                            and student details with your enrollment.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            6. Payment Processing
+                        </h2>
+
+                        <p>
+                            Course payments are processed through
+                            <strong>Zoho Payments</strong> or its applicable
+                            payment infrastructure.
+                        </p>
+
+                        <p>
+                            When you proceed to payment, information required
+                            for completing and verifying the transaction may
+                            be transmitted to the payment service provider.
+                        </p>
+
+                        <p>
+                            We may receive transaction information such as
+                            payment status, payment ID, payment session ID,
+                            amount, payment attempts, and other transaction
+                            details necessary to confirm your enrollment.
+                        </p>
+
+                        <p>
+                            We do not request or intentionally store your
+                            complete card number, CVV, UPI PIN, banking
+                            password, or similar authentication credentials.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 7 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            7. Third-Party Service Providers
+                        </h2>
+
+                        <p>
+                            We may use third-party service providers to
+                            operate, maintain, and support AhámTvám Shiksha.
+                        </p>
+
+                        <p>
+                            Depending on the service involved, these providers
+                            may process information on our behalf or receive
+                            information necessary to provide their services.
+                        </p>
+
+                        <p>
+                            These services may include:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Payment processing and payment verification.
+                            </li>
+
+                            <li>
+                                Website hosting and deployment.
+                            </li>
+
+                            <li>
+                                Student registration and record management.
+                            </li>
+
+                            <li>
+                                Communication and messaging services.
+                            </li>
+
+                            <li>
+                                Website security and technical infrastructure.
+                            </li>
+
+                        </ul>
+
+                        <p>
+                            Third-party services may have their own privacy
+                            policies and terms governing their processing
+                            of information.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 8 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            8. Google Sheets and Student Records
+                        </h2>
+
+                        <p>
+                            Enrollment information may be maintained in
+                            internal student registration records using
+                            Google Sheets or related Google Workspace
+                            infrastructure.
+                        </p>
+
+                        <p>
+                            Such records may contain information including
+                            student name, email address, phone number,
+                            course information, registration ID, payment
+                            information, payment status, and registration
+                            date.
+                        </p>
+
+                        <p>
+                            Access to these records is restricted to
+                            persons who require access for legitimate
+                            business, educational, administrative, or
+                            support purposes.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 9 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            9. WhatsApp and Student Communication
+                        </h2>
+
+                        <p>
+                            After successful enrollment, students may be
+                            invited to join a WhatsApp group or other
+                            communication channel used for course-related
+                            announcements and coordination.
+                        </p>
+
+                        <p>
+                            WhatsApp is operated by a third party and is
+                            governed by its own terms and privacy practices.
+                            Information shared or visible within a WhatsApp
+                            group may be visible to other members of that
+                            group.
+                        </p>
+
+                        <p>
+                            Students should avoid sharing sensitive personal
+                            or financial information in group communications.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 10 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            10. Cookies and Similar Technologies
+                        </h2>
+
+                        <p>
+                            Our website may use cookies or similar technical
+                            technologies where required for website
+                            functionality, security, preferences, or
+                            third-party services.
+                        </p>
+
+                        <p>
+                            The use of cookies may vary depending on the
+                            features and services enabled on the website.
+                        </p>
+
+                        <p>
+                            Where applicable, you may control certain
+                            cookies through your browser settings.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 11 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            11. How We Protect Personal Information
+                        </h2>
+
+                        <p>
+                            We take reasonable measures to protect personal
+                            information against unauthorized access,
+                            misuse, alteration, disclosure, loss, or
+                            destruction.
+                        </p>
+
+                        <p>
+                            Security measures may include access controls,
+                            restricted administrative access, secure
+                            authentication practices, payment-provider
+                            security infrastructure, and appropriate
+                            technical safeguards.
+                        </p>
+
+                        <p>
+                            However, no method of transmission or storage
+                            over the internet can be guaranteed to be
+                            completely secure.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 12 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            12. Data Retention
+                        </h2>
+
+                        <p>
+                            We retain personal information for as long as
+                            reasonably necessary to fulfil the purposes for
+                            which it was collected, provide our services,
+                            maintain student and transaction records,
+                            resolve disputes, enforce agreements, and
+                            comply with applicable legal, accounting, or
+                            regulatory requirements.
+                        </p>
+
+                        <p>
+                            When personal information is no longer required
+                            for these purposes, we may delete, anonymize,
+                            or securely dispose of it, subject to applicable
+                            legal or operational requirements.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 13 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            13. Sharing and Disclosure of Information
+                        </h2>
+
+                        <p>
+                            We do not sell your personal information.
+                        </p>
+
+                        <p>
+                            We may disclose or provide access to personal
+                            information where reasonably necessary to:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Provide our educational services.
+                            </li>
+
+                            <li>
+                                Process and verify payments.
+                            </li>
+
+                            <li>
+                                Maintain student and business records.
+                            </li>
+
+                            <li>
+                                Operate website and technical infrastructure.
+                            </li>
+
+                            <li>
+                                Provide customer or technical support.
+                            </li>
+
+                            <li>
+                                Comply with legal obligations or lawful
+                                requests from competent authorities.
+                            </li>
+
+                            <li>
+                                Protect the rights, property, security, or
+                                integrity of AhámTvám Shiksha, its users,
+                                or others.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- 14 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            14. International Processing
+                        </h2>
+
+                        <p>
+                            Some third-party service providers used by
+                            AhámTvám Shiksha may process or store information
+                            on infrastructure located outside India.
+                        </p>
+
+                        <p>
+                            Where applicable, such processing may be subject
+                            to the service provider's privacy practices,
+                            contractual safeguards, and applicable law.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 15 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            15. Student Rights and Requests
+                        </h2>
+
+                        <p>
+                            Subject to applicable law, individuals may have
+                            rights relating to their personal information,
+                            including rights to obtain information about
+                            processing, request correction of inaccurate
+                            information, request deletion where applicable,
+                            withdraw consent where consent is the applicable
+                            basis, and raise a grievance regarding the
+                            processing of personal information.
+                        </p>
+
+                        <p>
+                            Requests relating to personal information may
+                            be submitted using the contact details provided
+                            in this Privacy Policy.
+                        </p>
+
+                        <p>
+                            We may need to verify the identity of the person
+                            making a request before taking action.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 16 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            16. Consent and Withdrawal
+                        </h2>
+
+                        <p>
+                            Where processing of personal information is based
+                            on consent, you may request withdrawal of that
+                            consent by contacting us using the details
+                            provided below.
+                        </p>
+
+                        <p>
+                            Withdrawal of consent does not affect the
+                            lawfulness of processing that took place before
+                            the withdrawal.
+                        </p>
+
+                        <p>
+                            Certain information may continue to be retained
+                            or processed where required or permitted by
+                            applicable law or where necessary for legitimate
+                            administrative, contractual, accounting, or
+                            dispute-resolution purposes.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 17 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            17. Children's Information
+                        </h2>
+
+                        <p>
+                            AhámTvám Shiksha does not intentionally seek to
+                            collect personal information from children in
+                            circumstances where such collection is not
+                            permitted by applicable law.
+                        </p>
+
+                        <p>
+                            If you believe that personal information relating
+                            to a child has been provided to us improperly,
+                            please contact us so that we can review the
+                            situation and take appropriate action where
+                            required.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 18 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            18. Links to Third-Party Websites
+                        </h2>
+
+                        <p>
+                            Our website may contain links to third-party
+                            websites, platforms, payment services, social
+                            media services, or communication platforms.
+                        </p>
+
+                        <p>
+                            We are not responsible for the privacy practices,
+                            security, content, or policies of third-party
+                            websites.
+                        </p>
+
+                        <p>
+                            We recommend reviewing the privacy policy of
+                            any third-party service before providing
+                            personal information through that service.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 19 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            19. Changes to This Privacy Policy
+                        </h2>
+
+                        <p>
+                            We may update this Privacy Policy from time to
+                            time to reflect changes in our services,
+                            technology, legal requirements, or data
+                            processing practices.
+                        </p>
+
+                        <p>
+                            When changes are made, the updated version will
+                            be published on this page with a revised
+                            "Last Updated" date.
+                        </p>
+
+                        <p>
+                            We encourage users to review this page
+                            periodically for the latest information about
+                            our privacy practices.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 20 -->
+
+                    <div class="legal-block">
+
+                        <h2>
+                            20. Contact Us
+                        </h2>
+
+                        <p>
+                            If you have questions about this Privacy Policy,
+                            want to make a privacy-related request, or have
+                            a concern regarding the handling of your personal
+                            information, please contact us.
+                        </p>
+
+                        <div class="contact-box">
+
+                            <h3>
+                                AhámTvám Shiksha
+                            </h3>
+
+                            <p>
+                                <strong>
+                                    AHAMTVAM WORLD PRIVATE LIMITED
+                                </strong>
+                            </p>
+
+                            <p>
+                                Bhagyanagaram (Hyderabad),
+                                Telangana, Bharath (India)
+                            </p>
+
+                            <p>
+                                Email:
+                                <a
+                                    href="mailto:contactahamtvam@gmail.com"
+                                >
+                                    contactahamtvam@gmail.com
+                                </a>
+                            </p>
+
+                            <p>
+                                Support:
+                                <a
+                                    href="mailto:support.atshiksha@gmail.com"
+                                >
+                                    support.atshiksha@gmail.com
+                                </a>
+                            </p>
+
+                            <p>
+                                Phone:
+                                <a
+                                    href="tel:+919494890522"
+                                >
+                                    +91 9494 890 522
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img
+                    src="assets/images/logo-2.png"
+                    alt="AhámTvám Shiksha"
+                >
+
+                <p>
+                    Practical learning for creators,
+                    professionals, and aspiring digital
+                    talent.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="courses.html">
+                    Courses
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Legal
+                </h4>
+
+                <a href="terms-and-conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="refund-cancellation-policy.html">
+                    Refund & Cancellation
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 AHAMTVAM WORLD PRIVATE LIMITED.
+                All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="terms-and-conditions.html">
+                    Terms
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy
+                </a>
+
+                <a href="refund-cancellation-policy.html">
+                    Refund Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const mobileMenuButton =
+            document.getElementById(
+                "mobileMenuButton"
+            );
+
+        const mobileNav =
+            document.getElementById(
+                "mobileNav"
+            );
+
+
+        mobileMenuButton.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    mobileNav.classList.toggle(
+                        "active"
+                    );
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                        ? "true"
+                        : "false"
+                );
+
+            }
+        );
+
+
+        const mobileCoursesToggle =
+            document.querySelector(
+                ".mobile-courses-toggle"
+            );
+
+        const mobileCoursesMenu =
+            document.querySelector(
+                ".mobile-courses-menu"
+            );
+
+
+        if (
+            mobileCoursesToggle &&
+            mobileCoursesMenu
+        ) {
+
+            mobileCoursesToggle.addEventListener(
+                "click",
+                function () {
+
+                    const isOpen =
+                        mobileCoursesMenu.classList.toggle(
+                            "active"
+                        );
+
+                    mobileCoursesToggle.classList.toggle(
+                        "active",
+                        isOpen
+                    );
+
+                    mobileCoursesToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen
+                            ? "true"
+                            : "false"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
