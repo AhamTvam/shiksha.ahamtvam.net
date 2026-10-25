@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refund & Cancellation Policy | AhámTvám Shiksha</title>
+    <meta name="description" content="Read the refund and cancellation policy for courses offered by AhámTvám Shiksha, operated by AHAMTVAM WORLD PRIVATE LIMITED.">
+
+    <style>
+        :root {
+            --navy: #0A1543;
+            --orange: #FFA500;
+            --aqua: #05C3DD;
+            --light: #f7fbfd;
+            --white: #ffffff;
+            --text: #222222;
+            --muted: #666666;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                "Cascadia Mono",
+                "SFMono-Regular",
+                Consolas,
+                "Liberation Mono",
+                Menlo,
+                monospace;
+            font-weight: 400;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.75;
+            font-size: 15px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 150px;
+            height: auto;
+            display: block;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .desktop-nav > a,
+        .courses-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: 0.2s ease;
+        }
+
+        .desktop-nav > a:hover,
+        .courses-link:hover {
+            color: var(--orange);
+        }
+
+        .courses-dropdown {
+            position: relative;
+        }
+
+        .courses-link {
+            background: none;
+            border: 0;
+            cursor: pointer;
+            font-family: inherit;
+            padding: 0;
+        }
+
+        .courses-arrow {
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 210px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 0;
+            box-shadow: 0 10px 30px rgba(10, 21, 67, 0.08);
+            display: none;
+        }
+
+        .courses-dropdown:hover .dropdown-menu,
+        .courses-dropdown:focus-within .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 9px 16px;
+            text-decoration: none;
+            color: var(--navy);
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--light);
+            color: var(--orange);
+        }
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: 0;
+            color: var(--navy);
+            font-family: inherit;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* MOBILE NAVIGATION */
+
+        .mobile-nav {
+            display: none;
+            border-top: 1px solid var(--border);
+            padding: 12px 20px 18px;
+            background: var(--white);
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 11px 0;
+            color: var(--navy);
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+            text-decoration: none;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: 0;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-courses-toggle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 0;
+            background: none;
+            border: 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: var(--navy);
+            font-family: inherit;
+            font-size: 14px;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .mobile-courses-arrow {
+            font-size: 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .mobile-courses-toggle.active .mobile-courses-arrow {
+            transform: rotate(180deg);
+        }
+
+        .mobile-courses-menu {
+            display: none;
+            padding-left: 15px;
+        }
+
+        .mobile-courses-menu.active {
+            display: block;
+        }
+
+        .mobile-courses-menu a {
+            padding: 9px 0;
+            font-size: 13px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        /* HERO */
+
+        .legal-hero {
+            background: var(--light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px 25px 60px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            color: var(--navy);
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .effective-date {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .effective-date + .effective-date {
+            margin-top: 4px;
+        }
+
+        .effective-date strong {
+            color: var(--navy);
+        }
+
+        /* POLICY CONTENT */
+
+        .legal-section {
+            padding: 65px 0 90px;
+        }
+
+        .legal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .legal-content {
+            max-width: 900px;
+        }
+
+        .legal-block {
+            margin-bottom: 48px;
+        }
+
+        .legal-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-block h2 {
+            color: var(--navy);
+            font-size: 21px;
+            line-height: 1.4;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .legal-block h3 {
+            color: var(--navy);
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 700;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        .legal-block p {
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .legal-block ul {
+            margin: 12px 0 16px 22px;
+        }
+
+        .legal-block li {
+            margin-bottom: 8px;
+        }
+
+        .legal-block a {
+            color: var(--navy);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .legal-block a:hover {
+            color: var(--orange);
+        }
+
+        /* CONTACT BOX */
+
+        .contact-box {
+            margin-top: 20px;
+            background: var(--navy);
+            color: var(--white);
+            padding: 28px 30px;
+            border-radius: 10px;
+        }
+
+        .contact-box h3 {
+            color: var(--white);
+            margin: 0 0 12px;
+            font-weight: 700;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.88);
+            margin-bottom: 7px;
+        }
+
+        .contact-box p strong {
+            color: var(--white);
+        }
+
+        .contact-box a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .contact-box a:hover {
+            color: var(--orange);
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 55px 0 25px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand img {
+            width: 180px;
+            margin-bottom: 18px;
+        }
+
+        .footer-brand p {
+            max-width: 360px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 13px;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 9px;
+        }
+
+        .footer-column a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding: 20px 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 12px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--orange);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 14px 20px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .hero-container {
+                padding: 50px 20px 45px;
+            }
+
+            .hero-title {
+                font-size: 34px;
+            }
+
+            .legal-section {
+                padding: 45px 0 65px;
+            }
+
+            .legal-container {
+                padding: 0 20px;
+            }
+
+            .legal-block {
+                margin-bottom: 38px;
+            }
+
+            .legal-block h2 {
+                font-size: 19px;
+            }
+
+            .contact-box {
+                padding: 24px 22px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 0 20px;
+            }
+
+            .footer-bottom {
+                margin-top: 35px;
+                padding: 18px 20px 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-bottom-links {
+                flex-wrap: wrap;
+                gap: 12px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+
+        <a href="index.html" class="logo"
+           aria-label="AhámTvám Shiksha Home">
+            <img src="assets/images/logo-2.png"
+                 alt="AhámTvám Shiksha">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+
+            <div class="courses-dropdown">
+                <button type="button" class="courses-link">
+                    Courses <span class="courses-arrow">▼</span>
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="courses.html">Editing</a>
+                    <a href="writing.html">Writing (Coming Soon)</a>
+                    <a href="communication.html">Communication (Coming Soon)</a>
+                    <a href="marketing.html">Marketing (Coming Soon)</a>
+                </div>
+            </div>
+
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button type="button"
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open menu"
+                aria-expanded="false">
+            ☰
+        </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav"
+         aria-label="Mobile Navigation">
+
+        <a href="index.html">Home</a>
+
+        <div class="mobile-courses">
+            <button type="button"
+                    class="mobile-courses-toggle"
+                    aria-expanded="false">
+                Courses
+                <span class="mobile-courses-arrow">▼</span>
+            </button>
+
+            <div class="mobile-courses-menu">
+                <a href="courses.html">Editing</a>
+                <a href="writing.html">Writing (Coming Soon)</a>
+                <a href="communication.html">Communication (Coming Soon)</a>
+                <a href="marketing.html">Marketing (Coming Soon)</a>
+            </div>
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="legal-hero">
+    <div class="hero-container">
+
+        <span class="eyebrow">AhámTvám Shiksha</span>
+
+        <h1 class="hero-title">
+            Refund &amp; Cancellation Policy
+        </h1>
+
+        <p class="hero-description">
+            This policy explains the conditions and procedure for
+            requesting refunds or cancelling an enrollment for courses
+            offered by AhámTvám Shiksha.
+        </p>
+
+        <p class="effective-date">
+            <strong>Effective Date:</strong> 11 October 2026
+        </p>
+
+        <p class="effective-date">
+            <strong>Last Updated:</strong> 11 October 2026
+        </p>
+    </div>
+</section>
+
+<main>
+<section class="legal-section">
+<div class="legal-container">
+<div class="legal-content">
+
+    <div class="legal-block">
+        <h2>1. Introduction</h2>
+
+        <p>
+            AhámTvám Shiksha is an educational initiative operated by
+            <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
+            ("AhámTvám", "we", "us", or "our").
+        </p>
+
+        <p>
+            This policy applies to paid courses and related educational
+            services purchased through our website or other authorised
+            enrollment channels.
+        </p>
+
+        <p>
+            Please read this policy before completing your enrollment.
+            Refund requests will be reviewed according to the conditions
+            below and applicable law.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>2. Student-Requested Refunds: 24-Hour Window</h2>
+
+        <p>
+            A student requesting a refund for a change of mind or another
+            personal reason must submit the request within
+            <strong>24 hours of the registration or subscription
+            transaction</strong>.
+        </p>
+
+        <p>
+            The request must be sent to
+            <a href="mailto:support.atshiksha@gmail.com">
+                support.atshiksha@gmail.com
+            </a>
+            within this period.
+        </p>
+
+        <p>
+            The student must provide accurate information sufficient
+            for us to identify and verify the enrollment and payment.
+            This should include:
+        </p>
+
+        <ul>
+            <li>Student's full name.</li>
+            <li>Registered email address and phone number.</li>
+            <li>Registration ID, if available.</li>
+            <li>Course name and selected package.</li>
+            <li>Payment ID or transaction reference.</li>
+            <li>Payment date, amount, and a clear reason for the request.</li>
+        </ul>
+
+        <p>
+            We may request additional information reasonably necessary
+            to verify the request. Students should not send passwords,
+            UPI PINs, CVVs, or other payment authentication credentials.
+        </p>
+
+        <p>
+            Submitting a request within 24 hours does not automatically
+            guarantee approval. Each request will be reviewed against
+            this policy and applicable legal requirements.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>3. Duplicate Payments</h2>
+
+        <p>
+            If a student is charged more than once for the same
+            enrollment because of a duplicate transaction, the duplicate
+            payment is eligible for a refund after verification.
+        </p>
+
+        <p>
+            The student should provide the relevant transaction
+            references and registration details so we can identify
+            the duplicate charge.
+        </p>
+
+        <p>
+            A valid duplicate-payment refund request is not subject
+            to the standard 24-hour student-requested cancellation
+            window. It will be reviewed and processed in accordance
+            with applicable requirements.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>4. Failed Payments and Unsuccessful Enrollment</h2>
+
+        <p>
+            If a payment fails or an enrollment is not completed but
+            money has been debited from the student's account, we will
+            review the transaction and its status with the payment
+            service provider.
+        </p>
+
+        <p>
+            Where the payment was not successfully completed and the
+            amount is confirmed as refundable, the reversal or refund
+            will be handled through the relevant payment process.
+        </p>
+
+        <p>
+            A pending transaction, payment failure message, or delayed
+            bank update may not mean that the amount has been finally
+            collected by us. The transaction will be checked before
+            a separate refund is initiated, to avoid duplicate refunds.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>5. Qualifying Exceptional Cases</h2>
+
+        <p>
+            We may approve a refund outside the standard student-requested
+            cancellation process where the circumstances reasonably
+            justify it, subject to applicable law.
+        </p>
+
+        <p>Qualifying cases may include:</p>
+
+        <ul>
+            <li>
+                Cancellation of a course by AhámTvám where an appropriate
+                replacement or rescheduled option is not accepted or
+                cannot reasonably be provided.
+            </li>
+            <li>
+                A material failure to provide the paid course or service
+                as described, where a refund is an appropriate remedy.
+            </li>
+            <li>
+                A verified billing or payment-processing error.
+            </li>
+            <li>
+                Other exceptional circumstances approved after review.
+            </li>
+        </ul>
+
+        <p>
+            Each case will be assessed individually. We may ask for
+            supporting information necessary to establish what occurred.
+            Any refund required by applicable law will be handled in
+            accordance with that law.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>6. Course Cancellation or Rescheduling by AhámTvám</h2>
+
+        <p>
+            If AhámTvám Shiksha cancels a scheduled course or is unable
+            to provide the purchased course, we will communicate the
+            available options to affected students.
+        </p>
+
+        <p>
+            Depending on the circumstances, these options may include
+            rescheduling, an appropriate alternative course arrangement,
+            or a refund where applicable.
+        </p>
+
+        <p>
+            If a student does not accept a proposed alternative and
+            qualifies for a refund, the refund will be reviewed and
+            processed accordingly.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>7. When a Refund May Not Be Approved</h2>
+
+        <p>
+            Subject to applicable law and the exceptions described in
+            this policy, a student-requested refund may be declined
+            where:
+        </p>
+
+        <ul>
+            <li>
+                The request is submitted after the 24-hour window and
+                no qualifying exception applies.
+            </li>
+            <li>
+                The enrollment and payment details cannot be verified
+                after reasonable attempts to obtain clarification.
+            </li>
+            <li>
+                The request does not qualify under the applicable
+                refund conditions.
+            </li>
+        </ul>
+
+        <p>
+            A request will not be rejected solely because it falls
+            outside the standard 24-hour window if a refund is otherwise
+            required under applicable law or qualifies under the
+            exceptional circumstances in this policy.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>8. How to Request a Refund</h2>
+
+        <p>
+            Send your request by email to
+            <a href="mailto:support.atshiksha@gmail.com">
+                support.atshiksha@gmail.com
+            </a>
+            with the subject line:
+        </p>
+
+        <p>
+            <strong>Refund Request — [Registration ID]</strong>
+        </p>
+
+        <p>
+            Include the student and transaction details listed in
+            Section 2, along with a clear explanation of the request.
+        </p>
+
+        <p>
+            We may contact you using your registered email address
+            or phone number to verify the information or request
+            additional details.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>9. Review and Processing of Refunds</h2>
+
+        <p>
+            We will review the request and communicate the outcome
+            using the contact information provided by the student.
+        </p>
+
+        <p>
+            Once a refund is approved, it will ordinarily be initiated
+            through the original payment method or the applicable
+            payment-provider process, where supported.
+        </p>
+
+        <p>
+            The time taken for the amount to appear in the student's
+            account may depend on the payment provider, bank, card
+            issuer, or other financial institution. We will provide
+            relevant information about the refund where available.
+        </p>
+
+        <p>
+            Refunds will be handled within the time required by
+            applicable law or, where no specific period applies,
+            within a reasonable period after approval and completion
+            of the required verification.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>10. Course Access Following a Refund</h2>
+
+        <p>
+            Where a refund is approved and completed, access to the
+            refunded course or associated student services may be
+            withdrawn or cancelled, as appropriate.
+        </p>
+
+        <p>
+            Students must not continue using paid course materials
+            or access that has been withdrawn following a completed
+            refund.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>11. Changes to This Policy</h2>
+
+        <p>
+            We may update this policy to reflect changes in our
+            educational services, enrollment process, payment
+            arrangements, or applicable legal requirements.
+        </p>
+
+        <p>
+            The updated version will be published on this page with
+            a revised "Last Updated" date. The applicable law will
+            prevail over any inconsistent provision in this policy.
+        </p>
+    </div>
+
+    <div class="legal-block">
+        <h2>12. Contact Us</h2>
+
+        <p>
+            For refund requests, cancellation enquiries, or questions
+            about this policy, please contact us using the details below.
+        </p>
+
+        <div class="contact-box">
+            <h3>AhámTvám Shiksha</h3>
+
+            <p>
+                <strong>AHAMTVAM WORLD PRIVATE LIMITED</strong>
+            </p>
+
+            <p>
+                Bhagyanagaram (Hyderabad), Telangana, Bharath (India)
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:contactahamtvam@gmail.com">
+                    contactahamtvam@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Support:
+                <a href="mailto:support.atshiksha@gmail.com">
+                    support.atshiksha@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Phone:
+                <a href="tel:+919494890522">
+                    +91 9494 890 522
+                </a>
+            </p>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <img src="assets/images/logo-2.png"
+                 alt="AhámTvám Shiksha">
+
+            <p>
+                Practical learning for creators, professionals,
+                and aspiring digital talent.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Explore</h4>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h4>Legal</h4>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="refund-cancellation-policy.html">Refund &amp; Cancellation</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 AHAMTVAM WORLD PRIVATE LIMITED. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="terms-and-conditions.html">Terms</a>
+            <a href="privacy-policy.html">Privacy</a>
+            <a href="refund-cancellation-policy.html">Refund Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mobileNav =
+        document.getElementById("mobileNav");
+
+    mobileMenuButton.addEventListener("click", function () {
+        const isOpen = mobileNav.classList.toggle("active");
+
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+    });
+
+    const mobileCoursesToggle =
+        document.querySelector(".mobile-courses-toggle");
+
+    const mobileCoursesMenu =
+        document.querySelector(".mobile-courses-menu");
+
+    if (mobileCoursesToggle && mobileCoursesMenu) {
+        mobileCoursesToggle.addEventListener("click", function () {
+            const isOpen =
+                mobileCoursesMenu.classList.toggle("active");
+
+            mobileCoursesToggle.classList.toggle("active", isOpen);
+
+            mobileCoursesToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+        });
+    }
+</script>
+
+</body>
+</html>
